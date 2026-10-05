@@ -1,11 +1,8 @@
-import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { isLocale, locales } from '@/lib/i18n/locales';
 import { firago } from '@/lib/fonts';
 import '@/styles/globals.css';
-
-export const metadata: Metadata = { title: 'Dragon Point — Foundation' };
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

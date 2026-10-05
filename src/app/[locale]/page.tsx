@@ -2,6 +2,25 @@ import { notFound } from 'next/navigation';
 import { isLocale } from '@/lib/i18n/locales';
 import { getMessages } from '@/lib/i18n/messages';
 import { FoundationShell } from '@/components/layout/FoundationShell';
+import { getSeoConfig } from '@/lib/seo/config';
+import { buildLocaleMetadata } from '@/lib/seo/metadata';
+import {
+  buildStructuredData,
+  serializeJsonLd,
+} from '@/lib/seo/structured-data';
+
+// Keep runtime deployment policy consistent with robots, sitemap and response headers.
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildLocaleMetadata(locale, await getMessages(locale), getSeoConfig());
+}
 
 export default async function LocalePage({
   params,
@@ -10,7 +29,16 @@ export default async function LocalePage({
 }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
+  const messages = await getMessages(locale);
+  const structuredData = buildStructuredData(locale, messages, getSeoConfig());
   return (
-    <FoundationShell locale={locale} messages={await getMessages(locale)} />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
+      />
+      <FoundationShell locale={locale} messages={messages} />
+    </>
   );
 }
+import type { Metadata } from 'next';
