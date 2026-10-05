@@ -1,0 +1,43 @@
+:root {
+  --dp-obsidian: #0b0d10;
+  --dp-graphite: #242830;
+  --dp-titanium: #b9c0c8;
+  --dp-off-white: #f5f6f7;
+  --dp-violet: #6847f5;
+
+  --dp-space-1: 0.25rem;
+  --dp-space-2: 0.5rem;
+  --dp-space-3: 0.75rem;
+  --dp-space-4: 1rem;
+  --dp-space-6: 1.5rem;
+  --dp-space-8: 2rem;
+  --dp-space-12: 3rem;
+  --dp-space-16: 4rem;
+  --dp-space-24: 6rem;
+
+  --dp-radius-sm: 0.25rem;
+  --dp-radius-md: 0.5rem;
+  --dp-radius-lg: 1rem;
+  --dp-container: 80rem;
+  --dp-gutter: clamp(1rem, 4vw, 3rem);
+  --dp-shadow-card: 0 0.5rem 2rem
+    color-mix(in srgb, var(--dp-obsidian) 10%, transparent);
+  --dp-duration-fast: 150ms;
+  --dp-duration-base: 250ms;
+  --dp-duration-slow: 400ms;
+  --dp-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@theme inline {
+  --color-obsidian: var(--dp-obsidian);
+  --color-graphite: var(--dp-graphite);
+  --color-titanium: var(--dp-titanium);
+  --color-off-white: var(--dp-off-white);
+  --color-violet: var(--dp-violet);
+  --font-sans: var(--font-firago), Arial, sans-serif;
+  --spacing: var(--dp-space-1);
+  --radius-sm: var(--dp-radius-sm);
+  --radius-md: var(--dp-radius-md);
+  --radius-lg: var(--dp-radius-lg);
+  --shadow-card: var(--dp-shadow-card);
+}
