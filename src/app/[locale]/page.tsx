@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { isLocale } from '@/lib/i18n/locales';
 import { getMessages } from '@/lib/i18n/messages';
-import { FoundationShell } from '@/components/layout/FoundationShell';
+import { Landing } from '@/components/layout/Landing';
 import { getSeoConfig } from '@/lib/seo/config';
 import { buildLocaleMetadata } from '@/lib/seo/metadata';
 import {
@@ -37,7 +37,7 @@ export default async function LocalePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
       />
-      <FoundationShell locale={locale} messages={messages} />
+      <Landing locale={locale} messages={messages} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './tokens.css';
+@import './landing.css';
 
 body {
   background: var(--dp-off-white);
@@ -7,6 +8,7 @@ body {
   font-family: var(--dp-font-family);
   line-height: 1.6;
   text-align: start;
+  font-size: var(--dp-text-body);
 }
 
 ::selection {
@@ -51,7 +53,7 @@ body {
   position: fixed;
   inset-block-start: var(--dp-space-4);
   inset-inline-start: var(--dp-space-4);
-  z-index: 10;
+  z-index: 60;
   padding-block: var(--dp-space-3);
   padding-inline: var(--dp-space-4);
   background: var(--dp-off-white);

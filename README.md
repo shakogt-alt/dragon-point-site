@@ -1,4 +1,4 @@
-# Dragon Point — Foundation and SEO
+# Dragon Point — Core UI and SEO
 
 Repository: `shakogt-alt/dragon-point-site`. Working branch: `codex/landing-mvp`.
 Read `AGENTS.md` and `CODEX_TASK.md` before changing the application.
@@ -51,9 +51,10 @@ test fixtures only; tests never make network requests to them or deploy them.
 - `src/styles`: approved brand tokens and Tailwind v4 theme mapping.
 - `src/assets/fonts`: self-hosted FiraGO WOFF2 for EN/KA/RU and Noto Sans Hebrew
   variable font for HE, with their SIL OFL licenses and pinned provenance.
-- `src/components/layout`: temporary Foundation shell.
-- `src/components/ui`: language navigation.
-- `src/components/sections`: reserved for Phase 3.
+- `src/components/layout`: shared Landing, progressively enhanced Header and Footer.
+- `src/components/ui`: dictionary-driven language navigation, action links,
+  typographic logo and replaceable decorative architecture SVG.
+- `src/components/sections`: Hero, goals, comparison, standard, services and technology.
 - `src/lib/seo`: shared environment policy, metadata, crawlers and JSON-LD builders.
 - `src/proxy.ts`: environment-aware X-Robots-Tag response guard.
 - `src/app/robots.ts`, `sitemap.ts`: runtime crawler documents.
@@ -61,8 +62,13 @@ test fixtures only; tests never make network requests to them or deploy them.
 - `src/lib/analytics`: reserved for Phase 5.
 
 Reserved directories use `.gitkeep`; they do not publish placeholder APIs or
-future SEO pages. The visible UI is still the temporary Foundation shell;
-approved landing sections belong to Phase 3.
+future SEO pages. Core UI sections render on the server; only Header adds client
+enhancements for sticky state, disclosures and keyboard focus. Native mobile
+disclosures and all anchor/language links also work without JavaScript.
+Goal CTAs carry `data-intent` for the Phase 4 handoff and currently link to the
+honest advisor/contact placeholder in the footer. There is no lead form or
+integration. Privacy copy is an inline pending-input disclosure, not a future page.
+Comparison cards contain explicitly labeled qualitative examples, not market data.
 
 ## SEO configuration
 
@@ -101,12 +107,18 @@ insets, margins and padding, with `text-align: start`; layout order follows flex
 direction without changing the source/keyboard order. The Latin wordmark and
 language abbreviations are isolated with `dir="ltr"`.
 
-The current Foundation has no icons, process arrows, forms or mobile menu.
-When these are implemented in Phase 3/4, review them in both directions: use
-logical spacing/alignment, place icons at inline-start/end, mirror directional
-arrows with the process flow (do not mirror nondirectional brand/utility icons),
-and keep keyboard/source order and menu behavior consistent. The Hebrew matrix
-must be repeated for those actual controls; this phase does not add future UI.
+Directional CTA arrows and the six-step desktop process follow the locale's
+direction. Below 1280 px, the process runs vertically with downward arrows in
+all locales. Logo, architecture drawing, menu, chevron and check icons do not
+mirror. The Hebrew matrix covers actual navigation, disclosures, CTA alignment,
+process positions, overflow and mixed Latin/Hebrew text. Native source and
+keyboard order remain shared across locales.
+
+## Visual review
+
+Full-page Phase 3 screenshots are saved in `docs/screenshots/phase-3`: EN desktop
+1440, EN mobile 390, KA mobile 390, RU desktop 1440, HE desktop 1440 and HE mobile 390. Typographic brand compositions and original CSS/SVG geometry are
+replaceable when approved logo and photography are supplied.
 
 ## Production inputs
 
@@ -117,5 +129,5 @@ No KleekTo code, credentials or integration is touched.
 
 ## Phase gate
 
-Phase 2A stops after verification, a separate commit, push and report.
-Phase 3 requires explicit user confirmation.
+Phase 3 stops after verification, a separate commit, push and report.
+Phase 4 requires explicit user confirmation.

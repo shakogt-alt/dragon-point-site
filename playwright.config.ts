@@ -56,7 +56,7 @@ export default defineConfig({
   projects: [
     {
       name: 'foundation',
-      testMatch: '**/foundation.spec.ts',
+      testMatch: '**/{foundation,landing}.spec.ts',
       use: { ...devices['Desktop Chrome'] },
     },
     ...servers.map(({ name, port }) => ({

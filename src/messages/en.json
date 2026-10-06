@@ -7,6 +7,165 @@
     "description": "Buy, sell and invest in real estate in Georgia with market analysis, property verification and professional deal support. Dragon Point — Real Estate Intelligence.",
     "imageAlt": "Dragon Point — Real Estate Intelligence for Georgia"
   },
+  "languageLabels": { "en": "EN", "ka": "KA", "ru": "RU", "he": "HE" },
+  "brand": {
+    "name": "DRAGON POINT",
+    "descriptor": "REAL ESTATE INTELLIGENCE",
+    "powered": "Powered by",
+    "technology": "KleekTo"
+  },
+  "landing": {
+    "header": {
+      "navigation": "Main navigation",
+      "menu": "Menu",
+      "home": "Dragon Point home",
+      "buy": "Buy",
+      "invest": "Invest",
+      "sell": "Sell",
+      "standard": "How we work",
+      "advisor": "Talk to an advisor"
+    },
+    "hero": {
+      "lines": ["SEE THE DEAL", "CLEARLY."],
+      "description": "Buy, sell and invest in Georgian real estate with market analysis, property verification and end-to-end deal support.",
+      "primary": "Find a property",
+      "secondary": "Talk to an advisor",
+      "geo": "TBILISI · BATUMI · GEORGIA",
+      "formula": "PROPERTY · DATA · DECISION",
+      "visual": "ARCHITECTURE + DATA",
+      "visualNote": "A framework for seeing the whole picture."
+    },
+    "goals": {
+      "eyebrow": "YOUR NEXT MOVE",
+      "title": "Start with your goal.",
+      "description": "One market. Different ambitions. A clear approach for yours.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Buy",
+          "description": "Find the right property for living or relocation.",
+          "cta": "I want to buy"
+        },
+        {
+          "number": "02",
+          "title": "Invest",
+          "description": "Evaluate return, risk, liquidity and exit before you buy.",
+          "cta": "I want to invest"
+        },
+        {
+          "number": "03",
+          "title": "Sell",
+          "description": "Understand your real market price and sell with a clear strategy.",
+          "cta": "I want to sell"
+        }
+      ]
+    },
+    "decisions": {
+      "eyebrow": "A WIDER VIEW",
+      "lines": ["Not more listings.", "Better decisions."],
+      "description": "A property is more than its asking price. Put the information in context before you commit.",
+      "typical": "Typical listing",
+      "dragon": "Dragon Point view",
+      "sample": "Illustrative comparison · not market data",
+      "price": "Listing price",
+      "priceValue": "Asking price",
+      "range": "Market range",
+      "rangeValue": "Comparable properties",
+      "target": "Negotiation target",
+      "targetValue": "Evidence-led offer",
+      "liquidity": "Liquidity",
+      "liquidityValue": "Demand & exit context",
+      "absent": "Not shown",
+      "cta": "See how we analyze"
+    },
+    "standard": {
+      "eyebrow": "OUR FRAMEWORK",
+      "title": "The Dragon Point Standard.",
+      "description": "Six perspectives. One informed decision.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Market",
+          "description": "Location · Infrastructure · Demand"
+        },
+        {
+          "number": "02",
+          "title": "Price",
+          "description": "Listing · Market · Transaction"
+        },
+        {
+          "number": "03",
+          "title": "Property",
+          "description": "Building · Layout · Condition"
+        },
+        {
+          "number": "04",
+          "title": "Risk",
+          "description": "Legal · Technical · Market"
+        },
+        {
+          "number": "05",
+          "title": "Return",
+          "description": "Yield · Vacancy · Liquidity"
+        },
+        {
+          "number": "06",
+          "title": "Deal",
+          "description": "Offer · Negotiation · Due diligence · Closing"
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "WHERE WE WORK",
+      "title": "Real estate services in Georgia.",
+      "description": "From a place to live to a considered investment.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Residential",
+          "details": ["Buy", "Sell", "Rent"]
+        },
+        {
+          "number": "02",
+          "title": "Investments",
+          "details": ["Income", "Capital growth", "Resale"]
+        },
+        {
+          "number": "03",
+          "title": "New developments",
+          "details": ["Projects", "Developers", "Payment plans"]
+        },
+        {
+          "number": "04",
+          "title": "Commercial & land",
+          "details": ["Retail", "Office", "Income property", "Development"]
+        }
+      ]
+    },
+    "technology": {
+      "eyebrow": "CLARITY + CONTROL",
+      "lines": ["Intelligence", "behind the deal."],
+      "description": "Information gives you perspective. Professional judgment brings it together.",
+      "points": [
+        "Market analysis",
+        "Verified information",
+        "Property matching",
+        "Price history",
+        "Deal workflow"
+      ],
+      "note": "Technology supports the process. People guide the decision.",
+      "diagram": "PROPERTY · DATA · DECISION"
+    },
+    "footer": {
+      "title": "Talk to a Dragon Point advisor.",
+      "contact": "Contact details will be published here once confirmed.",
+      "geo": "Tbilisi · Batumi · Georgia",
+      "privacy": "Privacy",
+      "privacyNotice": "Privacy policy awaiting legal review. Enquiry channels and data collection terms will be published before enquiries open.",
+      "back": "Back to top",
+      "note": "SEE THE DEAL CLEARLY."
+    }
+  },
   "foundation": {
     "heading": "Real Estate Intelligence for Georgia",
     "status": "Website in preparation",

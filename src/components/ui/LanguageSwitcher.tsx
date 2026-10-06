@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { localePath, locales, type Locale } from '@/lib/i18n/locales';
 
-type Props = { locale: Locale; label: string };
+type Props = { locale: Locale; label: string; labels: Record<Locale, string> };
 
-export function LanguageSwitcher({ locale, label }: Props) {
+export function LanguageSwitcher({ locale, label, labels }: Props) {
   return (
     <nav aria-label={label} className="dp-languages">
       {locales.map((language) => (
@@ -16,7 +16,7 @@ export function LanguageSwitcher({ locale, label }: Props) {
           aria-current={language === locale ? 'page' : undefined}
           className="dp-language"
         >
-          {language.toUpperCase()}
+          {labels[language]}
         </Link>
       ))}
     </nav>

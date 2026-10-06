@@ -5,6 +5,14 @@
   --dp-off-white: #f5f6f7;
   --dp-violet: #6847f5;
   --dp-font-family: var(--font-firago), Arial, sans-serif;
+  --dp-text-body: 1rem;
+  --dp-text-small: 0.875rem;
+  --dp-text-title: clamp(2rem, 3.4vw, 3.25rem);
+  --dp-text-display: clamp(2.7rem, 5.5vw, 5.5rem);
+  --dp-section-space: clamp(4rem, 7vw, 7rem);
+  --dp-border-light: color-mix(in srgb, var(--dp-graphite) 18%, transparent);
+  --dp-border-dark: color-mix(in srgb, var(--dp-titanium) 28%, transparent);
+  --dp-header-offset: 6.5rem;
 
   --dp-space-1: 0.25rem;
   --dp-space-2: 0.5rem;
