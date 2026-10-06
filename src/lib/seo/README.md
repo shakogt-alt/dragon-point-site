@@ -9,6 +9,8 @@
 Locale content remains in `src/messages`; supported locales come from
 `src/lib/i18n/locales.ts`. Canonical and language alternates are page metadata,
 so future substantive pages can reuse these builders with their own page URLs.
+The locales are en/ka/ru/he, with x-default → /en and he_IL for Hebrew Open Graph.
+Sitemap and WebSite.inLanguage derive all four locales from the same registry.
 Do not publish empty future pages or reuse landing canonicals on new routes.
 
 SITE_URL is the confirmed production HTTPS origin, not the current preview

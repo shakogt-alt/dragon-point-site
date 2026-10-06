@@ -4,6 +4,7 @@
   --dp-titanium: #b9c0c8;
   --dp-off-white: #f5f6f7;
   --dp-violet: #6847f5;
+  --dp-font-family: var(--font-firago), Arial, sans-serif;
 
   --dp-space-1: 0.25rem;
   --dp-space-2: 0.5rem;
@@ -28,13 +29,17 @@
   --dp-ease: cubic-bezier(0.2, 0, 0, 1);
 }
 
+:root:lang(he) {
+  --dp-font-family: var(--font-noto-hebrew), Arial, sans-serif;
+}
+
 @theme inline {
   --color-obsidian: var(--dp-obsidian);
   --color-graphite: var(--dp-graphite);
   --color-titanium: var(--dp-titanium);
   --color-off-white: var(--dp-off-white);
   --color-violet: var(--dp-violet);
-  --font-sans: var(--font-firago), Arial, sans-serif;
+  --font-sans: var(--dp-font-family);
   --spacing: var(--dp-space-1);
   --radius-sm: var(--dp-radius-sm);
   --radius-md: var(--dp-radius-md);

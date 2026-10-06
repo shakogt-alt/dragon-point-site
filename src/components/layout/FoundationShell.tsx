@@ -13,7 +13,9 @@ export function FoundationShell({ locale, messages }: Props) {
       </a>
       <header className="border-b border-titanium py-6">
         <div className="dp-container flex flex-wrap items-center justify-between gap-4">
-          <p className="font-semibold tracking-wide">DRAGON POINT</p>
+          <p dir="ltr" className="font-semibold tracking-wide">
+            DRAGON POINT
+          </p>
           <LanguageSwitcher
             locale={locale}
             label={messages.languageNavigation}

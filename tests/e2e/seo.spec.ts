@@ -1,40 +1,47 @@
 import { expect, test } from '@playwright/test';
 
-test('crawler receives SEO in the initial document head', async ({
-  page,
-  request,
-}, testInfo) => {
-  const response = await request.get('/ka', {
-    headers: { 'User-Agent': 'Twitterbot' },
-  });
-  expect(response.status()).toBe(200);
-  const head = await page.evaluate(
-    (html) => {
-      const document = new DOMParser().parseFromString(html, 'text/html');
-      return {
-        title: document.head.querySelector('title')?.textContent,
-        description: document.head
-          .querySelector('meta[name="description"]')
-          ?.getAttribute('content'),
-        canonical: document.head
-          .querySelector('link[rel="canonical"]')
-          ?.getAttribute('href'),
-        h1Count: document.querySelectorAll('h1').length,
-      };
-    },
-    await response.text(),
-  );
-  expect(head.title).toBe(
+for (const [crawlerLocale, crawlerTitle, descriptionWord] of [
+  [
+    'ka',
     'უძრავი ქონება საქართველოში — ყიდვა, ინვესტირება და გაყიდვა | Dragon Point',
-  );
-  expect(head.description).toContain('შეიძინეთ');
-  expect(head.canonical).toBe(
-    testInfo.project.name === 'seo-unconfigured'
-      ? undefined
-      : 'https://dragon-point.test/ka',
-  );
-  expect(head.h1Count).toBe(1);
-});
+    'შეიძინეთ',
+  ],
+  ['he', 'נדל״ן בגאורגיה | קנייה, השקעה ומכירה | Dragon Point', 'קנו'],
+] as const) {
+  test(`${crawlerLocale}: crawler receives SEO in the initial document head`, async ({
+    page,
+    request,
+  }, testInfo) => {
+    const response = await request.get(`/${crawlerLocale}`, {
+      headers: { 'User-Agent': 'Twitterbot' },
+    });
+    expect(response.status()).toBe(200);
+    const head = await page.evaluate(
+      (html) => {
+        const document = new DOMParser().parseFromString(html, 'text/html');
+        return {
+          title: document.head.querySelector('title')?.textContent,
+          description: document.head
+            .querySelector('meta[name="description"]')
+            ?.getAttribute('content'),
+          canonical: document.head
+            .querySelector('link[rel="canonical"]')
+            ?.getAttribute('href'),
+          h1Count: document.querySelectorAll('h1').length,
+        };
+      },
+      await response.text(),
+    );
+    expect(head.title).toBe(crawlerTitle);
+    expect(head.description).toContain(descriptionWord);
+    expect(head.canonical).toBe(
+      testInfo.project.name === 'seo-unconfigured'
+        ? undefined
+        : `https://dragon-point.test/${crawlerLocale}`,
+    );
+    expect(head.h1Count).toBe(1);
+  });
+}
 
 const origin = 'https://dragon-point.test';
 const cases = [
@@ -61,6 +68,13 @@ const cases = [
       'Покупайте, продавайте и инвестируйте в недвижимость Грузии с анализом рынка, проверкой объектов и профессиональным сопровождением сделки. Dragon Point.',
     ogLocale: 'ru_RU',
   },
+  {
+    locale: 'he',
+    title: 'נדל״ן בגאורגיה | קנייה, השקעה ומכירה | Dragon Point',
+    description:
+      'קנו, מכרו והשקיעו בנדל״ן בגאורגיה עם ניתוח שוק, בדיקת נכסים וליווי מקצועי לאורך העסקה. Dragon Point — Real Estate Intelligence.',
+    ogLocale: 'he_IL',
+  },
 ];
 
 for (const { locale, title, description, ogLocale } of cases) {
@@ -83,15 +97,19 @@ for (const { locale, title, description, ogLocale } of cases) {
     );
     await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
     await expect(page.locator('html')).toHaveAttribute('lang', locale);
+    await expect(page.locator('html')).toHaveAttribute(
+      'dir',
+      locale === 'he' ? 'rtl' : 'ltr',
+    );
     if (configured) {
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
         'href',
         `${origin}/${locale}`,
       );
       await expect(page.locator('link[rel="alternate"][hreflang]')).toHaveCount(
-        4,
+        5,
       );
-      for (const language of ['en', 'ka', 'ru', 'x-default']) {
+      for (const language of ['en', 'ka', 'ru', 'he', 'x-default']) {
         await expect(
           page.locator(`link[hreflang="${language}"]`),
         ).toHaveAttribute(
@@ -171,6 +189,7 @@ for (const { locale, title, description, ogLocale } of cases) {
     expect(
       data['@graph'].map((entity: Record<string, unknown>) => entity['@type']),
     ).toEqual(['Organization', 'RealEstateAgent', 'WebSite']);
+    expect(data['@graph'][2].inLanguage).toEqual(['en', 'ka', 'ru', 'he']);
     for (const entity of data['@graph']) {
       expect(entity.name).toBe('Dragon Point');
       for (const field of [
@@ -231,14 +250,19 @@ test('robots and sitemap follow the same deployment policy as HTML', async ({
   }, xml);
   expect(parsed.errors).toBe(0);
   expect(parsed.urls).toEqual(
-    indexable ? [`${origin}/en`, `${origin}/ka`, `${origin}/ru`] : [],
+    indexable
+      ? [`${origin}/en`, `${origin}/ka`, `${origin}/ru`, `${origin}/he`]
+      : [],
   );
   if (indexable) {
-    expect(parsed.alternates).toHaveLength(12);
+    expect(parsed.alternates).toHaveLength(20);
     expect(
       parsed.alternates.filter((entry) => entry.language === 'x-default'),
-    ).toEqual(Array(3).fill({ language: 'x-default', href: `${origin}/en` }));
+    ).toEqual(Array(4).fill({ language: 'x-default', href: `${origin}/en` }));
+    expect(
+      parsed.alternates.filter((entry) => entry.language === 'he'),
+    ).toEqual(Array(4).fill({ language: 'he', href: `${origin}/he` }));
   }
-  for (const path of ['/en/tbilisi', '/ka/buy', '/ru/properties'])
+  for (const path of ['/en/tbilisi', '/ka/buy', '/ru/properties', '/he/invest'])
     expect((await request.get(path)).status()).toBe(404);
 });

@@ -91,6 +91,7 @@ describe('localized metadata', () => {
       'Недвижимость в Грузии — покупка, инвестиции и продажа | Dragon Point',
       'ru_RU',
     ],
+    ['he', 'נדל״ן בגאורגיה | קנייה, השקעה ומכירה | Dragon Point', 'he_IL'],
   ] as const)(
     'builds %s metadata from that dictionary',
     async (locale, title, ogLocale) => {
@@ -109,6 +110,7 @@ describe('localized metadata', () => {
           en: 'https://dragon-point.test/en',
           ka: 'https://dragon-point.test/ka',
           ru: 'https://dragon-point.test/ru',
+          he: 'https://dragon-point.test/he',
           'x-default': 'https://dragon-point.test/en',
         },
       });
@@ -179,7 +181,7 @@ describe('localized metadata', () => {
 });
 
 describe('robots and sitemap', () => {
-  it('advertises only the three approved locale pages in production', () => {
+  it('advertises only the four approved locale pages in production', () => {
     const config = getSeoConfig(production);
     expect(buildRobots(config)).toEqual({
       rules: { userAgent: '*', allow: '/' },
@@ -189,11 +191,13 @@ describe('robots and sitemap', () => {
       'https://dragon-point.test/en',
       'https://dragon-point.test/ka',
       'https://dragon-point.test/ru',
+      'https://dragon-point.test/he',
     ]);
     expect(buildSitemap(config)[0].alternates?.languages).toEqual({
       en: 'https://dragon-point.test/en',
       ka: 'https://dragon-point.test/ka',
       ru: 'https://dragon-point.test/ru',
+      he: 'https://dragon-point.test/he',
       'x-default': 'https://dragon-point.test/en',
     });
   });
@@ -234,7 +238,7 @@ describe('JSON-LD framework', () => {
     });
     expect(graph['@graph'][2]).toMatchObject({
       publisher: { '@id': 'https://dragon-point.test/#organization' },
-      inLanguage: ['en', 'ka', 'ru'],
+      inLanguage: ['en', 'ka', 'ru', 'he'],
     });
     for (const entity of graph['@graph']) {
       for (const field of [

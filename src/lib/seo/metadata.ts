@@ -16,6 +16,7 @@ const ogLocales: Record<Locale, string> = {
   en: 'en_US',
   ka: 'ka_GE',
   ru: 'ru_RU',
+  he: 'he_IL',
 };
 
 export function buildLocaleMetadata(

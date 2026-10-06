@@ -4,8 +4,9 @@
 body {
   background: var(--dp-off-white);
   color: var(--dp-obsidian);
-  font-family: var(--font-firago), Arial, sans-serif;
+  font-family: var(--dp-font-family);
   line-height: 1.6;
+  text-align: start;
 }
 
 ::selection {
@@ -19,7 +20,7 @@ body {
 }
 
 .dp-container {
-  width: min(100% - var(--dp-gutter) * 2, var(--dp-container));
+  inline-size: min(100% - var(--dp-gutter) * 2, var(--dp-container));
   margin-inline: auto;
 }
 
@@ -33,8 +34,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
+  min-inline-size: 2.75rem;
+  min-block-size: 2.75rem;
   border-radius: var(--dp-radius-sm);
   text-decoration: underline;
   text-underline-offset: var(--dp-space-1);
@@ -48,10 +49,11 @@ body {
 
 .dp-skip-link {
   position: fixed;
-  top: var(--dp-space-4);
-  left: var(--dp-space-4);
+  inset-block-start: var(--dp-space-4);
+  inset-inline-start: var(--dp-space-4);
   z-index: 10;
-  padding: var(--dp-space-3) var(--dp-space-4);
+  padding-block: var(--dp-space-3);
+  padding-inline: var(--dp-space-4);
   background: var(--dp-off-white);
   color: var(--dp-obsidian);
   transform: translateY(-200%);

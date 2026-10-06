@@ -1,5 +1,15 @@
 import localFont from 'next/font/local';
 
+export const notoHebrew = localFont({
+  src: '../assets/fonts/hebrew/NotoSansHebrew-Variable.ttf',
+  weight: '100 900',
+  style: 'normal',
+  variable: '--font-noto-hebrew',
+  display: 'swap',
+  preload: false,
+  fallback: ['Arial', 'sans-serif'],
+});
+
 export const firago = localFont({
   src: [
     {
