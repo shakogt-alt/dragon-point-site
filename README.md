@@ -1,4 +1,4 @@
-# Dragon Point — Core UI and SEO
+# Dragon Point — Landing, Lead System and SEO
 
 Repository: `shakogt-alt/dragon-point-site`. Working branch: `codex/landing-mvp`.
 Read `AGENTS.md` and `CODEX_TASK.md` before changing the application.
@@ -54,21 +54,71 @@ test fixtures only; tests never make network requests to them or deploy them.
 - `src/components/layout`: shared Landing, progressively enhanced Header and Footer.
 - `src/components/ui`: dictionary-driven language navigation, action links,
   typographic logo and replaceable decorative architecture SVG.
-- `src/components/sections`: Hero, goals, comparison, standard, services and technology.
+- `src/components/sections`: Hero, goals, comparison, standard, services, technology
+  and the shared lead section.
+- `src/components/leads`: React Hook Form, intent/focus enhancement and mobile CTA.
 - `src/lib/seo`: shared environment policy, metadata, crawlers and JSON-LD builders.
 - `src/proxy.ts`: environment-aware X-Robots-Tag response guard.
 - `src/app/robots.ts`, `sitemap.ts`: runtime crawler documents.
-- `src/lib/leads`, `src/lib/validation`, `src/app/api/leads`: reserved for Phase 4.
+- `src/lib/leads`, `src/lib/validation`, `src/app/api/leads`: attribution, bounded
+  schema/server validation, rate limiter and optional webhook service.
 - `src/lib/analytics`: reserved for Phase 5.
 
 Reserved directories use `.gitkeep`; they do not publish placeholder APIs or
-future SEO pages. Core UI sections render on the server; only Header adds client
-enhancements for sticky state, disclosures and keyboard focus. Native mobile
+future SEO pages. Core UI sections render on the server; Header, form and mobile
+CTA add client enhancements. Native mobile
 disclosures and all anchor/language links also work without JavaScript.
-Goal CTAs carry `data-intent` for the Phase 4 handoff and currently link to the
-honest advisor/contact placeholder in the footer. There is no lead form or
-integration. Privacy copy is an inline pending-input disclosure, not a future page.
+Goal card/CTA actions preselect intent and focus the form at `#advisor`; Hero and
+advisor links target it too. Real contact information remains pending at
+`#contact` in the footer. Privacy copy is an inline pending-input disclosure, not
+a future page. The form requires JavaScript; it renders disabled before hydration
+and has a localized noscript explanation, avoiding accidental URL-based PII submission.
 Comparison cards contain explicitly labeled qualitative examples, not market data.
+
+## Lead delivery and attribution
+
+Name and Phone are required; Email, Budget and Message are optional. Preferred
+language is distinct from the page locale. International phones accept 7–15
+digits, formatting separators and +/00 country-code prefixes. This is format
+validation, not verification of ownership or national numbering plans.
+
+The server accepts JSON only, checks same-origin browser requests, limits the
+streaming body to 16 KiB, validates the strict Zod contract and rejects honeypot
+submissions before delivery. Replies contain only generic status codes, with
+no-store/noindex headers. Neither lead payloads nor backend error details are logged.
+
+`LEAD_WEBHOOK_URL` and optional `LEAD_WEBHOOK_TOKEN` are server-only settings.
+Leave them blank until the real recipient is supplied. The receiver must accept
+JSON and persist the enquiry before returning 2xx. Only HTTPS destinations are
+accepted; redirects are rejected; delivery times out after 8 seconds. A missing
+or failed destination returns 503 and a localized retry message. No enquiry is
+silently discarded or reported successful. There is no local durable queue, CRM
+or KleekTo connection. Confirm privacy copy before enabling public collection.
+
+Rate limiting is bounded and per process: on Vercel, five attempts per client in
+ten minutes using its platform [x-vercel-forwarded-for header](https://vercel.com/docs/headers/request-headers#x-vercel-forwarded-for);
+elsewhere, untrusted forwarded headers are ignored and a shared budget allows
+twenty attempts per minute. Cold starts/other instances have separate budgets;
+distributed protection can be added when deployment infrastructure is known.
+
+First-touch `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`,
+`gclid`, `fbclid`, referrer and landingUrl persist in session storage across
+locale navigation. No form fields or personal contact details are stored there.
+Blocked/corrupt storage falls back to current-page attribution without preventing
+submission. The server fixes source to `dragon-point-landing` and validates all
+attribution fields; attribution is contextual, not trusted for authorization.
+
+The mobile CTA appears after Hero below 768 px, respects safe-area padding and
+hides for visible form, editable focus/keyboard or open navigation. Future
+consent UI can set `html[data-consent-ui="open"]` or mark a visible element with
+`data-consent-overlay`; either hides the CTA. No consent/tracking provider is
+activated. Scrolling is immediate and honors reduced motion.
+
+Tests clear webhook settings for every E2E server. Success/error UI uses isolated
+HTTP response fixtures; server/adapter unit tests verify actual validation and
+delivery outcomes. The unconfigured API is tested directly and never sends
+synthetic leads to a real recipient. Phase 4 review images live in
+`docs/screenshots/phase-4`.
 
 ## SEO configuration
 
@@ -129,5 +179,5 @@ No KleekTo code, credentials or integration is touched.
 
 ## Phase gate
 
-Phase 3 stops after verification, a separate commit, push and report.
-Phase 4 requires explicit user confirmation.
+Phase 4 stops after verification, a separate commit, push and report.
+Phase 5 requires explicit user confirmation.

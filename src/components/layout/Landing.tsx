@@ -8,6 +8,8 @@ import { BetterDecisions } from '@/components/sections/BetterDecisions';
 import { DragonPointStandard } from '@/components/sections/DragonPointStandard';
 import { Services } from '@/components/sections/Services';
 import { Technology } from '@/components/sections/Technology';
+import { LeadSection } from '@/components/sections/LeadSection';
+import { MobileLeadCTA } from '@/components/leads/MobileLeadCTA';
 
 export function Landing({
   locale,
@@ -37,8 +39,10 @@ export function Landing({
         <DragonPointStandard copy={messages.landing.standard} />
         <Services copy={messages.landing.services} />
         <Technology messages={messages} />
+        <LeadSection locale={locale} copy={messages.landing.lead} />
       </main>
       <Footer locale={locale} messages={messages} />
+      <MobileLeadCTA label={messages.landing.lead.submit} />
     </>
   );
 }

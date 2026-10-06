@@ -26,7 +26,9 @@ export function Hero({ messages }: { messages: Messages }) {
           </p>
           <p className="dp-hero-description">{copy.description}</p>
           <div className="dp-actions">
-            <ActionLink href="#goals">{copy.primary}</ActionLink>
+            <ActionLink href="#advisor" intent="buy">
+              {copy.primary}
+            </ActionLink>
             <ActionLink href="#advisor" secondary>
               {copy.secondary}
             </ActionLink>

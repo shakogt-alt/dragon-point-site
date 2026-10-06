@@ -32,7 +32,7 @@ for (const locale of locales) {
       await expect(page.locator(`#${id}`)).toBeVisible();
     await expect(page.locator('#services article')).toHaveCount(4);
     await expect(page.locator('.dp-process > li')).toHaveCount(6);
-    await expect(page.locator('form, input, textarea')).toHaveCount(0);
+    await expect(page.locator('#lead-form')).toHaveCount(1);
     await expect(page.locator('.dp-desktop-nav')).toBeVisible();
     await expect(page.locator('.dp-mobile-menu')).toBeHidden();
     await page.locator('.dp-desktop-nav a[href="#standard"]').click();

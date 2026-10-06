@@ -7,7 +7,12 @@
     "description": "Buy, sell and invest in real estate in Georgia with market analysis, property verification and professional deal support. Dragon Point — Real Estate Intelligence.",
     "imageAlt": "Dragon Point — Real Estate Intelligence for Georgia"
   },
-  "languageLabels": { "en": "EN", "ka": "KA", "ru": "RU", "he": "HE" },
+  "languageLabels": {
+    "en": "EN",
+    "ka": "KA",
+    "ru": "RU",
+    "he": "HE"
+  },
   "brand": {
     "name": "DRAGON POINT",
     "descriptor": "REAL ESTATE INTELLIGENCE",
@@ -164,6 +169,53 @@
       "privacyNotice": "Privacy policy awaiting legal review. Enquiry channels and data collection terms will be published before enquiries open.",
       "back": "Back to top",
       "note": "SEE THE DEAL CLEARLY."
+    },
+    "lead": {
+      "eyebrow": "YOUR NEXT STEP",
+      "title": "What are you looking for?",
+      "description": "Tell us your goal. A clear next step starts with the right information.",
+      "intent": "Your goal",
+      "intents": {
+        "buy": "Buy",
+        "invest": "Invest",
+        "sell": "Sell"
+      },
+      "labels": {
+        "name": "Name",
+        "phone": "Phone / WhatsApp",
+        "email": "Email (optional)",
+        "budget": "Budget (optional)",
+        "message": "Message (optional)",
+        "preferredLanguage": "Preferred language",
+        "website": "Website"
+      },
+      "languages": {
+        "en": "English",
+        "ka": "ქართული",
+        "ru": "Русский",
+        "he": "עברית"
+      },
+      "requiredMark": "*",
+      "required": "Fields marked * are required.",
+      "phoneHint": "International numbers welcome. Include your country code.",
+      "submit": "Talk to an Advisor",
+      "sending": "Sending…",
+      "success": "Thank you. A Dragon Point advisor will contact you shortly.",
+      "another": "Send another enquiry",
+      "error": "We could not send your enquiry. Your details are still here. Please try again later.",
+      "rateError": "Please wait a few minutes before trying again. Your details are still here.",
+      "noScript": "Please enable JavaScript to use the enquiry form. Contact information will be published below once confirmed.",
+      "privacyLink": "Privacy",
+      "errors": {
+        "intent": "Choose Buy, Invest or Sell.",
+        "name": "Enter your name (2–120 characters).",
+        "phone": "Enter a valid phone number, including your country code.",
+        "email": "Enter a valid email address or leave this field empty.",
+        "budget": "Keep the budget under 120 characters.",
+        "message": "Keep your message under 2,000 characters.",
+        "preferredLanguage": "Choose a preferred language.",
+        "website": "Please try again."
+      }
     }
   },
   "foundation": {

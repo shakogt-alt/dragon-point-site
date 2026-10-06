@@ -13,7 +13,7 @@ export function Footer({
 }) {
   const copy = messages.landing.footer;
   return (
-    <footer id="advisor" tabIndex={-1} className="dp-footer dp-dark">
+    <footer id="contact" tabIndex={-1} className="dp-footer dp-dark">
       <div className="dp-container">
         <div className="dp-footer-intro">
           <h2>{copy.title}</h2>

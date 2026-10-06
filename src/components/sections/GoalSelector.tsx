@@ -25,6 +25,7 @@ export function GoalSelector({ copy }: { copy: Messages['landing']['goals'] }) {
               id={intents[index]}
               key={item.number}
               tabIndex={-1}
+              data-intent={intents[index]}
             >
               <span className="dp-index" dir="ltr">
                 {item.number}
