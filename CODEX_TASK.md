@@ -15,7 +15,7 @@ Dragon Point is **not** a conventional property listing portal. It is positioned
 - Brand essence: **CLARITY + CONTROL**
 - Lead idea: **NOT MORE LISTINGS. BETTER DECISIONS.**
 - Primary geography: **Tbilisi · Batumi · Georgia**
-- Languages: **EN / KA / RU**
+- Languages: **EN / KA / RU / HE**
 - Analytical framework: **MARKET → PRICE → PROPERTY → RISK → RETURN → DEAL**
 
 ## Non-negotiable visual system
@@ -32,6 +32,7 @@ Use Dragon Violet sparingly, mostly for CTAs, highlights, data markers, and digi
 
 Typography:
 - **FiraGO** for Latin, Georgian, and Cyrillic.
+- For Hebrew, use a high-quality Hebrew web font that is visually compatible with FiraGO; self-host if practical and licensing permits. Do not rely on unsupported glyph fallback.
 - Prefer Regular / Medium / SemiBold / Bold.
 
 Visual principle:
@@ -92,6 +93,7 @@ Routes:
 - `/en`
 - `/ka`
 - `/ru`
+- `/he`
 
 Root `/` should server-redirect to `/en` for MVP.
 
@@ -99,6 +101,13 @@ Use one component tree and locale dictionaries, e.g.:
 - `messages/en.json`
 - `messages/ka.json`
 - `messages/ru.json`
+- `messages/he.json`
+
+Hebrew requirements:
+- `/he` must render with `lang="he"` and `dir="rtl"` at the document level.
+- Use CSS logical properties and direction-aware UI so RTL works without a separate component tree.
+- Navigation, section layouts, process arrows, icon placement, form alignment, and mobile menu behavior must be reviewed in RTL.
+- Do not machine-translate Hebrew at runtime; use reviewed locale copy.
 
 No runtime machine translation.
 
@@ -112,7 +121,7 @@ Desktop:
 - Invest
 - Sell
 - How We Work
-- EN / KA / RU
+- EN / KA / RU / HE
 - Talk to an Advisor
 
 Use anchor navigation for MVP.
@@ -308,7 +317,7 @@ type LeadPayload = {
   email?: string
   budget?: string
   message?: string
-  locale: 'en' | 'ka' | 'ru'
+  locale: 'en' | 'ka' | 'ru' | 'he'
   source: string
   utmSource?: string
   utmMedium?: string
@@ -336,6 +345,7 @@ Indexable:
 - `/en`
 - `/ka`
 - `/ru`
+- `/he`
 
 Each locale page uses a self-canonical.
 
@@ -343,6 +353,7 @@ hreflang:
 - en
 - ka
 - ru
+- he
 - x-default → /en
 
 Do not use aggressive geo redirects.
@@ -358,12 +369,20 @@ RU:
 KA:
 Create a natural professional Georgian equivalent, not keyword-stuffed literal translation.
 
+HE:
+`נדל״ן בגאורגיה | קנייה, השקעה ומכירה | Dragon Point`
+
+Use natural professional Hebrew aimed at Hebrew-speaking buyers and investors interested in Georgia; do not use literal or keyword-stuffed translations.
+
 ### Meta descriptions
 
 Create a unique, natural description for each locale.
 
 EN baseline:
 `Buy, sell and invest in real estate in Georgia with market analysis, property verification and professional deal support. Dragon Point — Real Estate Intelligence.`
+
+HE baseline:
+`קנו, מכרו והשקיעו בנדל״ן בגאורגיה עם ניתוח שוק, בדיקת נכסים וליווי מקצועי לאורך העסקה. Dragon Point — Real Estate Intelligence.`
 
 ### Primary keyword themes
 
@@ -390,12 +409,26 @@ RU:
 KA:
 Use natural Georgian semantic wording; do not just translate Russian keywords word-for-word.
 
+HE:
+Use natural Hebrew search language for Georgia real estate, including themes such as:
+- נדל״ן בגאורגיה
+- קניית נכס בגאורגיה
+- דירות למכירה בטביליסי
+- נדל״ן בטביליסי
+- נדל״ן בבטומי
+- השקעות נדל״ן בגאורגיה
+- השקעה בנדל״ן בטביליסי
+
+Do not stuff keywords or translate English/Russian phrases mechanically.
+
 ### Heading structure
 
 Exactly one H1 per locale page.
 
 Recommended H1:
 `Real Estate Intelligence for Georgia`
+
+For Hebrew, use a natural semantic equivalent rather than displaying the English H1 as the only heading.
 
 Suggested hierarchy:
 - H2 Start with your goal
@@ -414,6 +447,8 @@ Add JSON-LD framework for:
 - Organization
 - RealEstateAgent
 - WebSite
+
+`WebSite.inLanguage` must include `en`, `ka`, `ru`, and `he`.
 
 Only populate known data.
 
@@ -436,6 +471,8 @@ Per locale:
 - og:locale
 - og:locale:alternate
 - og:url
+
+Use `he_IL` for the Hebrew Open Graph locale while keeping the URL locale and hreflang as `he`.
 - twitter:card = summary_large_image
 
 Prepare support for a branded 1200×630 OG image.
@@ -607,6 +644,7 @@ src/
     en.json
     ka.json
     ru.json
+    he.json
   styles/
 ```
 
@@ -647,6 +685,8 @@ Test at least:
 - 1440
 - 1920
 
+For `/he`, run the same responsive matrix in RTL and verify no mirrored-layout regressions, clipped text, incorrect arrow direction, or LTR-only spacing assumptions.
+
 ## Motion
 
 Keep restrained:
@@ -685,7 +725,7 @@ Minimal:
 - contact placeholders
 - social placeholders only if actual URLs exist
 - Privacy
-- EN / KA / RU
+- EN / KA / RU / HE
 - Powered by KleekTo
 
 Do not add dead social links.
@@ -721,7 +761,8 @@ SEO checks:
 ## Definition of Done
 
 MVP is complete when:
-- EN / KA / RU work
+- EN / KA / RU / HE work
+- Hebrew `/he` renders correctly in RTL with `lang="he"` and `dir="rtl"`
 - all approved landing sections are implemented
 - mobile-first layout is complete
 - lead form works with safe placeholder integration
@@ -760,6 +801,14 @@ Work in small reviewable commits.
 - sitemap
 - JSON-LD framework
 - OG framework
+
+### Phase 2A — Hebrew Locale & SEO Amendment
+- add `/he` locale and reviewed Hebrew dictionary
+- add document-level RTL support without a separate component tree
+- update locale routing and switcher
+- add Hebrew metadata, canonical, hreflang, sitemap, JSON-LD language list and OG locale
+- extend SEO/unit/E2E coverage to Hebrew and RTL
+- keep x-default → /en
 
 ### Phase 3 — Core UI
 - Header
