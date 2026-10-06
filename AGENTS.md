@@ -50,6 +50,7 @@ unless explicitly approved.
 
 ## Engineering rules
 - Use small, reviewable commits.
+- EN / KA / RU / HE must share one component tree; Hebrew must use document-level RTL (`lang="he"`, `dir="rtl"`) and direction-aware CSS/UI rather than a separate implementation.
 - Prefer simple implementations over unnecessary abstractions.
 - Keep brand tokens centralized.
 - Keep locale content outside presentation components.
@@ -60,14 +61,15 @@ unless explicitly approved.
 
 ## SEO rules
 SEO must be implemented as part of the core app:
-- /en /ka /ru
+- /en /ka /ru /he
 - self-canonical
-- hreflang
-- sitemap
+- hreflang including `he`, with x-default → /en
+- sitemap including all four locale URLs
 - robots
 - localized metadata
 - JSON-LD
-- Open Graph
+- Open Graph, with `he_IL` for Hebrew
+- Hebrew localized title/description and natural search semantics
 - staging/preview noindex
 - exactly one H1 per locale page
 
@@ -78,6 +80,7 @@ Before marking work complete:
 - run unit tests
 - run E2E tests where available
 - verify mobile layout
+- verify Hebrew RTL at all required breakpoints
 - verify accessibility basics
 - verify no console errors
 - verify no broken links
