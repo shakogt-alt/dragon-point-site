@@ -1,5 +1,10 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { necessaryOnly } from './consent-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await necessaryOnly(page);
+});
 
 const locales = ['en', 'ka', 'ru', 'he'] as const;
 const widths = [360, 390, 430, 768, 1024, 1280, 1440, 1920];
@@ -214,16 +219,9 @@ for (const locale of locales) {
           fullPage: true,
         });
         await page.screenshot({
-          path: `docs/screenshots/visual-assets-pass/${locale}-${width}.png`,
+          path: `docs/screenshots/phase-5/${locale}-${width}-landing.png`,
           fullPage: true,
         });
-        if (locale === 'en') {
-          await page.locator('#hero').screenshot({
-            path: `docs/screenshots/visual-assets-pass/en-${width}-hero-after.png`,
-            style:
-              '.dp-header,.dp-skip-link,.dp-mobile-lead-cta {visibility:hidden !important}',
-          });
-        }
       }
       expect(errors).toEqual([]);
     });

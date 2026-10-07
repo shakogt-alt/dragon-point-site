@@ -1,5 +1,10 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { necessaryOnly } from './consent-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await necessaryOnly(page);
+});
 
 const locales = ['en', 'ka', 'ru', 'he'] as const;
 const widths = [360, 390, 430, 768, 1024, 1280, 1440, 1920];

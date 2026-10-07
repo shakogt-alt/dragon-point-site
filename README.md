@@ -1,4 +1,4 @@
-# Dragon Point — Landing, Lead System and SEO
+# Dragon Point — Landing, Leads, SEO and Analytics Readiness
 
 Repository: `shakogt-alt/dragon-point-site`. Working branch: `codex/landing-mvp`.
 Read `AGENTS.md` and `CODEX_TASK.md` before changing the application.
@@ -39,6 +39,9 @@ SEO tests cover rendered metadata, reciprocal hreflang, JSON-LD, robots and
 sitemap, production indexability, preview/staging noindex and missing-domain
 behavior. The reserved `https://dragon-point.test` origin and image URLs are
 test fixtures only; tests never make network requests to them or deploy them.
+Consent tests cover first visits, purpose gating, persistence/reopening, keyboard
+flow, cross-tab revocation, blocked storage, sticky CTA coordination and privacy
+of funnel/language events. E2E builds and servers leave provider IDs empty.
 
 ## Architecture
 
@@ -62,7 +65,9 @@ test fixtures only; tests never make network requests to them or deploy them.
 - `src/app/robots.ts`, `sitemap.ts`: runtime crawler documents.
 - `src/lib/leads`, `src/lib/validation`, `src/app/api/leads`: attribution, bounded
   schema/server validation, rate limiter and optional webhook service.
-- `src/lib/analytics`: reserved for Phase 5.
+- `src/lib/analytics`: strict event contract, consent persistence, purpose-gated
+  runtime and lazy GA4/GTM/Meta adapters.
+- `src/components/analytics`: shared localized consent banner/dialog and Footer settings.
 
 Reserved directories use `.gitkeep`; they do not publish placeholder APIs or
 future SEO pages. Core UI sections render on the server; Header, form and mobile
@@ -109,16 +114,30 @@ submission. The server fixes source to `dragon-point-landing` and validates all
 attribution fields; attribution is contextual, not trusted for authorization.
 
 The mobile CTA appears after Hero below 768 px, respects safe-area padding and
-hides for visible form, editable focus/keyboard or open navigation. Future
-consent UI can set `html[data-consent-ui="open"]` or mark a visible element with
-`data-consent-overlay`; either hides the CTA. No consent/tracking provider is
-activated. Scrolling is immediate and honors reduced motion.
+hides for visible form, editable focus/keyboard or open navigation. The shared
+consent UI sets `html[data-consent-ui="open"]` and uses `data-consent-overlay`;
+either hides the CTA. Scrolling is immediate and honors reduced motion.
 
 Tests clear webhook settings for every E2E server. Success/error UI uses isolated
 HTTP response fixtures; server/adapter unit tests verify actual validation and
 delivery outcomes. The unconfigured API is tested directly and never sends
 synthetic leads to a real recipient. Phase 4 review images live in
 `docs/screenshots/phase-4`.
+
+## Analytics readiness
+
+Necessary features are always available. Analytics and Marketing start disabled;
+no optional providers load before their required consent. Choices persist for
+180 days, reopen from Footer settings and synchronize across tabs. Invalid or
+expired records fail closed; blocked storage retains a current-visit choice only.
+No personal lead values, attribution, URLs or raw error details enter events.
+
+GA4, GTM and Meta adapters are prepared with empty environment IDs. GTM replaces
+direct GA4 and requires both optional categories plus an audited consent-aware
+container. Automatic vendor collection and account settings require an activation
+review. Vendors deliberately stay blocked on unsafe URL/referrer context,
+including UTM query pages, without changing lead attribution. See the full
+[event and activation contract](src/lib/analytics/README.md).
 
 ## SEO configuration
 
@@ -169,6 +188,9 @@ keyboard order remain shared across locales.
 Full-page Phase 3 screenshots are saved in `docs/screenshots/phase-3`: EN desktop
 1440, EN mobile 390, KA mobile 390, RU desktop 1440, HE desktop 1440 and HE mobile 390. Typographic brand compositions and original CSS/SVG geometry are
 replaceable when approved logo and photography are supplied.
+The approved Visual Assets Integration Pass supplies the illustrative Architecture
+image used by the current Hero; its sources and prior screenshots are preserved.
+Phase 5 consent and refreshed landing screenshots live in `docs/screenshots/phase-5`.
 
 ## Production inputs
 
@@ -179,5 +201,5 @@ No KleekTo code, credentials or integration is touched.
 
 ## Phase gate
 
-Phase 4 stops after verification, a separate commit, push and report.
-Phase 5 requires explicit user confirmation.
+Phase 5 stops after verification, a separate commit, push and report.
+Phase 6 requires explicit user confirmation.

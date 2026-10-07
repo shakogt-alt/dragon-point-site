@@ -2,6 +2,7 @@
 @import './tokens.css';
 @import './landing.css';
 @import './leads.css';
+@import './consent.css';
 
 body {
   background: var(--dp-off-white);

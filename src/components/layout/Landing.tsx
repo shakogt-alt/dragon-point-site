@@ -10,6 +10,7 @@ import { Services } from '@/components/sections/Services';
 import { Technology } from '@/components/sections/Technology';
 import { LeadSection } from '@/components/sections/LeadSection';
 import { MobileLeadCTA } from '@/components/leads/MobileLeadCTA';
+import { ConsentManager } from '@/components/analytics/ConsentManager';
 
 export function Landing({
   locale,
@@ -43,6 +44,7 @@ export function Landing({
       </main>
       <Footer locale={locale} messages={messages} />
       <MobileLeadCTA label={messages.landing.lead.submit} />
+      <ConsentManager copy={messages.consent} />
     </>
   );
 }

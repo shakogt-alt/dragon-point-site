@@ -223,5 +223,31 @@
     "heading": "Real Estate Intelligence for Georgia",
     "status": "Website in preparation",
     "description": "The Dragon Point website is being prepared."
+  },
+  "consent": {
+    "title": "Your privacy choices",
+    "description": "Necessary features keep this site and enquiry form working. Optional analytics and marketing run only with your permission.",
+    "categories": "Consent categories",
+    "necessary": {
+      "title": "Necessary",
+      "description": "Navigation, security, your privacy choice and enquiry attribution. Always active."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "Help us understand how the site and enquiry journey are used, without sending your contact details or message."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Allow optional campaign measurement. Your contact details and enquiry message are not used for tracking."
+    },
+    "alwaysOn": "Always on",
+    "reject": "Necessary only",
+    "accept": "Accept all",
+    "customize": "Choose preferences",
+    "save": "Save preferences",
+    "close": "Close",
+    "settings": "Privacy settings",
+    "persistence": "Your choice is saved for 180 days. You can change it at any time in Privacy settings.",
+    "sessionOnly": "Your browser could not save this choice. It applies to this visit only."
   }
 }

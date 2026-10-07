@@ -15,6 +15,7 @@ import {
 import { captureFirstTouch } from '@/lib/leads/attribution';
 import { buildLeadPayload } from '@/lib/leads/payload';
 import { Arrow } from '@/components/ui/Arrow';
+import { trackAnalytics } from '@/lib/analytics/client';
 
 const subscribe = () => () => {};
 const hydrated = () => true;
@@ -115,6 +116,8 @@ export function LeadForm({
   }, [status]);
 
   const submit = async (values: LeadFormValues) => {
+    const measurement = { locale, intent: values.intent, surface: 'lead' };
+    trackAnalytics('lead_form_submit', measurement);
     setStatus('idle');
     try {
       const response = await fetch('/api/leads', {
@@ -136,9 +139,20 @@ export function LeadForm({
       ) {
         reset();
         setStatus('success');
-      } else setStatus(response.status === 429 ? 'rate' : 'error');
+        trackAnalytics('lead_form_success', measurement);
+      } else {
+        setStatus(response.status === 429 ? 'rate' : 'error');
+        trackAnalytics('lead_form_error', {
+          ...measurement,
+          errorKind: response.status === 429 ? 'rate' : 'delivery',
+        });
+      }
     } catch {
       setStatus('error');
+      trackAnalytics('lead_form_error', {
+        ...measurement,
+        errorKind: 'delivery',
+      });
     }
   };
   const errorFor = (key: keyof LeadFormValues) =>
@@ -184,7 +198,13 @@ export function LeadForm({
     <form
       id="lead-form"
       onSubmit={(event) => {
-        void handleSubmit(submit)(event);
+        void handleSubmit(submit, () => {
+          trackAnalytics('lead_form_error', {
+            locale,
+            surface: 'lead',
+            errorKind: 'validation',
+          });
+        })(event);
       }}
       action="/api/leads"
       method="post"

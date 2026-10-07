@@ -13,6 +13,7 @@ export function LanguageSwitcher({ locale, label, labels }: Props) {
           lang={language}
           dir="ltr"
           hrefLang={language}
+          data-language={language}
           aria-current={language === locale ? 'page' : undefined}
           className="dp-language"
         >

@@ -3,6 +3,7 @@ import type { Messages } from '@/lib/i18n/messages';
 import { Logo } from '@/components/ui/Logo';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { Arrow } from '@/components/ui/Arrow';
+import { ConsentSettings } from '@/components/analytics/ConsentSettings';
 
 export function Footer({
   locale,
@@ -38,6 +39,7 @@ export function Footer({
               <summary>{copy.privacy}</summary>
               <p>{copy.privacyNotice}</p>
             </details>
+            <ConsentSettings copy={messages.consent} />
           </div>
           <a className="dp-back" href="#hero">
             <span>{copy.back}</span>

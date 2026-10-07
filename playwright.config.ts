@@ -56,7 +56,7 @@ export default defineConfig({
   projects: [
     {
       name: 'foundation',
-      testMatch: '**/{foundation,landing,leads}.spec.ts',
+      testMatch: '**/{foundation,landing,leads,analytics}.spec.ts',
       use: { ...devices['Desktop Chrome'] },
     },
     ...servers.map(({ name, port }) => ({
@@ -73,7 +73,15 @@ export default defineConfig({
     url: `http://127.0.0.1:${port}/en`,
     // Never send synthetic leads to delivery configuration inherited from a shell
     // or .env.local. These test servers exercise the unconfigured adapter only.
-    env: { ...env, LEAD_WEBHOOK_URL: '', LEAD_WEBHOOK_TOKEN: '', VERCEL: '' },
+    env: {
+      ...env,
+      LEAD_WEBHOOK_URL: '',
+      LEAD_WEBHOOK_TOKEN: '',
+      VERCEL: '',
+      NEXT_PUBLIC_GA_ID: '',
+      NEXT_PUBLIC_GTM_ID: '',
+      NEXT_PUBLIC_META_PIXEL_ID: '',
+    },
     reuseExistingServer: false,
     timeout: 60000,
   })),
