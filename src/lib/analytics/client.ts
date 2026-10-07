@@ -10,6 +10,7 @@ import {
 import { createAnalyticsRuntime } from './runtime';
 import type { EventName } from './events';
 import { isLocale } from '@/lib/i18n/locales';
+import { getFirstTouchAttribution } from '@/lib/leads/browser-attribution';
 
 type State = {
   initialized: boolean;
@@ -87,6 +88,8 @@ export function trackAnalytics(name: EventName, properties: unknown): boolean {
 }
 
 export function initializeAnalytics() {
+  // Explicitly capture before restoring any consent that could activate providers.
+  getFirstTouchAttribution();
   runtime ??= createAnalyticsRuntime(
     async () => {
       const {

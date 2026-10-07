@@ -58,14 +58,47 @@ delivery. Activating vendors requires the following checks:
    vendor account settings in a separate activation review before deployment.
    Consent-copy/legal approval is an owner input, not established by these tests.
 
-Vendor scripts may read URL/referrer independently of application events. The
-adapter therefore refuses loading or manual dispatch on query-bearing pages,
-unknown fragments, arbitrary paths or unsafe referrers. Allowed context consists
-of the four locale paths, approved section anchors and an empty/root/same-origin
-locale referrer. Consequently even ordinary UTM campaign pages do not load
-vendors. First-touch lead attribution is preserved unchanged; the safe neutral
-event bus can still operate after consent. This deliberate privacy limitation
-must be considered before activation, without rewriting the landing URL.
+Vendor scripts may read URL/referrer independently of application events. Phase
+5B therefore uses an explicit sequence, independent of React effect order:
+
+1. `getFirstTouchAttribution()` captures the original document into the existing
+   session-storage attribution system and a document-local memory cache.
+2. After required consent, a configured adapter calls `prepareProviderContext()`
+   before vendor commands or download. It captures first, removes every query
+   parameter and any unapproved hash via `history.replaceState`, then validates
+   the actual browser URL/referrer. Locale, approved anchors and history state
+   are preserved. There is no reload or synthetic navigation event.
+3. Only the validated context permits provider loading and manual events.
+
+Normal UTM/gclid/fbclid campaign pages can now activate vendors after consent.
+Raw campaign values stay exclusively in lead attribution; the event allowlist
+does not expose them. LeadForm reads the same cached original record even if it
+mounts after cleanup or session storage is blocked. Root `/` preserves the query
+in its server redirect to `/en` so it can be captured there.
+
+`safeTrackingContext()` remains strict about raw queries, unapproved fragments
+and arbitrary routes. Failed capture/cleanup or unsafe immutable referrer stays
+blocked. An empty referrer, an HTTP(S) origin-only external referrer, or a clean
+same-origin locale referrer is allowed; arbitrary cross-origin paths/queries are
+not rewritten or passed to vendors. With no valid provider IDs, there is no vendor
+loading or URL cleanup. No changes to consent wording/categories or lead payload.
+
+Mocked browser activation tests use separate synthetic-ID builds:
+
+```powershell
+$env:NEXT_PUBLIC_GA_ID='G-TESTONLY'
+$env:NEXT_PUBLIC_GTM_ID=''
+$env:NEXT_PUBLIC_META_PIXEL_ID='1234567890'
+npm run build
+$env:DP_TEST_PROVIDER='ga-meta'
+npx playwright test --config tests/e2e/campaign.config.ts
+# Repeat with GA/Meta empty, GTM='GTM-TESTONLY', DP_TEST_PROVIDER='gtm'.
+# Then clear all three IDs, rebuild, and run the normal full E2E suite.
+```
+
+The dedicated fixture intercepts all cross-origin requests and fulfills vendor
+scripts locally. Never run that test build as a deployment artifact; restore the
+blank-ID production build. Actual accounts still require the activation review.
 
 Removing a downloaded script cannot undo its execution. Explicit GA disable,
 Meta revoke and GTM consent updates complement the runtime gate; known vendor

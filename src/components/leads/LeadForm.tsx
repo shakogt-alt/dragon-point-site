@@ -12,7 +12,7 @@ import {
   type LeadFormValues,
   type Attribution,
 } from '@/lib/validation/lead';
-import { captureFirstTouch } from '@/lib/leads/attribution';
+import { getFirstTouchAttribution } from '@/lib/leads/browser-attribution';
 import { buildLeadPayload } from '@/lib/leads/payload';
 import { Arrow } from '@/components/ui/Arrow';
 import { trackAnalytics } from '@/lib/analytics/client';
@@ -57,17 +57,7 @@ export function LeadForm({
   });
 
   useEffect(() => {
-    let storage: Storage | undefined;
-    try {
-      storage = window.sessionStorage;
-    } catch {
-      /* Private browsing can block storage. */
-    }
-    attribution.current = captureFirstTouch(
-      storage,
-      location.href,
-      document.referrer,
-    );
+    attribution.current = getFirstTouchAttribution();
     const activate = (event: MouseEvent) => {
       if (
         event.button !== 0 ||

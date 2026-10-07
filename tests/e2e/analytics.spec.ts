@@ -5,6 +5,63 @@ const locales = ['en', 'ka', 'ru', 'he'] as const;
 const widths = [360, 390, 430, 768, 1024, 1280, 1440, 1920];
 const key = 'dragon-point:consent:v1';
 
+for (const [locale, campaign] of [
+  ['en', 'utm_source=google&utm_campaign=test'],
+  ['he', 'utm_source=meta&fbclid=test'],
+] as const) {
+  test(`${locale}: missing IDs preserve campaign attribution without loading vendors`, async ({
+    page,
+  }) => {
+    const requests: string[] = [];
+    page.on('request', (request) => {
+      if (/googletagmanager|google-analytics|facebook/.test(request.url()))
+        requests.push(request.url());
+    });
+    const response = await page.goto(`/${locale}?${campaign}`);
+    const original = response!.url();
+    await expect(page.locator('[data-consent-settings]')).toBeEnabled();
+    await page.locator('[data-consent-action="all"]').click();
+    await expect(page).toHaveURL(original);
+    await expect(page.locator('html')).toHaveAttribute(
+      'dir',
+      locale === 'he' ? 'rtl' : 'ltr',
+    );
+    await page.locator('#lead-name').fill('Test Person');
+    await page.locator('#lead-phone').fill('+972 50 123 4567');
+    let submitted: Record<string, unknown> = {};
+    await page.route('**/api/leads', async (route) => {
+      submitted = route.request().postDataJSON();
+      await route.fulfill({ json: { ok: true } });
+    });
+    await page.locator('.dp-lead-submit').click();
+    await expect(page.locator('.dp-lead-success')).toBeVisible();
+    expect(submitted.landingUrl).toBe(original);
+    expect(submitted.utm_source).toBe(locale === 'en' ? 'google' : 'meta');
+    expect(requests).toEqual([]);
+  });
+}
+
+test('root campaign redirect preserves query for localized first-touch capture', async ({
+  page,
+}) => {
+  await page.goto(
+    '/?utm_source=google&utm_campaign=test&fbclid=one&fbclid=two',
+  );
+  await expect(page).toHaveURL(
+    '/en?utm_source=google&utm_campaign=test&fbclid=one&fbclid=two',
+  );
+  await expect(page.locator('[data-consent-settings]')).toBeEnabled();
+  expect(
+    await page.evaluate(() =>
+      JSON.parse(sessionStorage.getItem('dragon-point:first-touch:v1')!),
+    ),
+  ).toMatchObject({
+    utm_source: 'google',
+    utm_campaign: 'test',
+    fbclid: 'one',
+  });
+});
+
 for (const locale of locales) {
   test(`${locale}: first visit, necessary-only, reopening, keyboard and sticky CTA`, async ({
     page,

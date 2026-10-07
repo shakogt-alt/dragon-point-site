@@ -135,8 +135,10 @@ No personal lead values, attribution, URLs or raw error details enter events.
 GA4, GTM and Meta adapters are prepared with empty environment IDs. GTM replaces
 direct GA4 and requires both optional categories plus an audited consent-aware
 container. Automatic vendor collection and account settings require an activation
-review. Vendors deliberately stay blocked on unsafe URL/referrer context,
-including UTM query pages, without changing lead attribution. See the full
+review. Phase 5B captures first-touch explicitly, then removes queries and
+unapproved fragments without reload before consented vendor activation. Campaign
+URLs therefore work; unsafe immutable referrers still block vendors. Lead
+attribution retains the original URL and parameters. See the full
 [event and activation contract](src/lib/analytics/README.md).
 
 ## SEO configuration

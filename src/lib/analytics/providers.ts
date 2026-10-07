@@ -1,3 +1,6 @@
+import { getFirstTouchAttribution } from '../leads/browser-attribution';
+import { prepareProviderContext } from './context';
+export { safeTrackingContext } from './context';
 import type { AnalyticsEvent } from './events';
 import type { AnalyticsAdapter } from './runtime';
 
@@ -9,51 +12,6 @@ export function parseProviderConfig(input: ProviderConfig): ProviderConfig {
     config.gtmId = input.gtmId;
   if (/^\d{5,20}$/.test(input.metaId ?? '')) config.metaId = input.metaId;
   return config;
-}
-
-// Vendor scripts can collect their own URL/referrer beyond our event payload.
-// Refuse arbitrary paths, query strings and fragments instead of rewriting the
-// landing URL (which belongs to the existing first-touch attribution system).
-export function safeTrackingContext(href: string, referrer: string): boolean {
-  try {
-    const url = new URL(href);
-    if (
-      !/^https?:$/.test(url.protocol) ||
-      url.username ||
-      url.password ||
-      url.search ||
-      !/^\/(en|ka|ru|he)$/.test(url.pathname) ||
-      ![
-        '',
-        '#main',
-        '#hero',
-        '#goals',
-        '#buy',
-        '#invest',
-        '#sell',
-        '#decisions',
-        '#standard',
-        '#services',
-        '#technology',
-        '#advisor',
-        '#contact',
-      ].includes(url.hash)
-    )
-      return false;
-    if (!referrer) return true;
-    const ref = new URL(referrer);
-    return (
-      /^https?:$/.test(ref.protocol) &&
-      !ref.username &&
-      !ref.password &&
-      !ref.search &&
-      !ref.hash &&
-      (ref.pathname === '/' ||
-        (ref.origin === url.origin && /^\/(en|ka|ru|he)$/.test(ref.pathname)))
-    );
-  } catch {
-    return false;
-  }
 }
 
 export type ProviderHost = {
@@ -218,7 +176,13 @@ export function browserProviderHost(): ProviderHost {
   };
   const scripts = new Map<string, Promise<boolean>>();
   return {
-    safeContext: () => safeTrackingContext(location.href, document.referrer),
+    safeContext: () =>
+      prepareProviderContext({
+        capture: getFirstTouchAttribution,
+        href: () => location.href,
+        referrer: () => document.referrer,
+        replaceUrl: (url) => history.replaceState(history.state, '', url),
+      }),
     google,
     tag(event) {
       w.dataLayer ??= [];

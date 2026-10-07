@@ -1,9 +1,10 @@
-import { expect, it } from 'vitest';
+import { expect, it, vi } from 'vitest';
 import {
   createProviderAdapters,
   parseProviderConfig,
   safeTrackingContext,
   type ProviderHost,
+  browserProviderHost,
 } from '../../src/lib/analytics/providers';
 
 function host() {
@@ -45,6 +46,48 @@ it('empty or malformed configuration never creates tracking adapters', () => {
       metaId: 'secret',
     }),
   ).toEqual({});
+});
+
+it('browser provider boot captures campaign first-touch before cleaning its visible URL', () => {
+  const original =
+    'https://site.test/en?utm_source=google&utm_campaign=test#advisor';
+  let href = original;
+  const saved = new Map<string, string>();
+  const steps: string[] = [];
+  const marker = { framework: 'keep' };
+  vi.stubGlobal('window', {
+    sessionStorage: {
+      getItem: (key: string) => saved.get(key) ?? null,
+      setItem: (key: string, value: string) => {
+        steps.push('capture');
+        saved.set(key, value);
+      },
+    },
+  });
+  vi.stubGlobal('location', {
+    get href() {
+      return href;
+    },
+  });
+  vi.stubGlobal('document', { referrer: '' });
+  vi.stubGlobal('history', {
+    state: marker,
+    replaceState: (state: unknown, _title: string, url: string) => {
+      expect(state).toBe(marker);
+      expect(
+        JSON.parse(saved.get('dragon-point:first-touch:v1')!).landingUrl,
+      ).toBe(original);
+      steps.push('cleanup');
+      href = url;
+    },
+  });
+  try {
+    expect(browserProviderHost().safeContext()).toBe(true);
+    expect(href).toBe('https://site.test/en#advisor');
+    expect(steps).toEqual(['capture', 'cleanup']);
+  } finally {
+    vi.unstubAllGlobals();
+  }
 });
 it.each([
   ['https://site.test/he', '', true],
