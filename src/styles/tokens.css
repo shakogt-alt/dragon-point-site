@@ -12,6 +12,11 @@
   --dp-section-space: clamp(4rem, 7vw, 7rem);
   --dp-border-light: color-mix(in srgb, var(--dp-graphite) 18%, transparent);
   --dp-border-dark: color-mix(in srgb, var(--dp-titanium) 28%, transparent);
+  --dp-border-control: color-mix(
+    in srgb,
+    var(--dp-graphite) 60%,
+    var(--dp-off-white)
+  );
   --dp-header-offset: 6.5rem;
 
   --dp-space-1: 0.25rem;

@@ -54,6 +54,17 @@ export default defineConfig({
   reporter: 'list',
   use: { baseURL: 'http://127.0.0.1:3300', trace: 'retain-on-failure' },
   projects: [
+    ...(['chromium', 'firefox', 'webkit'] as const).map((browserName) => ({
+      name: `journey-${browserName}`,
+      timeout: 60000,
+      testMatch: '**/hardening.spec.ts',
+      use: { browserName },
+    })),
+    {
+      name: 'responsive',
+      testMatch: '**/responsive.spec.ts',
+      use: { ...devices['Desktop Chrome'] },
+    },
     {
       name: 'foundation',
       testMatch: '**/{foundation,landing,leads,analytics}.spec.ts',

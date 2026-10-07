@@ -48,11 +48,12 @@ const storage = () => {
   }
 };
 
-export function openConsentSettings() {
+export function openConsentSettings(trigger?: HTMLElement) {
   returnFocus =
-    document.activeElement instanceof HTMLElement
+    trigger ??
+    (document.activeElement instanceof HTMLElement
       ? document.activeElement
-      : null;
+      : null);
   returnToBanner = returnFocus?.dataset.consentAction === 'customize';
   update({ ...state, ui: 'dialog' });
 }

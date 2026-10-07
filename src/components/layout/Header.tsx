@@ -51,7 +51,11 @@ export function Header({
       const link = (event.target as Element).closest('a');
       if (!link) return;
       close();
-      if (link.hash && link.pathname === location.pathname) {
+      if (
+        link.hash &&
+        link.hash !== '#advisor' &&
+        link.pathname === location.pathname
+      ) {
         // The target's heading receives focus after the native anchor scroll.
         requestAnimationFrame(() =>
           document

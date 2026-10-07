@@ -1,11 +1,11 @@
 body {
   margin: 0;
 }
-main:focus,
-section:focus,
-footer:focus,
-article:focus {
-  outline: none;
+main:focus-visible,
+section:focus-visible,
+footer:focus-visible,
+article:focus-visible {
+  outline-offset: -2px;
 }
 section,
 footer,
@@ -435,6 +435,7 @@ summary::-webkit-details-marker {
   position: relative;
   min-inline-size: 0;
   padding-block: var(--dp-space-6);
+  padding-block-end: calc(var(--dp-space-6) + var(--dp-space-4));
   padding-inline: var(--dp-space-6);
   border-block-start: 1px solid var(--dp-border-light);
 }
@@ -735,6 +736,7 @@ summary::-webkit-details-marker {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .dp-process > li {
+    padding-block-end: var(--dp-space-6);
     padding-inline: var(--dp-space-4);
     border-inline-start: 1px solid var(--dp-border-light);
     border-block-start: 0;

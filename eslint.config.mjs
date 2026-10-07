@@ -13,6 +13,7 @@ export default defineConfig([
     'coverage/**',
     'playwright-report/**',
     'test-results/**',
+    '.superpowers/**',
     'next-env.d.ts',
   ]),
 ]);

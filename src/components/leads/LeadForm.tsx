@@ -72,12 +72,15 @@ export function LeadForm({
         'a[href="#advisor"], .dp-goal-card[data-intent]',
       );
       if (!action) return;
+      // Native fragment navigation can take focus back from the field in Firefox.
+      event.preventDefault();
+      if (location.hash !== '#advisor')
+        history.pushState(history.state, '', '#advisor');
       const intent = action.getAttribute('data-intent');
       if (intents.includes(intent as (typeof intents)[number]))
         setValue('intent', intent as LeadFormValues['intent'], {
           shouldValidate: true,
         });
-      if (!(action instanceof HTMLAnchorElement)) location.hash = 'advisor';
       requestAnimationFrame(() => {
         // Setting an already-current fragment does not scroll a card activation.
         document
@@ -104,6 +107,54 @@ export function LeadForm({
   useEffect(() => {
     if (status !== 'idle') feedback.current?.focus({ preventScroll: false });
   }, [status]);
+
+  useEffect(() => {
+    let frame = 0;
+    const reveal = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const field = document.activeElement;
+        if (
+          !(field instanceof HTMLElement) ||
+          !field.matches(
+            '#lead-form input, #lead-form textarea, #lead-form select',
+          )
+        )
+          return;
+        const viewport = window.visualViewport;
+        const top =
+          Math.max(
+            viewport?.offsetTop ?? 0,
+            document.querySelector('header')?.getBoundingClientRect().bottom ??
+              0,
+          ) + 8;
+        const banner = document.querySelector('.dp-consent-banner');
+        const bottom =
+          Math.min(
+            (viewport?.offsetTop ?? 0) +
+              (viewport?.height ?? window.innerHeight),
+            banner?.getBoundingClientRect().top ?? Infinity,
+          ) - 8;
+        const bounds = field.getBoundingClientRect();
+        const delta =
+          bounds.top < top || bounds.height > bottom - top
+            ? bounds.top - top
+            : bounds.bottom > bottom
+              ? bounds.bottom - bottom
+              : 0;
+        if (delta) window.scrollBy({ top: delta, behavior: 'instant' });
+      });
+    };
+    document.addEventListener('focusin', reveal);
+    window.addEventListener('resize', reveal);
+    window.visualViewport?.addEventListener('resize', reveal);
+    return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener('focusin', reveal);
+      window.removeEventListener('resize', reveal);
+      window.visualViewport?.removeEventListener('resize', reveal);
+    };
+  }, []);
 
   const submit = async (values: LeadFormValues) => {
     const measurement = { locale, intent: values.intent, surface: 'lead' };
@@ -201,6 +252,11 @@ export function LeadForm({
       noValidate
       aria-busy={isSubmitting}
     >
+      <div className="dp-visually-hidden" role="alert" aria-atomic="true">
+        {Object.keys(errors)
+          .map((key) => copy.errors[key as keyof LeadFormValues])
+          .join(' ')}
+      </div>
       {(status === 'error' || status === 'rate') && (
         <div
           className="dp-lead-feedback"

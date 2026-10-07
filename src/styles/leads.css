@@ -86,7 +86,7 @@
   inline-size: 100%;
   min-inline-size: 0;
   min-block-size: 3.25rem;
-  border: 1px solid var(--dp-border-light);
+  border: 1px solid var(--dp-border-control);
   border-radius: 0;
   padding-block: var(--dp-space-3);
   padding-inline: var(--dp-space-4);

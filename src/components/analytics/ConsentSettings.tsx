@@ -22,7 +22,7 @@ export function ConsentSettings({ copy }: { copy: Messages['consent'] }) {
         className="dp-consent-settings"
         data-consent-settings=""
         disabled={!state.initialized}
-        onClick={openConsentSettings}
+        onClick={(event) => openConsentSettings(event.currentTarget)}
       >
         {copy.settings}
       </button>

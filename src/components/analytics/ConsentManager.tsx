@@ -200,7 +200,7 @@ export function ConsentManager({ copy }: { copy: Copy }) {
             <button
               type="button"
               data-consent-action="customize"
-              onClick={openConsentSettings}
+              onClick={(event) => openConsentSettings(event.currentTarget)}
             >
               {copy.customize}
             </button>
