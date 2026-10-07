@@ -72,7 +72,7 @@ for (const locale of ['en', 'ka', 'ru', 'he']) {
               ? 340000
               : 220000,
       );
-      expect(bytes.scripts).toBeLessThanOrEqual(200000);
+      expect(bytes.scripts).toBeLessThanOrEqual(165000);
       await expect(page.locator('#lead-name')).toBeEnabled();
       await page.locator('#lead-name').focus();
       await page.locator('#lead-form button[type="submit"]').click();
@@ -91,6 +91,55 @@ for (const locale of ['en', 'ka', 'ru', 'he']) {
       await context.close();
     });
   }
+}
+
+for (const locale of ['en', 'ka', 'ru', 'he']) {
+  test(`${locale}: offscreen rendering preserves immediate goal, keyboard and anchor form access`, async ({
+    page,
+  }) => {
+    await necessaryOnly(page);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`/${locale}`, { waitUntil: 'networkidle' });
+    await expect(page.locator('#lead-name')).toBeEnabled();
+    // Browser skips offscreen rendering, while DOM, hydration and keyboard
+    // order remain available. This observes behavior rather than a CSS string.
+    expect(
+      await page
+        .locator('#lead-form')
+        .evaluate((el) => el.checkVisibility({ contentVisibilityAuto: true })),
+    ).toBe(false);
+    await page.locator('#hero .dp-action').first().click();
+    await expect(page.locator('#lead-name')).toBeFocused();
+    await expect(page.locator('#lead-name')).toBeInViewport();
+    await page.locator('#lead-name').fill('Retained Person');
+    for (const intent of ['buy', 'invest', 'sell']) {
+      await page.locator(`#${intent} a`).click();
+      await expect(
+        page.locator(`#lead-form input[value="${intent}"]`),
+      ).toBeChecked();
+      await expect(page.locator('#lead-name')).toBeFocused();
+      await expect(page.locator('#lead-name')).toHaveValue('Retained Person');
+    }
+    await page.evaluate(() => {
+      (document.activeElement as HTMLElement | null)?.blur();
+      window.scrollTo(0, 0);
+    });
+    // Native focus reveals the skipped section; Tab continues in logical order.
+    await page.locator('#lead-name').focus();
+    await page.keyboard.press('Tab');
+    await expect(page.locator('#lead-phone')).toBeFocused();
+    await expect(page.locator('#lead-phone')).toBeInViewport();
+    await page.goto(`/${locale}#advisor`, { waitUntil: 'networkidle' });
+    await expect(page.locator('#advisor')).toBeInViewport();
+    await page.locator('#lead-name').fill('Anchor Person');
+    await expect(page.locator('#lead-name')).toHaveValue('Anchor Person');
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  });
 }
 
 for (const locale of ['en', 'ka', 'ru', 'he']) {

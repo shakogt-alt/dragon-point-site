@@ -1,0 +1,220 @@
+{
+  "stage": "final",
+  "node": "v24.17.0",
+  "lighthouse": "13.5.0",
+  "setup": "Local production server; reserved .test SEO fixture; blank IDs; first-visit consent; cold browser profiles; warm origin derivatives; default simulated mobile/desktop throttling; sequential runs",
+  "summaries": [
+    {
+      "locale": "en",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "samples": 5,
+      "scores": {
+        "performance": 77,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 3804.06,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 433.5,
+        "first-contentful-paint": 1708.59615,
+        "speed-index": 1989.371201781818,
+        "server-response-time": 38,
+        "total-byte-weight": 409952
+      },
+      "ranges": {
+        "performance": {
+          "min": 76,
+          "max": 79
+        },
+        "largest-contentful-paint": {
+          "min": 3714.6724999999997,
+          "max": 3864.44
+        },
+        "first-contentful-paint": {
+          "min": 1699.44,
+          "max": 1712.0069999999998
+        },
+        "total-blocking-time": {
+          "min": 409.96795,
+          "max": 463.38049999999976
+        },
+        "cumulative-layout-shift": {
+          "min": 0,
+          "max": 0
+        },
+        "speed-index": {
+          "min": 1944.957800009609,
+          "max": 2027.287163854335
+        },
+        "total-byte-weight": {
+          "min": 409952,
+          "max": 409952
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "samples": 1,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 799.9225,
+        "cumulative-layout-shift": 0.00002535180055401662,
+        "total-blocking-time": 31,
+        "first-contentful-paint": 377.50700000000006,
+        "speed-index": 662.2143771100355,
+        "server-response-time": 41,
+        "total-byte-weight": 408788
+      },
+      "ranges": {
+        "performance": {
+          "min": 100,
+          "max": 100
+        },
+        "largest-contentful-paint": {
+          "min": 799.9225,
+          "max": 799.9225
+        },
+        "first-contentful-paint": {
+          "min": 377.50700000000006,
+          "max": 377.50700000000006
+        },
+        "total-blocking-time": {
+          "min": 31,
+          "max": 31
+        },
+        "cumulative-layout-shift": {
+          "min": 0.00002535180055401662,
+          "max": 0.00002535180055401662
+        },
+        "speed-index": {
+          "min": 662.2143771100355,
+          "max": 662.2143771100355
+        },
+        "total-byte-weight": {
+          "min": 408788,
+          "max": 408788
+        }
+      }
+    },
+    {
+      "locale": "he",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "samples": 5,
+      "scores": {
+        "performance": 80,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 3037.1620000000003,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 573.44975,
+        "first-contentful-paint": 1204.0810000000001,
+        "speed-index": 1692.1756399828328,
+        "server-response-time": 37,
+        "total-byte-weight": 278660
+      },
+      "ranges": {
+        "performance": {
+          "min": 75,
+          "max": 82
+        },
+        "largest-contentful-paint": {
+          "min": 3007.026,
+          "max": 3108.319
+        },
+        "first-contentful-paint": {
+          "min": 833.4069999999999,
+          "max": 1469.6595
+        },
+        "total-blocking-time": {
+          "min": 475.4999999999998,
+          "max": 760.5
+        },
+        "cumulative-layout-shift": {
+          "min": 0,
+          "max": 0.0005474944408256778
+        },
+        "speed-index": {
+          "min": 1462.4405719129268,
+          "max": 2125.8227083727697
+        },
+        "total-byte-weight": {
+          "min": 278660,
+          "max": 278660
+        }
+      }
+    },
+    {
+      "locale": "he",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "samples": 1,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 723.5206000000001,
+        "cumulative-layout-shift": 0.000182170514004309,
+        "total-blocking-time": 42.36984999999993,
+        "first-contentful-paint": 318.26030000000003,
+        "speed-index": 603.8154567416359,
+        "server-response-time": 34,
+        "total-byte-weight": 331567
+      },
+      "ranges": {
+        "performance": {
+          "min": 100,
+          "max": 100
+        },
+        "largest-contentful-paint": {
+          "min": 723.5206000000001,
+          "max": 723.5206000000001
+        },
+        "first-contentful-paint": {
+          "min": 318.26030000000003,
+          "max": 318.26030000000003
+        },
+        "total-blocking-time": {
+          "min": 42.36984999999993,
+          "max": 42.36984999999993
+        },
+        "cumulative-layout-shift": {
+          "min": 0.000182170514004309,
+          "max": 0.000182170514004309
+        },
+        "speed-index": {
+          "min": 603.8154567416359,
+          "max": 603.8154567416359
+        },
+        "total-byte-weight": {
+          "min": 331567,
+          "max": 331567
+        }
+      }
+    }
+  ]
+}

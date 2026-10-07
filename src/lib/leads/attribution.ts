@@ -1,8 +1,8 @@
+import type { Attribution } from '../validation/attribution';
 import {
-  attributionSchema,
-  attributionShape,
-  type Attribution,
-} from '../validation/attribution';
+  browserAttributionSchema,
+  parseBrowserAttributionField,
+} from '../validation/browser-attribution';
 
 const storageKey = 'dragon-point:first-touch:v1';
 type StorageAccess = Pick<Storage, 'getItem' | 'setItem'>;
@@ -15,7 +15,7 @@ export function captureFirstTouch(
   try {
     const saved = storage?.getItem(storageKey);
     if (saved) {
-      const parsed = attributionSchema.safeParse(JSON.parse(saved));
+      const parsed = browserAttributionSchema.safeParse(JSON.parse(saved));
       if (parsed.success && parsed.data.landingUrl) return parsed.data;
     }
   } catch {
@@ -24,7 +24,7 @@ export function captureFirstTouch(
   const result: Attribution = {};
   try {
     const url = new URL(href);
-    const landing = attributionShape.landingUrl.safeParse(url.href);
+    const landing = parseBrowserAttributionField('landingUrl', url.href);
     if (landing.success) result.landingUrl = landing.data;
     for (const key of [
       'utm_source',
@@ -36,10 +36,13 @@ export function captureFirstTouch(
       'fbclid',
     ] as const) {
       const value = url.searchParams.get(key);
-      const parsed = attributionShape[key].safeParse(value);
+      const parsed = parseBrowserAttributionField(key, value);
       if (parsed.success && parsed.data) result[key] = parsed.data;
     }
-    const referral = attributionShape.referrer.safeParse(referrer || undefined);
+    const referral = parseBrowserAttributionField(
+      'referrer',
+      referrer || undefined,
+    );
     if (referral.success && referral.data) result.referrer = referral.data;
   } catch {
     /* Malformed external input does not prevent enquiries. */

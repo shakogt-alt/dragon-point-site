@@ -4,6 +4,10 @@ import {
   attributionSchema,
   attributionShape,
 } from '@/lib/validation/attribution';
+import {
+  browserAttributionSchema,
+  parseBrowserAttributionField,
+} from '@/lib/validation/browser-attribution';
 
 // Independent Phase 6 oracle: accepted values and transformed output must stay identical.
 const controls =
@@ -78,6 +82,12 @@ it('preserves Phase 6 attribution acceptance and normalization at all boundaries
   }
   for (const key of Object.keys(shape) as (keyof typeof shape)[]) {
     for (const value of inputs) {
+      expect(result(parseBrowserAttributionField(key, value))).toEqual(
+        result(shape[key].safeParse(value)),
+      );
+      expect(
+        result(browserAttributionSchema.safeParse({ [key]: value })),
+      ).toEqual(result(oracle.safeParse({ [key]: value })));
       expect(
         result(attributionShape[key].safeParse(value)),
         `${key}: ${JSON.stringify(value)}`,
@@ -96,7 +106,20 @@ it('preserves Phase 6 attribution acceptance and normalization at all boundaries
     { landingUrl: 'https://safe.test', utm_source: ' e\u0301 ' },
     JSON.parse('{"__proto__":"x"}'),
     { constructor: 'x' },
+    new Date(),
+    new Map(),
+    Object.create({ utm_source: ' source ' }),
+    Object.create({ unknown: 'x' }),
+    Object.assign(Object.create({ utm_source: 'inherited' }), {
+      utm_source: undefined,
+    }),
+    Object.defineProperty({}, 'utm_source', { value: ' hidden ' }),
+    Object.defineProperty({}, 'unknown', { value: 'hidden' }),
+    { [Symbol('unknown')]: 'x' },
   ]) {
+    expect(result(browserAttributionSchema.safeParse(value))).toEqual(
+      result(oracle.safeParse(value)),
+    );
     expect(result(attributionSchema.safeParse(value))).toEqual(
       result(oracle.safeParse(value)),
     );

@@ -10,18 +10,23 @@ import {
   strictObject,
   type infer as Infer,
 } from 'zod/mini';
+import {
+  attributionTextLimit,
+  attributionClickIdLimit,
+  attributionUrlLimit,
+  noControls,
+} from './attribution-rules';
+export { noControls } from './attribution-rules';
 
 // Kept separate from the form/resolver so synchronous first-touch capture does
 // not load form validation. Rules and transforms are identical to Phase 6.
-export const noControls =
-  /^[^\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f\u202a-\u202e]*$/;
 export const validatedText = (max: number) =>
   pipe(
     string().check(trim(), maxLength(max), regex(noControls)),
     transform((value) => value.normalize('NFC')),
   );
 export const safeUrl = string().check(
-  maxLength(2048),
+  maxLength(attributionUrlLimit),
   refine((value) => {
     try {
       const url = new URL(value);
@@ -37,13 +42,13 @@ export const safeUrl = string().check(
   }),
 );
 export const attributionShape = {
-  utm_source: optional(validatedText(160)),
-  utm_medium: optional(validatedText(160)),
-  utm_campaign: optional(validatedText(160)),
-  utm_content: optional(validatedText(160)),
-  utm_term: optional(validatedText(160)),
-  gclid: optional(validatedText(256)),
-  fbclid: optional(validatedText(256)),
+  utm_source: optional(validatedText(attributionTextLimit)),
+  utm_medium: optional(validatedText(attributionTextLimit)),
+  utm_campaign: optional(validatedText(attributionTextLimit)),
+  utm_content: optional(validatedText(attributionTextLimit)),
+  utm_term: optional(validatedText(attributionTextLimit)),
+  gclid: optional(validatedText(attributionClickIdLimit)),
+  fbclid: optional(validatedText(attributionClickIdLimit)),
   referrer: optional(safeUrl),
   landingUrl: optional(safeUrl),
 };

@@ -54,6 +54,14 @@ svg {
 .dp-section {
   padding-block: var(--dp-section-space);
 }
+/* Keep DOM, focus/search and hydration available while the browser skips
+   rendering distant sections. Goals retain stable pointer geometry; services
+   retain painted contrast geometry for offscreen accessibility inspection.
+   The intrinsic size is cached after first paint. */
+main > section:not(#hero, #goals, #services) {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 60rem;
+}
 .dp-section-heading {
   display: grid;
   gap: var(--dp-space-6);

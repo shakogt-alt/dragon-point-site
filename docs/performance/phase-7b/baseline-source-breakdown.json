@@ -1,0 +1,182 @@
+{
+  "note": "Turbopack analyzer compiled source parts from the baseline production build. Internal filenames are analyzer names, not deployed hash identities; actual deployed entry spans/network bodies are in baseline-bundle.json. Sources may repeat across outputs; do not sum these as transfer bytes.",
+  "unchangedClientHashes": [
+    {
+      "name": "01dj2-hel4olj.js",
+      "bytes": 47274,
+      "sha256": "4D12E57076DEB891068BEA0490CACEFCBA1A2FF9495E1E55FC630A66F1370D0E"
+    },
+    {
+      "name": "0cz1d0mv5g_q7.js",
+      "bytes": 112594,
+      "sha256": "0973C1D64C88ADC8E3C950410CB58B288F72118D5965B78049438DEB8F2F9683"
+    },
+    {
+      "name": "0v-2s0yvqwzw2.js",
+      "bytes": 316906,
+      "sha256": "6E0D0940E8F0F1E08CCEEFE2F6C2284BDC970A1AE62770538A6C9323B721575D"
+    },
+    {
+      "name": "12m6ej1ccy3m1.js",
+      "bytes": 4574,
+      "sha256": "4EA9E111D06E58874E77371C151F4F8C2E1C88B53933ECAFBBF97F9C9B5EFE4F"
+    },
+    {
+      "name": "12psjg6fwk17l.js",
+      "bytes": 1578,
+      "sha256": "DCDB1102A78B58C906B7FC580125416F0483EE610275141A59CB9F1631679EB8"
+    },
+    {
+      "name": "19mx3mg6lkumu.js",
+      "bytes": 28907,
+      "sha256": "170F3982866674A829571BEEC30CC23C69FCD36196739FF34B9D586B3AD73CD7"
+    },
+    {
+      "name": "2z-e6jheq0ftu.js",
+      "bytes": 165979,
+      "sha256": "AB60BBC049A06DBED11ACE8FDFAE300A8A76D376415FDB07058887B8E818B23E"
+    },
+    {
+      "name": "31a9_ugznsb5n.js",
+      "bytes": 30682,
+      "sha256": "56D05E1B96627D2E11CED66FC8AC19F7413A6A98B6542999C72FB083C0CCFC9D"
+    },
+    {
+      "name": "32bi6sac9z5_s.js",
+      "bytes": 3396,
+      "sha256": "E0BA4C0C01F4018F317DE38E9395A8AC9B97C1B4DBDF2343C8FB716EC2E3EBF4"
+    },
+    {
+      "name": "3fntmmi971322.js",
+      "bytes": 14377,
+      "sha256": "34ED6ABF4C6D0D1BB3DC56D3F133D2A5DBC3A3C89C791DEAB314E27143AC14CE"
+    },
+    {
+      "name": "3fyts7zvwwr81.js",
+      "bytes": 96565,
+      "sha256": "19D32E05F2563CD6970CA9046A6C6B0BB2413A36B27FB7960F7EABDC2C2A904F"
+    },
+    {
+      "name": "3g4px251sg85e.js",
+      "bytes": 228922,
+      "sha256": "30ABC6B5CE026A4FAD0A49733DDAFE448C7BFF24092F8D8663CCE37CFAB48317"
+    },
+    {
+      "name": "3s6nzrbk-8mnv.js",
+      "bytes": 5598,
+      "sha256": "1D36F2E3F57740F75EB021AAEC1208D7E938130E36C106A9F28678E4A98559B0"
+    },
+    {
+      "name": "turbopack-03rfayxv7ep_b.js",
+      "bytes": 9721,
+      "sha256": "3A0FC33A5F9F2ECC8AFB9BF27D77BFBC0DC25A646EBE29BD3D148180F4EC1D49"
+    }
+  ],
+  "rows": [
+    {
+      "source": "/[project]/src/lib/analytics/providers.ts",
+      "output": "[client-fs]/_next/static/chunks/2siyzxlp-ggbj.js",
+      "compiledBytes": 3815
+    },
+    {
+      "source": "/[project]/src/lib/analytics/context.ts",
+      "output": "[client-fs]/_next/static/chunks/2siyzxlp-ggbj.js",
+      "compiledBytes": 802
+    },
+    {
+      "source": "/[project]/src/lib/validation/lead.ts",
+      "output": "[client-fs]/_next/static/chunks/1n4e50d6r9bqm.js",
+      "compiledBytes": 1162
+    },
+    {
+      "source": "/[project]/src/lib/leads/browser-attribution.ts",
+      "output": "[client-fs]/_next/static/chunks/0q0gxfy0lbi7u.js",
+      "compiledBytes": 149
+    },
+    {
+      "source": "/[project]/src/lib/leads/attribution.ts",
+      "output": "[client-fs]/_next/static/chunks/0q0gxfy0lbi7u.js",
+      "compiledBytes": 694
+    },
+    {
+      "source": "/[project]/src/lib/leads/constants.ts",
+      "output": "[client-fs]/_next/static/chunks/0q0gxfy0lbi7u.js",
+      "compiledBytes": 233
+    },
+    {
+      "source": "/[project]/src/components/analytics/ConsentManager.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 4001
+    },
+    {
+      "source": "/[project]/src/components/analytics/ConsentSettings.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 535
+    },
+    {
+      "source": "/[project]/src/components/layout/Header.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 3247
+    },
+    {
+      "source": "/[project]/src/components/ui/LanguageSwitcher.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 327
+    },
+    {
+      "source": "/[project]/src/components/ui/Logo.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 215
+    },
+    {
+      "source": "/[project]/src/components/leads/LeadForm.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 7205
+    },
+    {
+      "source": "/[project]/src/lib/leads/payload.ts",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 452
+    },
+    {
+      "source": "/[project]/src/components/leads/MobileLeadCTA.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 1696
+    },
+    {
+      "source": "/[project]/src/components/ui/Arrow.tsx",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 287
+    },
+    {
+      "source": "/[project]/src/lib/analytics/client.ts",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 3598
+    },
+    {
+      "source": "/[project]/src/lib/analytics/consent.ts",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 677
+    },
+    {
+      "source": "/[project]/src/lib/analytics/events.ts",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 772
+    },
+    {
+      "source": "/[project]/src/lib/analytics/runtime.ts",
+      "output": "[client-fs]/_next/static/chunks/0ksvcsh1ed86r.js",
+      "compiledBytes": 734
+    },
+    {
+      "source": "/[project]/src/lib/validation/attribution.ts",
+      "output": "[client-fs]/_next/static/chunks/0u67h6k868d-p.js",
+      "compiledBytes": 883
+    },
+    {
+      "source": "/[project]/node_modules/react-hook-form/dist/index.esm.mjs",
+      "output": "[client-fs]/_next/static/chunks/0sw9anvmhqf3g.js",
+      "compiledBytes": 30725
+    }
+  ]
+}

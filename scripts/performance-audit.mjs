@@ -10,18 +10,21 @@ const stage = process.argv[2];
 if (!['baseline', 'final'].includes(stage))
   throw new Error('Usage: node scripts/performance-audit.mjs baseline|final');
 const root = process.cwd();
-const out = resolve(root, 'docs/performance/phase-7');
-const scratch = resolve(root, '.superpowers/phase-7');
+const amendment = process.argv.includes('--phase7b');
+const phase = amendment ? 'phase-7b' : 'phase-7';
+const out = resolve(root, `docs/performance/${phase}`);
+const scratch = resolve(root, `.superpowers/${phase}`);
 await mkdir(out, { recursive: true });
 await mkdir(scratch, { recursive: true });
-const toolRequire = createRequire(resolve(scratch, 'tools/package.json'));
+const toolRoot = resolve(root, '.superpowers/phase-7/tools');
+const toolRequire = createRequire(resolve(toolRoot, 'package.json'));
 const { default: lighthouse } = await import(
   pathToFileURL(toolRequire.resolve('lighthouse')).href
 );
 const { launch } = await import(
   pathToFileURL(toolRequire.resolve('chrome-launcher')).href
 );
-const lighthouseRoot = resolve(scratch, 'tools/node_modules/lighthouse');
+const lighthouseRoot = resolve(toolRoot, 'node_modules/lighthouse');
 const { default: desktop } = await import(
   pathToFileURL(resolve(lighthouseRoot, 'core/config/desktop-config.js')).href
 );
@@ -189,7 +192,8 @@ try {
   // Sequential, isolated Chrome profiles. Browser caches cold; origin image
   // derivatives were warmed by the probes, consistently for baseline and final.
   for (const c of cases) {
-    for (let repetition = 1; repetition <= 3; repetition++) {
+    const samples = amendment ? (c.device === 'mobile' ? 5 : 1) : 3;
+    for (let repetition = 1; repetition <= samples; repetition++) {
       const chrome = await launch({
         chromePath: chromium.executablePath(),
         chromeFlags: ['--headless=new', '--disable-background-networking'],
@@ -219,6 +223,15 @@ try {
         );
         const lhr = result.lhr;
         if (lhr.runtimeError) throw new Error(JSON.stringify(lhr.runtimeError));
+        if (amendment) {
+          await writeFile(
+            resolve(
+              scratch,
+              `${stage}-${c.locale}-${c.device}-${repetition}-trace.json`,
+            ),
+            JSON.stringify(result.artifacts.Trace),
+          );
+        }
         const detailIds = [
           'network-requests',
           'resource-summary',
@@ -317,6 +330,29 @@ try {
           median(relevant.map((r) => r.audits[k]?.numericValue)),
         ]),
       ),
+      ...(amendment
+        ? {
+            ranges: Object.fromEntries(
+              [
+                ['performance', relevant.map((r) => r.categories.performance)],
+                ...[
+                  'largest-contentful-paint',
+                  'first-contentful-paint',
+                  'total-blocking-time',
+                  'cumulative-layout-shift',
+                  'speed-index',
+                  'total-byte-weight',
+                ].map((key) => [
+                  key,
+                  relevant.map((r) => r.audits[key].numericValue),
+                ]),
+              ].map(([key, values]) => [
+                key,
+                { min: Math.min(...values), max: Math.max(...values) },
+              ]),
+            ),
+          }
+        : {}),
     };
   });
   const bundles = [];

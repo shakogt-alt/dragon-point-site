@@ -1,0 +1,4660 @@
+{
+  "probes": [
+    {
+      "locale": "en",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "shifts": [],
+      "lcp": [
+        {
+          "time": 440,
+          "element": "dp-hero-description"
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 434.2000000476837,
+          "duration": 111
+        }
+      ],
+      "image": {
+        "currentSrc": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+        "sizes": "(min-width: 1440px) 1200px, (min-width: 1024px) 95vw, calc(100vw - 80px)",
+        "width": 324,
+        "height": 182.25,
+        "naturalWidth": 310,
+        "objectPosition": "70% 50%"
+      },
+      "fonts": [
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "Noto Sans Hebrew",
+          "weight": "100 900",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Input",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Fallback",
+          "weight": "normal",
+          "status": "loaded",
+          "display": "auto"
+        },
+        {
+          "family": "Noto Hebrew Fallback",
+          "weight": "normal",
+          "status": "unloaded",
+          "display": "auto"
+        }
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:3305/en",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 566.5,
+        "navigationId": 3656,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.5,
+        "domainLookupStart": 3.700000047683716,
+        "domainLookupEnd": 7.200000047683716,
+        "connectStart": 7.200000047683716,
+        "secureConnectionStart": 0,
+        "connectEnd": 9.200000047683716,
+        "requestStart": 9.599999904632568,
+        "responseStart": 61.299999952316284,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 61.299999952316284,
+        "responseEnd": 74.90000009536743,
+        "transferSize": 12641,
+        "encodedBodySize": 12341,
+        "decodedBodySize": 59865,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 565.5999999046326,
+        "domContentLoadedEventStart": 565.5999999046326,
+        "domContentLoadedEventEnd": 566.2999999523163,
+        "domComplete": 566.2999999523163,
+        "loadEventStart": 566.5,
+        "loadEventEnd": 566.5,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "/fonts/firago-common-400.d200e020fd35.woff2",
+          "type": "link",
+          "transferredBytes": 44712,
+          "encodedBytes": 44412,
+          "decodedBytes": 44412
+        },
+        {
+          "url": "/fonts/firago-common-500.3c55cee41236.woff2",
+          "type": "link",
+          "transferredBytes": 45772,
+          "encodedBytes": 45472,
+          "decodedBytes": 45472
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+          "type": "link",
+          "transferredBytes": 28938,
+          "encodedBytes": 28638,
+          "decodedBytes": 28638
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "link",
+          "transferredBytes": 9452,
+          "encodedBytes": 9152,
+          "decodedBytes": 54619
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "script",
+          "transferredBytes": 15902,
+          "encodedBytes": 15602,
+          "decodedBytes": 47453
+        },
+        {
+          "url": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+          "type": "css",
+          "transferredBytes": 45804,
+          "encodedBytes": 45504,
+          "decodedBytes": 45504
+        },
+        {
+          "url": "/fonts/firago-georgian-400.8c7722e1a031.woff2",
+          "type": "css",
+          "transferredBytes": 12916,
+          "encodedBytes": 12616,
+          "decodedBytes": 12616
+        },
+        {
+          "url": "/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+          "type": "css",
+          "transferredBytes": 32764,
+          "encodedBytes": 32464,
+          "decodedBytes": 32464
+        },
+        {
+          "url": "/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+          "type": "css",
+          "transferredBytes": 8896,
+          "encodedBytes": 8596,
+          "decodedBytes": 8596
+        }
+      ],
+      "requests": [
+        {
+          "url": "/en",
+          "type": "Document",
+          "status": 200,
+          "mime": "text/html",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "transferredBytes": 12980
+        },
+        {
+          "url": "/fonts/firago-common-400.d200e020fd35.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 44712
+        },
+        {
+          "url": "/fonts/firago-common-500.3c55cee41236.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45772
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "mime": "text/css",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 9535
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 2425
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+          "type": "Image",
+          "status": 200,
+          "mime": "image/webp",
+          "cacheControl": "public, max-age=14400, must-revalidate",
+          "transferredBytes": 29075
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8011
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4247
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45607
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4057
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 1597
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 72016
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 11275
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 15999
+        },
+        {
+          "url": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45804
+        },
+        {
+          "url": "/fonts/firago-georgian-400.8c7722e1a031.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 12916
+        },
+        {
+          "url": "/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 32764
+        },
+        {
+          "url": "/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8895
+        }
+      ],
+      "textGeometry": [
+        {
+          "text": "DRAGON POINT REAL ESTATE INTELLIGENCE",
+          "x": 16,
+          "y": 137,
+          "width": 358,
+          "height": 43.0625
+        },
+        {
+          "text": "Real Estate Intelligence for Georgia",
+          "x": 16,
+          "y": 212.0625,
+          "width": 358,
+          "height": 24
+        },
+        {
+          "text": "SEE THE DEALCLEARLY.",
+          "x": 16,
+          "y": 260.0625,
+          "width": 358,
+          "height": 89.84375
+        },
+        {
+          "text": "Buy, sell and invest in Georgian real estate with market analysis, property verification and end-to-end deal support.",
+          "x": 16,
+          "y": 381.90625,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "Find a property",
+          "x": 16,
+          "y": 490.6875,
+          "width": 186.640625,
+          "height": 54
+        },
+        {
+          "text": "Talk to an advisor",
+          "x": 16,
+          "y": 560.6875,
+          "width": 202.453125,
+          "height": 54
+        },
+        {
+          "text": "TBILISI · BATUMI · GEORGIA",
+          "x": 16,
+          "y": 662.6875,
+          "width": 358,
+          "height": 17.921875
+        },
+        {
+          "text": "ARCHITECTURE + DATA",
+          "x": 33,
+          "y": 745.609375,
+          "width": 324,
+          "height": 16.640625
+        },
+        {
+          "text": "YOUR NEXT MOVE",
+          "x": 16,
+          "y": 1163.78125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "Start with your goal.",
+          "x": 16,
+          "y": 1206.203125,
+          "width": 358,
+          "height": 38.390625
+        },
+        {
+          "text": "One market. Different ambitions. A clear approach for yours.",
+          "x": 16,
+          "y": 1268.59375,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "Buy",
+          "x": 49,
+          "y": 1453.25,
+          "width": 54.09375,
+          "height": 41.59375
+        },
+        {
+          "text": "Find the right property for living or relocation.",
+          "x": 49,
+          "y": 1518.84375,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "I want to buy",
+          "x": 49,
+          "y": 1602.03125,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "Invest",
+          "x": 49,
+          "y": 1799.5,
+          "width": 88.328125,
+          "height": 41.59375
+        },
+        {
+          "text": "Evaluate return, risk, liquidity and exit before you buy.",
+          "x": 49,
+          "y": 1865.09375,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "I want to invest",
+          "x": 49,
+          "y": 1948.28125,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "Sell",
+          "x": 49,
+          "y": 2145.75,
+          "width": 54.5,
+          "height": 41.59375
+        },
+        {
+          "text": "Understand your real market price and sell with a clear strategy.",
+          "x": 49,
+          "y": 2211.34375,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "I want to sell",
+          "x": 49,
+          "y": 2294.53125,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "A WIDER VIEW",
+          "x": 16,
+          "y": 2519.53125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "Not more listings.Better decisions.",
+          "x": 16,
+          "y": 2561.953125,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "A property is more than its asking price. Put the information in context before you commit.",
+          "x": 16,
+          "y": 2662.734375,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "See how we analyze",
+          "x": 16,
+          "y": 2745.921875,
+          "width": 216.359375,
+          "height": 54
+        },
+        {
+          "text": "Illustrative comparison · not market data",
+          "x": 16,
+          "y": 2847.921875,
+          "width": 358,
+          "height": 17.921875
+        },
+        {
+          "text": "Typical listing",
+          "x": 33,
+          "y": 2898.84375,
+          "width": 145,
+          "height": 56
+        },
+        {
+          "text": "Dragon Point view",
+          "x": 212,
+          "y": 2900.84375,
+          "width": 145,
+          "height": 56
+        },
+        {
+          "text": "OUR FRAMEWORK",
+          "x": 16,
+          "y": 3608.53125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "The Dragon Point Standard.",
+          "x": 16,
+          "y": 3650.953125,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "Six perspectives. One informed decision.",
+          "x": 16,
+          "y": 3751.734375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Market",
+          "x": 40,
+          "y": 3890.796875,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Location · Infrastructure · Demand",
+          "x": 40,
+          "y": 3934.859375,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "Price",
+          "x": 40,
+          "y": 4062.71875,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Listing · Market · Transaction",
+          "x": 40,
+          "y": 4106.78125,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "Property",
+          "x": 40,
+          "y": 4234.640625,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Building · Layout · Condition",
+          "x": 40,
+          "y": 4278.703125,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "Risk",
+          "x": 40,
+          "y": 4406.5625,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Legal · Technical · Market",
+          "x": 40,
+          "y": 4450.625,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "Return",
+          "x": 40,
+          "y": 4578.484375,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Yield · Vacancy · Liquidity",
+          "x": 40,
+          "y": 4622.546875,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "Deal",
+          "x": 40,
+          "y": 4750.40625,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "Offer · Negotiation · Due diligence · Closing",
+          "x": 40,
+          "y": 4794.46875,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "WHERE WE WORK",
+          "x": 16,
+          "y": 4632.53125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "Real estate services in Georgia.",
+          "x": 16,
+          "y": 4674.953125,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "From a place to live to a considered investment.",
+          "x": 16,
+          "y": 4775.734375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Residential",
+          "x": 16,
+          "y": 4914.796875,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "Investments",
+          "x": 16,
+          "y": 5165.109375,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "New developments",
+          "x": 16,
+          "y": 5415.421875,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "Commercial & land",
+          "x": 16,
+          "y": 5665.734375,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "CLARITY + CONTROL",
+          "x": 16,
+          "y": 5720.53125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "Intelligencebehind the deal.",
+          "x": 16,
+          "y": 5762.953125,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "Information gives you perspective. Professional judgment brings it together.",
+          "x": 16,
+          "y": 5863.734375,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "Powered by KleekTo",
+          "x": 16,
+          "y": 5946.921875,
+          "width": 358,
+          "height": 75.59375
+        },
+        {
+          "text": "Technology supports the process. People guide the decision.",
+          "x": 16,
+          "y": 6046.515625,
+          "width": 358,
+          "height": 44.78125
+        },
+        {
+          "text": "PROPERTY · DATA · DECISION",
+          "x": 16,
+          "y": 6331.296875,
+          "width": 358,
+          "height": 16.640625
+        },
+        {
+          "text": "YOUR NEXT STEP",
+          "x": 16,
+          "y": 6809.53125,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "What are you looking for?",
+          "x": 16,
+          "y": 6851.953125,
+          "width": 358,
+          "height": 38.390625
+        },
+        {
+          "text": "Tell us your goal. A clear next step starts with the right information.",
+          "x": 16,
+          "y": 6914.34375,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "Fields marked * are required.",
+          "x": 16,
+          "y": 6997.53125,
+          "width": 358,
+          "height": 22.390625
+        },
+        {
+          "text": "Buy",
+          "x": 16,
+          "y": 7139.109375,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "Invest",
+          "x": 138,
+          "y": 7139.109375,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "Sell",
+          "x": 260,
+          "y": 7139.109375,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "Name *",
+          "x": 16,
+          "y": 7222.703125,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Phone / WhatsApp *",
+          "x": 16,
+          "y": 7332.296875,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "International numbers welcome. Include your country code.",
+          "x": 16,
+          "y": 7425.890625,
+          "width": 358,
+          "height": 44.78125
+        },
+        {
+          "text": "Email (optional)",
+          "x": 16,
+          "y": 7494.671875,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Budget (optional)",
+          "x": 16,
+          "y": 7604.265625,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Message (optional)",
+          "x": 16,
+          "y": 7713.859375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Preferred language",
+          "x": 16,
+          "y": 7899.828125,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Website",
+          "x": 16,
+          "y": 7988.421875,
+          "width": 57.265625,
+          "height": 19
+        },
+        {
+          "text": "Talk to an Advisor",
+          "x": 16,
+          "y": 8017.421875,
+          "width": 202.96875,
+          "height": 54
+        },
+        {
+          "text": "Talk to a Dragon Point advisor.",
+          "x": 16,
+          "y": 8184.421875,
+          "width": 358,
+          "height": 32.640625
+        },
+        {
+          "text": "Contact details will be published here once confirmed.",
+          "x": 16,
+          "y": 8241.0625,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "Tbilisi · Batumi · Georgia",
+          "x": 16,
+          "y": 8443.453125,
+          "width": 358,
+          "height": 20.46875
+        },
+        {
+          "text": "Powered by KleekTo",
+          "x": 16,
+          "y": 8479.921875,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "Privacy policy awaiting legal review. Enquiry channels and data collection terms will be published before enquiries open.",
+          "x": 16,
+          "y": 8657.515625,
+          "width": 358,
+          "height": 67.171875
+        },
+        {
+          "text": "Privacy settings",
+          "x": 16,
+          "y": 8641.515625,
+          "width": 90.484375,
+          "height": 44
+        },
+        {
+          "text": "SEE THE DEAL CLEARLY.",
+          "x": 16,
+          "y": 8809.515625,
+          "width": 358,
+          "height": 40.34375
+        },
+        {
+          "text": "Talk to an Advisor",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "text": "Your privacy choices",
+          "x": 16,
+          "y": 594.921875,
+          "width": 358,
+          "height": 29.125
+        },
+        {
+          "text": "Necessary features keep this site and enquiry form working. Optional analytics and marketing run only with your permission.",
+          "x": 16,
+          "y": 632.046875,
+          "width": 358,
+          "height": 67.171875
+        },
+        {
+          "text": "Necessary only",
+          "x": 16,
+          "y": 715.21875,
+          "width": 175,
+          "height": 48.390625
+        },
+        {
+          "text": "Accept all",
+          "x": 199,
+          "y": 715.21875,
+          "width": 175,
+          "height": 48.390625
+        },
+        {
+          "text": "Choose preferences",
+          "x": 16,
+          "y": 771.609375,
+          "width": 358,
+          "height": 48.390625
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "shifts": [
+        {
+          "value": 0.00002482638888888889,
+          "recentInput": false,
+          "time": 422.7000000476837,
+          "nodes": ["dp-desktop-nav"]
+        }
+      ],
+      "lcp": [
+        {
+          "time": 336,
+          "element": "dp-architecture-image"
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 122.29999995231628,
+          "duration": 140
+        },
+        {
+          "time": 312.09999990463257,
+          "duration": 99
+        }
+      ],
+      "image": {
+        "currentSrc": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+        "sizes": "(min-width: 1440px) 1200px, (min-width: 1024px) 95vw, calc(100vw - 80px)",
+        "width": 530.453125,
+        "height": 663.0625,
+        "naturalWidth": 1200,
+        "objectPosition": "70% 50%"
+      },
+      "fonts": [
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "Noto Sans Hebrew",
+          "weight": "100 900",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Input",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Fallback",
+          "weight": "normal",
+          "status": "loaded",
+          "display": "auto"
+        },
+        {
+          "family": "Noto Hebrew Fallback",
+          "weight": "normal",
+          "status": "unloaded",
+          "display": "auto"
+        }
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:3305/en",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 434,
+        "navigationId": 1663,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.39999985694885254,
+        "domainLookupStart": 2.299999952316284,
+        "domainLookupEnd": 2.8999998569488525,
+        "connectStart": 2.8999998569488525,
+        "secureConnectionStart": 0,
+        "connectEnd": 3.5999999046325684,
+        "requestStart": 3.700000047683716,
+        "responseStart": 36.59999990463257,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 36.59999990463257,
+        "responseEnd": 46.39999985694885,
+        "transferSize": 12641,
+        "encodedBodySize": 12341,
+        "decodedBodySize": 59865,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 122.39999985694885,
+        "domContentLoadedEventStart": 122.39999985694885,
+        "domContentLoadedEventEnd": 122.5,
+        "domComplete": 433.7999999523163,
+        "loadEventStart": 434,
+        "loadEventEnd": 434,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "/fonts/firago-common-400.d200e020fd35.woff2",
+          "type": "link",
+          "transferredBytes": 44712,
+          "encodedBytes": 44412,
+          "decodedBytes": 44412
+        },
+        {
+          "url": "/fonts/firago-common-500.3c55cee41236.woff2",
+          "type": "link",
+          "transferredBytes": 45772,
+          "encodedBytes": 45472,
+          "decodedBytes": 45472
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+          "type": "link",
+          "transferredBytes": 77206,
+          "encodedBytes": 76906,
+          "decodedBytes": 76906
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "link",
+          "transferredBytes": 9452,
+          "encodedBytes": 9152,
+          "decodedBytes": 54619
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "script",
+          "transferredBytes": 15902,
+          "encodedBytes": 15602,
+          "decodedBytes": 47453
+        },
+        {
+          "url": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+          "type": "css",
+          "transferredBytes": 45804,
+          "encodedBytes": 45504,
+          "decodedBytes": 45504
+        },
+        {
+          "url": "/en?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "fetch",
+          "transferredBytes": 1281,
+          "encodedBytes": 981,
+          "decodedBytes": 2978
+        },
+        {
+          "url": "/ka?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "fetch",
+          "transferredBytes": 1409,
+          "encodedBytes": 1109,
+          "decodedBytes": 4088
+        },
+        {
+          "url": "/ru?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "fetch",
+          "transferredBytes": 1400,
+          "encodedBytes": 1100,
+          "decodedBytes": 3464
+        },
+        {
+          "url": "/he?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "fetch",
+          "transferredBytes": 1348,
+          "encodedBytes": 1048,
+          "decodedBytes": 3149
+        }
+      ],
+      "requests": [
+        {
+          "url": "/en",
+          "type": "Document",
+          "status": 200,
+          "mime": "text/html",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "transferredBytes": 12980
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "mime": "text/css",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 9535
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 2425
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+          "type": "Image",
+          "status": 200,
+          "mime": "image/webp",
+          "cacheControl": "public, max-age=14400, must-revalidate",
+          "transferredBytes": 77343
+        },
+        {
+          "url": "/fonts/firago-common-400.d200e020fd35.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 44712
+        },
+        {
+          "url": "/fonts/firago-common-500.3c55cee41236.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45772
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8011
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4247
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 1597
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4057
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45607
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 11275
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 72016
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 15999
+        },
+        {
+          "url": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45804
+        },
+        {
+          "url": "/en?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/ka?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/ru?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/he?_rsc=1vwYfVB7_E9t4fEj",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/fonts/firago-georgian-400.8c7722e1a031.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 12916
+        },
+        {
+          "url": "/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 32764
+        },
+        {
+          "url": "/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8895
+        }
+      ],
+      "textGeometry": [
+        {
+          "text": "DRAGON POINT REAL ESTATE INTELLIGENCE",
+          "x": 80,
+          "y": 175.390625,
+          "width": 667.53125,
+          "height": 43.0625
+        },
+        {
+          "text": "Real Estate Intelligence for Georgia",
+          "x": 80,
+          "y": 250.453125,
+          "width": 512,
+          "height": 24
+        },
+        {
+          "text": "SEE THE DEALCLEARLY.",
+          "x": 80,
+          "y": 298.453125,
+          "width": 667.53125,
+          "height": 164.71875
+        },
+        {
+          "text": "Buy, sell and invest in Georgian real estate with market analysis, property verification and end-to-end deal support.",
+          "x": 80,
+          "y": 495.171875,
+          "width": 512,
+          "height": 51.1875
+        },
+        {
+          "text": "Find a property",
+          "x": 80,
+          "y": 578.359375,
+          "width": 186.640625,
+          "height": 54
+        },
+        {
+          "text": "Talk to an advisor",
+          "x": 282.640625,
+          "y": 578.359375,
+          "width": 202.453125,
+          "height": 54
+        },
+        {
+          "text": "TBILISI · BATUMI · GEORGIA",
+          "x": 80,
+          "y": 680.359375,
+          "width": 667.53125,
+          "height": 17.921875
+        },
+        {
+          "text": "ARCHITECTURE + DATA",
+          "x": 804.53125,
+          "y": 200.390625,
+          "width": 530.453125,
+          "height": 16.640625
+        },
+        {
+          "text": "YOUR NEXT MOVE",
+          "x": 80,
+          "y": 1182.5625,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "Start with your goal.",
+          "x": 80,
+          "y": 1224.984375,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "One market. Different ambitions. A clear approach for yours.",
+          "x": 949.328125,
+          "y": 1232.53125,
+          "width": 410.65625,
+          "height": 51.1875
+        },
+        {
+          "text": "Buy",
+          "x": 113,
+          "y": 1417.1875,
+          "width": 45.96875,
+          "height": 35.359375
+        },
+        {
+          "text": "Find the right property for living or relocation.",
+          "x": 113,
+          "y": 1476.546875,
+          "width": 332.5625,
+          "height": 25.59375
+        },
+        {
+          "text": "I want to buy",
+          "x": 113,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "Invest",
+          "x": 545,
+          "y": 1417.1875,
+          "width": 75.078125,
+          "height": 35.359375
+        },
+        {
+          "text": "Evaluate return, risk, liquidity and exit before you buy.",
+          "x": 545,
+          "y": 1476.546875,
+          "width": 350,
+          "height": 51.1875
+        },
+        {
+          "text": "I want to invest",
+          "x": 545,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "Sell",
+          "x": 977,
+          "y": 1417.1875,
+          "width": 46.328125,
+          "height": 35.359375
+        },
+        {
+          "text": "Understand your real market price and sell with a clear strategy.",
+          "x": 977,
+          "y": 1476.546875,
+          "width": 350,
+          "height": 51.1875
+        },
+        {
+          "text": "I want to sell",
+          "x": 977,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "A WIDER VIEW",
+          "x": 80,
+          "y": 1976.75,
+          "width": 560,
+          "height": 18.421875
+        },
+        {
+          "text": "Not more listings.Better decisions.",
+          "x": 80,
+          "y": 2019.171875,
+          "width": 560,
+          "height": 117.46875
+        },
+        {
+          "text": "A property is more than its asking price. Put the information in context before you commit.",
+          "x": 80,
+          "y": 2160.640625,
+          "width": 528,
+          "height": 51.1875
+        },
+        {
+          "text": "See how we analyze",
+          "x": 80,
+          "y": 2243.828125,
+          "width": 216.359375,
+          "height": 54
+        },
+        {
+          "text": "Illustrative comparison · not market data",
+          "x": 688,
+          "y": 1858.328125,
+          "width": 672,
+          "height": 17.921875
+        },
+        {
+          "text": "Typical listing",
+          "x": 713,
+          "y": 1917.25,
+          "width": 286,
+          "height": 56
+        },
+        {
+          "text": "Dragon Point view",
+          "x": 1049,
+          "y": 1919.25,
+          "width": 286,
+          "height": 56
+        },
+        {
+          "text": "OUR FRAMEWORK",
+          "x": 80,
+          "y": 2618.84375,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "The Dragon Point Standard.",
+          "x": 80,
+          "y": 2661.265625,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "Six perspectives. One informed decision.",
+          "x": 949.328125,
+          "y": 2694.40625,
+          "width": 410.65625,
+          "height": 25.59375
+        },
+        {
+          "text": "Market",
+          "x": 97,
+          "y": 2832.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "Location · Infrastructure · Demand",
+          "x": 97,
+          "y": 2872.390625,
+          "width": 180.328125,
+          "height": 44.78125
+        },
+        {
+          "text": "Price",
+          "x": 310.328125,
+          "y": 2832.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "Listing · Market · Transaction",
+          "x": 310.328125,
+          "y": 2872.390625,
+          "width": 180.328125,
+          "height": 44.78125
+        },
+        {
+          "text": "Property",
+          "x": 523.65625,
+          "y": 2832.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "Building · Layout · Condition",
+          "x": 523.65625,
+          "y": 2872.390625,
+          "width": 180.328125,
+          "height": 22.390625
+        },
+        {
+          "text": "Risk",
+          "x": 736.984375,
+          "y": 2832.46875,
+          "width": 180.34375,
+          "height": 23.921875
+        },
+        {
+          "text": "Legal · Technical · Market",
+          "x": 736.984375,
+          "y": 2872.390625,
+          "width": 180.34375,
+          "height": 22.390625
+        },
+        {
+          "text": "Return",
+          "x": 950.328125,
+          "y": 2832.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "Yield · Vacancy · Liquidity",
+          "x": 950.328125,
+          "y": 2872.390625,
+          "width": 180.328125,
+          "height": 22.390625
+        },
+        {
+          "text": "Deal",
+          "x": 1163.65625,
+          "y": 2832.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "Offer · Negotiation · Due diligence · Closing",
+          "x": 1163.65625,
+          "y": 2872.390625,
+          "width": 180.328125,
+          "height": 44.78125
+        },
+        {
+          "text": "WHERE WE WORK",
+          "x": 80,
+          "y": 3679.640625,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "Real estate services in Georgia.",
+          "x": 80,
+          "y": 3722.0625,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "From a place to live to a considered investment.",
+          "x": 949.328125,
+          "y": 3755.203125,
+          "width": 410.65625,
+          "height": 25.59375
+        },
+        {
+          "text": "Residential",
+          "x": 80,
+          "y": 3894.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "Investments",
+          "x": 408,
+          "y": 3894.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "New developments",
+          "x": 736,
+          "y": 3894.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "Commercial & land",
+          "x": 1064,
+          "y": 3894.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "CLARITY + CONTROL",
+          "x": 80,
+          "y": 4905.5,
+          "width": 592,
+          "height": 18.421875
+        },
+        {
+          "text": "Intelligencebehind the deal.",
+          "x": 80,
+          "y": 4947.921875,
+          "width": 592,
+          "height": 117.46875
+        },
+        {
+          "text": "Information gives you perspective. Professional judgment brings it together.",
+          "x": 80,
+          "y": 5089.390625,
+          "width": 528,
+          "height": 51.1875
+        },
+        {
+          "text": "Powered by KleekTo",
+          "x": 80,
+          "y": 5172.578125,
+          "width": 592,
+          "height": 75.59375
+        },
+        {
+          "text": "Technology supports the process. People guide the decision.",
+          "x": 80,
+          "y": 5272.171875,
+          "width": 480,
+          "height": 22.390625
+        },
+        {
+          "text": "PROPERTY · DATA · DECISION",
+          "x": 768,
+          "y": 5033.234375,
+          "width": 592,
+          "height": 16.640625
+        },
+        {
+          "text": "YOUR NEXT STEP",
+          "x": 80,
+          "y": 6003.828125,
+          "width": 473.59375,
+          "height": 18.421875
+        },
+        {
+          "text": "What are you looking for?",
+          "x": 80,
+          "y": 6046.25,
+          "width": 473.59375,
+          "height": 117.46875
+        },
+        {
+          "text": "Tell us your goal. A clear next step starts with the right information.",
+          "x": 80,
+          "y": 6187.71875,
+          "width": 473.59375,
+          "height": 51.1875
+        },
+        {
+          "text": "Fields marked * are required.",
+          "x": 80,
+          "y": 6270.90625,
+          "width": 473.59375,
+          "height": 22.390625
+        },
+        {
+          "text": "Buy",
+          "x": 649.59375,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "Invest",
+          "x": 889.0625,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "Sell",
+          "x": 1128.53125,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "Name *",
+          "x": 649.59375,
+          "y": 6125.015625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "Phone / WhatsApp *",
+          "x": 1016.796875,
+          "y": 6125.015625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "International numbers welcome. Include your country code.",
+          "x": 1016.796875,
+          "y": 6218.609375,
+          "width": 343.203125,
+          "height": 44.78125
+        },
+        {
+          "text": "Email (optional)",
+          "x": 649.59375,
+          "y": 6287.390625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "Budget (optional)",
+          "x": 1016.796875,
+          "y": 6287.390625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "Message (optional)",
+          "x": 649.59375,
+          "y": 6396.984375,
+          "width": 710.40625,
+          "height": 25.59375
+        },
+        {
+          "text": "Preferred language",
+          "x": 649.59375,
+          "y": 6582.953125,
+          "width": 710.40625,
+          "height": 25.59375
+        },
+        {
+          "text": "Website",
+          "x": 649.59375,
+          "y": 6671.546875,
+          "width": 57.265625,
+          "height": 19
+        },
+        {
+          "text": "Talk to an Advisor",
+          "x": 649.59375,
+          "y": 6700.546875,
+          "width": 202.96875,
+          "height": 54
+        },
+        {
+          "text": "Talk to a Dragon Point advisor.",
+          "x": 80,
+          "y": 6904.34375,
+          "width": 640,
+          "height": 51.84375
+        },
+        {
+          "text": "Contact details will be published here once confirmed.",
+          "x": 867.1875,
+          "y": 6930.59375,
+          "width": 416,
+          "height": 25.59375
+        },
+        {
+          "text": "Tbilisi · Batumi · Georgia",
+          "x": 80,
+          "y": 7107.390625,
+          "width": 647.796875,
+          "height": 20.46875
+        },
+        {
+          "text": "Powered by KleekTo",
+          "x": 80,
+          "y": 7143.859375,
+          "width": 647.796875,
+          "height": 25.59375
+        },
+        {
+          "text": "Privacy policy awaiting legal review. Enquiry channels and data collection terms will be published before enquiries open.",
+          "x": 759.796875,
+          "y": 7173.1875,
+          "width": 416,
+          "height": 44.78125
+        },
+        {
+          "text": "Privacy settings",
+          "x": 759.796875,
+          "y": 7157.1875,
+          "width": 90.484375,
+          "height": 44
+        },
+        {
+          "text": "SEE THE DEAL CLEARLY.",
+          "x": 80,
+          "y": 7249.1875,
+          "width": 1280,
+          "height": 40.34375
+        },
+        {
+          "text": "Talk to an Advisor",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "text": "Your privacy choices",
+          "x": 48,
+          "y": 794.09375,
+          "width": 787.1875,
+          "height": 29.125
+        },
+        {
+          "text": "Necessary features keep this site and enquiry form working. Optional analytics and marketing run only with your permission.",
+          "x": 48,
+          "y": 831.21875,
+          "width": 787.1875,
+          "height": 44.78125
+        },
+        {
+          "text": "Necessary only",
+          "x": 867.1875,
+          "y": 810.84375,
+          "width": 169.59375,
+          "height": 48.390625
+        },
+        {
+          "text": "Accept all",
+          "x": 1044.78125,
+          "y": 810.84375,
+          "width": 169.609375,
+          "height": 48.390625
+        },
+        {
+          "text": "Choose preferences",
+          "x": 1222.390625,
+          "y": 810.84375,
+          "width": 169.59375,
+          "height": 48.390625
+        }
+      ]
+    },
+    {
+      "locale": "he",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "shifts": [
+        {
+          "value": 0.0005474944408256778,
+          "recentInput": true,
+          "time": 418.40000009536743,
+          "nodes": ["dp-action dp-action-secondary", {}, {}]
+        }
+      ],
+      "lcp": [
+        {
+          "time": 320,
+          "element": "dp-architecture-image"
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 95.5,
+          "duration": 182
+        },
+        {
+          "time": 306.2000000476837,
+          "duration": 70
+        }
+      ],
+      "image": {
+        "currentSrc": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+        "sizes": "(min-width: 1440px) 1200px, (min-width: 1024px) 95vw, calc(100vw - 80px)",
+        "width": 324,
+        "height": 182.25,
+        "naturalWidth": 310,
+        "objectPosition": "70% 50%"
+      },
+      "fonts": [
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "Noto Sans Hebrew",
+          "weight": "100 900",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Input",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Fallback",
+          "weight": "normal",
+          "status": "unloaded",
+          "display": "auto"
+        },
+        {
+          "family": "Noto Hebrew Fallback",
+          "weight": "normal",
+          "status": "loaded",
+          "display": "auto"
+        }
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:3305/he",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 433.40000009536743,
+        "navigationId": 1651,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.3000001907348633,
+        "domainLookupStart": 1.7000000476837158,
+        "domainLookupEnd": 2.3000001907348633,
+        "connectStart": 2.3000001907348633,
+        "secureConnectionStart": 0,
+        "connectEnd": 2.9000000953674316,
+        "requestStart": 3,
+        "responseStart": 33.30000019073486,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 33.30000019073486,
+        "responseEnd": 43.10000014305115,
+        "transferSize": 13388,
+        "encodedBodySize": 13088,
+        "decodedBodySize": 63663,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 95.5,
+        "domContentLoadedEventStart": 95.5,
+        "domContentLoadedEventEnd": 95.80000019073486,
+        "domComplete": 433.2000000476837,
+        "loadEventStart": 433.40000009536743,
+        "loadEventEnd": 433.40000009536743,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+          "type": "link",
+          "transferredBytes": 58932,
+          "encodedBytes": 58632,
+          "decodedBytes": 58632
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+          "type": "link",
+          "transferredBytes": 28938,
+          "encodedBytes": 28638,
+          "decodedBytes": 28638
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "link",
+          "transferredBytes": 9452,
+          "encodedBytes": 9152,
+          "decodedBytes": 54619
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "script",
+          "transferredBytes": 15902,
+          "encodedBytes": 15602,
+          "decodedBytes": 47453
+        }
+      ],
+      "requests": [
+        {
+          "url": "/he",
+          "type": "Document",
+          "status": 200,
+          "mime": "text/html",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "transferredBytes": 13620
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "mime": "text/css",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 9535
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 2425
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+          "type": "Image",
+          "status": 200,
+          "mime": "image/webp",
+          "cacheControl": "public, max-age=14400, must-revalidate",
+          "transferredBytes": 29075
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8011
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4247
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4057
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 1597
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 11275
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45607
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 15999
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 72016
+        },
+        {
+          "url": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 58932
+        }
+      ],
+      "textGeometry": [
+        {
+          "text": "DRAGON POINT REAL ESTATE INTELLIGENCE",
+          "x": 16,
+          "y": 137,
+          "width": 358,
+          "height": 43.0625
+        },
+        {
+          "text": "תובנות לקבלת החלטות נדל״ן בגאורגיה",
+          "x": 16,
+          "y": 212.0625,
+          "width": 358,
+          "height": 24
+        },
+        {
+          "text": "רואים את העסקהבבירור.",
+          "x": 16,
+          "y": 260.0625,
+          "width": 358,
+          "height": 89.84375
+        },
+        {
+          "text": "קנו, מכרו והשקיעו בנדל״ן בגאורגיה עם ניתוח שוק, בדיקת נכסים וליווי מקצועי בכל שלבי העסקה.",
+          "x": 16,
+          "y": 381.90625,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "מצאו נכס",
+          "x": 228.140625,
+          "y": 465.09375,
+          "width": 145.859375,
+          "height": 54
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 44.8125,
+          "y": 465.09375,
+          "width": 167.328125,
+          "height": 54
+        },
+        {
+          "text": "טביליסי · בטומי · גאורגיה",
+          "x": 16,
+          "y": 567.09375,
+          "width": 358,
+          "height": 17.921875
+        },
+        {
+          "text": "אדריכלות + נתונים",
+          "x": 33,
+          "y": 650.015625,
+          "width": 324,
+          "height": 16.640625
+        },
+        {
+          "text": "הצעד הבא שלכם",
+          "x": 16,
+          "y": 1068.1875,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "מתחילים מהמטרה שלכם.",
+          "x": 16,
+          "y": 1110.609375,
+          "width": 358,
+          "height": 38.390625
+        },
+        {
+          "text": "שוק אחד. מטרות שונות. גישה ברורה שמתאימה לכם.",
+          "x": 16,
+          "y": 1173,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "קנייה",
+          "x": 269.3125,
+          "y": 1332.0625,
+          "width": 71.6875,
+          "height": 41.59375
+        },
+        {
+          "text": "מצאו את הנכס המתאים למגורים או למעבר לגאורגיה.",
+          "x": 49,
+          "y": 1397.65625,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים לקנות",
+          "x": 49,
+          "y": 1480.84375,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "השקעה",
+          "x": 236.484375,
+          "y": 1678.3125,
+          "width": 104.515625,
+          "height": 41.59375
+        },
+        {
+          "text": "בחנו תשואה, סיכון, נזילות ואפשרויות יציאה לפני הקנייה.",
+          "x": 49,
+          "y": 1743.90625,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים להשקיע",
+          "x": 49,
+          "y": 1827.09375,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "מכירה",
+          "x": 256.890625,
+          "y": 2024.5625,
+          "width": 84.109375,
+          "height": 41.59375
+        },
+        {
+          "text": "הבינו את שווי השוק של הנכס ומכרו בעזרת אסטרטגיה ברורה.",
+          "x": 49,
+          "y": 2090.15625,
+          "width": 292,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים למכור",
+          "x": 49,
+          "y": 2173.34375,
+          "width": 292,
+          "height": 63
+        },
+        {
+          "text": "התמונה הרחבה",
+          "x": 16,
+          "y": 2398.34375,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "לא עוד מודעות.החלטות טובות יותר.",
+          "x": 16,
+          "y": 2440.765625,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "נכס הוא יותר מהמחיר המבוקש. בחנו את המידע בהקשר הנכון לפני שמתחייבים.",
+          "x": 16,
+          "y": 2541.546875,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "כך אנחנו מנתחים",
+          "x": 180.203125,
+          "y": 2624.734375,
+          "width": 193.796875,
+          "height": 54
+        },
+        {
+          "text": "המחשה של הגישה · לא נתוני שוק",
+          "x": 16,
+          "y": 2726.734375,
+          "width": 358,
+          "height": 17.921875
+        },
+        {
+          "text": "מודעת נכס רגילה",
+          "x": 212,
+          "y": 2777.65625,
+          "width": 145,
+          "height": 56
+        },
+        {
+          "text": "המבט של Dragon Point",
+          "x": 33,
+          "y": 2779.65625,
+          "width": 145,
+          "height": 56
+        },
+        {
+          "text": "מסגרת הניתוח שלנו",
+          "x": 16,
+          "y": 3487.34375,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "הסטנדרט של Dragon Point.",
+          "x": 16,
+          "y": 3529.765625,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "שש נקודות מבט. החלטה מושכלת אחת.",
+          "x": 16,
+          "y": 3630.546875,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "שוק",
+          "x": 40,
+          "y": 3768.609375,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "מיקום · תשתיות · ביקוש",
+          "x": 40,
+          "y": 3812.671875,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "מחיר",
+          "x": 40,
+          "y": 3939.53125,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "מודעה · שוק · עסקה",
+          "x": 40,
+          "y": 3983.59375,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "נכס",
+          "x": 40,
+          "y": 4110.453125,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "בניין · תכנון · מצב הנכס",
+          "x": 40,
+          "y": 4154.515625,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "סיכון",
+          "x": 40,
+          "y": 4281.375,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "משפטי · טכני · שוק",
+          "x": 40,
+          "y": 4325.4375,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "תשואה",
+          "x": 40,
+          "y": 4452.296875,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "הכנסה · תקופות ללא שוכר · נזילות",
+          "x": 40,
+          "y": 4496.359375,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "עסקה",
+          "x": 40,
+          "y": 4623.21875,
+          "width": 310,
+          "height": 28.0625
+        },
+        {
+          "text": "הצעה · משא ומתן · בדיקת נאותות · השלמה",
+          "x": 40,
+          "y": 4667.28125,
+          "width": 310,
+          "height": 22.390625
+        },
+        {
+          "text": "תחומי הפעילות שלנו",
+          "x": 16,
+          "y": 4511.34375,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "שירותי נדל״ן בגאורגיה.",
+          "x": 16,
+          "y": 4553.765625,
+          "width": 358,
+          "height": 38.390625
+        },
+        {
+          "text": "מבית למגורים ועד להשקעה מחושבת.",
+          "x": 16,
+          "y": 4616.15625,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "נדל״ן למגורים",
+          "x": 16,
+          "y": 4754.21875,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "השקעות",
+          "x": 16,
+          "y": 5003.53125,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "פרויקטים חדשים",
+          "x": 16,
+          "y": 5252.84375,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "מסחרי וקרקעות",
+          "x": 16,
+          "y": 5502.15625,
+          "width": 358,
+          "height": 28.0625
+        },
+        {
+          "text": "בהירות + שליטה",
+          "x": 16,
+          "y": 5599.34375,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "תובנותמאחורי העסקה.",
+          "x": 16,
+          "y": 5641.765625,
+          "width": 358,
+          "height": 76.78125
+        },
+        {
+          "text": "מידע מרחיב את נקודת המבט. שיקול דעת מקצועי מחבר את הפרטים לתמונה שלמה.",
+          "x": 16,
+          "y": 5742.546875,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "בתמיכת KleekTo",
+          "x": 16,
+          "y": 5825.734375,
+          "width": 358,
+          "height": 75.59375
+        },
+        {
+          "text": "הטכנולוגיה תומכת בתהליך. אנשי מקצוע מלווים את ההחלטה.",
+          "x": 16,
+          "y": 5925.328125,
+          "width": 358,
+          "height": 22.390625
+        },
+        {
+          "text": "נכס · נתונים · החלטה",
+          "x": 16,
+          "y": 6187.71875,
+          "width": 358,
+          "height": 16.640625
+        },
+        {
+          "text": "הצעד הבא שלכם",
+          "x": 16,
+          "y": 6688.34375,
+          "width": 358,
+          "height": 18.421875
+        },
+        {
+          "text": "מה אתם מחפשים?",
+          "x": 16,
+          "y": 6730.765625,
+          "width": 358,
+          "height": 38.390625
+        },
+        {
+          "text": "ספרו לנו על המטרה שלכם. צעד נכון מתחיל במידע הנכון.",
+          "x": 16,
+          "y": 6793.15625,
+          "width": 358,
+          "height": 51.1875
+        },
+        {
+          "text": "שדות המסומנים ב־* הם שדות חובה.",
+          "x": 16,
+          "y": 6876.34375,
+          "width": 358,
+          "height": 22.390625
+        },
+        {
+          "text": "קנייה",
+          "x": 260,
+          "y": 7017.921875,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "השקעה",
+          "x": 138,
+          "y": 7017.921875,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "מכירה",
+          "x": 16,
+          "y": 7017.921875,
+          "width": 114,
+          "height": 51.59375
+        },
+        {
+          "text": "שם *",
+          "x": 16,
+          "y": 7101.515625,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "טלפון / WhatsApp *",
+          "x": 16,
+          "y": 7211.109375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "אפשר להזין מספר בינלאומי. יש לציין את קידומת המדינה.",
+          "x": 16,
+          "y": 7304.703125,
+          "width": 358,
+          "height": 22.390625
+        },
+        {
+          "text": "דוא״ל (לא חובה)",
+          "x": 16,
+          "y": 7351.09375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "תקציב (לא חובה)",
+          "x": 16,
+          "y": 7460.6875,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "הודעה (לא חובה)",
+          "x": 16,
+          "y": 7570.28125,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "שפה מועדפת",
+          "x": 16,
+          "y": 7756.25,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "אתר",
+          "x": 344.546875,
+          "y": 7842.84375,
+          "width": 29.453125,
+          "height": 22
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 206.671875,
+          "y": 7873.84375,
+          "width": 167.328125,
+          "height": 54
+        },
+        {
+          "text": "דברו עם יועץ של Dragon Point.",
+          "x": 16,
+          "y": 8040.84375,
+          "width": 358,
+          "height": 32.640625
+        },
+        {
+          "text": "פרטי הקשר יפורסמו כאן לאחר אישורם.",
+          "x": 16,
+          "y": 8097.484375,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "טביליסי · בטומי · גאורגיה",
+          "x": 16,
+          "y": 8273.28125,
+          "width": 358,
+          "height": 20.46875
+        },
+        {
+          "text": "בתמיכת KleekTo",
+          "x": 16,
+          "y": 8309.75,
+          "width": 358,
+          "height": 25.59375
+        },
+        {
+          "text": "מדיניות הפרטיות ממתינה לבדיקה משפטית. ערוצי הפנייה ותנאי איסוף הנתונים יפורסמו לפני פתיחת האפשרות לפנות אלינו.",
+          "x": 16,
+          "y": 8487.34375,
+          "width": 358,
+          "height": 67.171875
+        },
+        {
+          "text": "הגדרות פרטיות",
+          "x": 293.296875,
+          "y": 8471.34375,
+          "width": 80.703125,
+          "height": 44
+        },
+        {
+          "text": "רואים את העסקה בבירור.",
+          "x": 16,
+          "y": 8639.34375,
+          "width": 358,
+          "height": 40.34375
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "text": "הבחירה שלכם בפרטיות",
+          "x": 16,
+          "y": 617.3125,
+          "width": 358,
+          "height": 29.125
+        },
+        {
+          "text": "הפעולות ההכרחיות מאפשרות לאתר ולטופס הפנייה לפעול. ניתוח שימוש ומדידה שיווקית מופעלים רק בהסכמתכם.",
+          "x": 16,
+          "y": 654.4375,
+          "width": 358,
+          "height": 44.78125
+        },
+        {
+          "text": "הכרחי בלבד",
+          "x": 199,
+          "y": 715.21875,
+          "width": 175,
+          "height": 48.390625
+        },
+        {
+          "text": "אישור הכול",
+          "x": 16,
+          "y": 715.21875,
+          "width": 175,
+          "height": 48.390625
+        },
+        {
+          "text": "בחירת העדפות",
+          "x": 16,
+          "y": 771.609375,
+          "width": 358,
+          "height": 48.390625
+        }
+      ]
+    },
+    {
+      "locale": "he",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "shifts": [
+        {
+          "value": 0.00016779192386831275,
+          "recentInput": false,
+          "time": 431.10000014305115,
+          "nodes": ["dp-desktop-nav", "dp-action dp-action-secondary", {}, {}]
+        }
+      ],
+      "lcp": [
+        {
+          "time": 332,
+          "element": "dp-architecture-image"
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 103.90000009536743,
+          "duration": 172
+        },
+        {
+          "time": 309.30000019073486,
+          "duration": 77
+        }
+      ],
+      "image": {
+        "currentSrc": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+        "sizes": "(min-width: 1440px) 1200px, (min-width: 1024px) 95vw, calc(100vw - 80px)",
+        "width": 530.453125,
+        "height": 663.0625,
+        "naturalWidth": 1200,
+        "objectPosition": "70% 50%"
+      },
+      "fonts": [
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "500",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "600",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "700",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "Noto Sans Hebrew",
+          "weight": "100 900",
+          "status": "loaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Input",
+          "weight": "400",
+          "status": "unloaded",
+          "display": "swap"
+        },
+        {
+          "family": "FiraGO Fallback",
+          "weight": "normal",
+          "status": "unloaded",
+          "display": "auto"
+        },
+        {
+          "family": "Noto Hebrew Fallback",
+          "weight": "normal",
+          "status": "loaded",
+          "display": "auto"
+        }
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:3305/he",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 444.60000014305115,
+        "navigationId": 9420,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.40000009536743164,
+        "domainLookupStart": 1.9000000953674316,
+        "domainLookupEnd": 2.5,
+        "connectStart": 2.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 3.5,
+        "requestStart": 3.6000001430511475,
+        "responseStart": 35.80000019073486,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 35.80000019073486,
+        "responseEnd": 48.80000019073486,
+        "transferSize": 13388,
+        "encodedBodySize": 13088,
+        "decodedBodySize": 63663,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 103.90000009536743,
+        "domContentLoadedEventStart": 104,
+        "domContentLoadedEventEnd": 104,
+        "domComplete": 444.40000009536743,
+        "loadEventStart": 444.60000014305115,
+        "loadEventEnd": 444.60000014305115,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "url": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+          "type": "link",
+          "transferredBytes": 58932,
+          "encodedBytes": 58632,
+          "decodedBytes": 58632
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+          "type": "link",
+          "transferredBytes": 77206,
+          "encodedBytes": 76906,
+          "decodedBytes": 76906
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "link",
+          "transferredBytes": 9452,
+          "encodedBytes": 9152,
+          "decodedBytes": 54619
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "script",
+          "transferredBytes": 15902,
+          "encodedBytes": 15602,
+          "decodedBytes": 47453
+        },
+        {
+          "url": "/en?_rsc=cflHFZMCNpVKpTAk",
+          "type": "fetch",
+          "transferredBytes": 1284,
+          "encodedBytes": 984,
+          "decodedBytes": 2978
+        },
+        {
+          "url": "/ka?_rsc=cflHFZMCNpVKpTAk",
+          "type": "fetch",
+          "transferredBytes": 1411,
+          "encodedBytes": 1111,
+          "decodedBytes": 4088
+        },
+        {
+          "url": "/ru?_rsc=cflHFZMCNpVKpTAk",
+          "type": "fetch",
+          "transferredBytes": 1400,
+          "encodedBytes": 1100,
+          "decodedBytes": 3464
+        },
+        {
+          "url": "/he?_rsc=cflHFZMCNpVKpTAk",
+          "type": "fetch",
+          "transferredBytes": 1344,
+          "encodedBytes": 1044,
+          "decodedBytes": 3149
+        }
+      ],
+      "requests": [
+        {
+          "url": "/he",
+          "type": "Document",
+          "status": 200,
+          "mime": "text/html",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "transferredBytes": 13620
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=1200&q=75",
+          "type": "Image",
+          "status": 200,
+          "mime": "image/webp",
+          "cacheControl": "public, max-age=14400, must-revalidate",
+          "transferredBytes": 77343
+        },
+        {
+          "url": "/_next/static/chunks/0-8gupcdan708.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "mime": "text/css",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 9535
+        },
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 2425
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 8011
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4247
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 45607
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 1597
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 72016
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 4057
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 11275
+        },
+        {
+          "url": "/_next/static/chunks/06fd08vvt8qn2.js",
+          "type": "Script",
+          "status": 200,
+          "mime": "application/javascript",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 15999
+        },
+        {
+          "url": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+          "type": "Font",
+          "status": 200,
+          "mime": "font/woff2",
+          "cacheControl": "public, max-age=31536000, immutable",
+          "transferredBytes": 58932
+        },
+        {
+          "url": "/en?_rsc=cflHFZMCNpVKpTAk",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/ka?_rsc=cflHFZMCNpVKpTAk",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/ru?_rsc=cflHFZMCNpVKpTAk",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        },
+        {
+          "url": "/he?_rsc=cflHFZMCNpVKpTAk",
+          "type": "Fetch",
+          "status": 200,
+          "mime": "text/x-component",
+          "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+        }
+      ],
+      "textGeometry": [
+        {
+          "text": "DRAGON POINT REAL ESTATE INTELLIGENCE",
+          "x": 692.46875,
+          "y": 175.390625,
+          "width": 667.53125,
+          "height": 43.0625
+        },
+        {
+          "text": "תובנות לקבלת החלטות נדל״ן בגאורגיה",
+          "x": 848,
+          "y": 250.453125,
+          "width": 512,
+          "height": 24
+        },
+        {
+          "text": "רואים את העסקהבבירור.",
+          "x": 692.46875,
+          "y": 298.453125,
+          "width": 667.53125,
+          "height": 164.71875
+        },
+        {
+          "text": "קנו, מכרו והשקיעו בנדל״ן בגאורגיה עם ניתוח שוק, בדיקת נכסים וליווי מקצועי בכל שלבי העסקה.",
+          "x": 848,
+          "y": 495.171875,
+          "width": 512,
+          "height": 51.1875
+        },
+        {
+          "text": "מצאו נכס",
+          "x": 1214.140625,
+          "y": 578.359375,
+          "width": 145.859375,
+          "height": 54
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 1030.8125,
+          "y": 578.359375,
+          "width": 167.328125,
+          "height": 54
+        },
+        {
+          "text": "טביליסי · בטומי · גאורגיה",
+          "x": 692.46875,
+          "y": 680.359375,
+          "width": 667.53125,
+          "height": 17.921875
+        },
+        {
+          "text": "אדריכלות + נתונים",
+          "x": 105.015625,
+          "y": 200.390625,
+          "width": 530.453125,
+          "height": 16.640625
+        },
+        {
+          "text": "הצעד הבא שלכם",
+          "x": 538.671875,
+          "y": 1182.5625,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "מתחילים מהמטרה שלכם.",
+          "x": 538.671875,
+          "y": 1224.984375,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "שוק אחד. מטרות שונות. גישה ברורה שמתאימה לכם.",
+          "x": 80.015625,
+          "y": 1258.125,
+          "width": 410.65625,
+          "height": 25.59375
+        },
+        {
+          "text": "קנייה",
+          "x": 1266.0625,
+          "y": 1417.1875,
+          "width": 60.9375,
+          "height": 35.359375
+        },
+        {
+          "text": "מצאו את הנכס המתאים למגורים או למעבר לגאורגיה.",
+          "x": 977,
+          "y": 1476.546875,
+          "width": 350,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים לקנות",
+          "x": 977,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "השקעה",
+          "x": 806.15625,
+          "y": 1417.1875,
+          "width": 88.84375,
+          "height": 35.359375
+        },
+        {
+          "text": "בחנו תשואה, סיכון, נזילות ואפשרויות יציאה לפני הקנייה.",
+          "x": 545,
+          "y": 1476.546875,
+          "width": 350,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים להשקיע",
+          "x": 545,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "מכירה",
+          "x": 391.515625,
+          "y": 1417.1875,
+          "width": 71.484375,
+          "height": 35.359375
+        },
+        {
+          "text": "הבינו את שווי השוק של הנכס ומכרו בעזרת אסטרטגיה ברורה.",
+          "x": 113,
+          "y": 1476.546875,
+          "width": 350,
+          "height": 51.1875
+        },
+        {
+          "text": "רוצים למכור",
+          "x": 113,
+          "y": 1559.734375,
+          "width": 350,
+          "height": 63
+        },
+        {
+          "text": "התמונה הרחבה",
+          "x": 800,
+          "y": 1989.546875,
+          "width": 560,
+          "height": 18.421875
+        },
+        {
+          "text": "לא עוד מודעות.החלטות טובות יותר.",
+          "x": 800,
+          "y": 2031.96875,
+          "width": 560,
+          "height": 117.46875
+        },
+        {
+          "text": "נכס הוא יותר מהמחיר המבוקש. בחנו את המידע בהקשר הנכון לפני שמתחייבים.",
+          "x": 832,
+          "y": 2173.4375,
+          "width": 528,
+          "height": 25.59375
+        },
+        {
+          "text": "כך אנחנו מנתחים",
+          "x": 1166.203125,
+          "y": 2231.03125,
+          "width": 193.796875,
+          "height": 54
+        },
+        {
+          "text": "המחשה של הגישה · לא נתוני שוק",
+          "x": 80,
+          "y": 1858.328125,
+          "width": 672,
+          "height": 17.921875
+        },
+        {
+          "text": "מודעת נכס רגילה",
+          "x": 441,
+          "y": 1917.25,
+          "width": 286,
+          "height": 56
+        },
+        {
+          "text": "המבט של Dragon Point",
+          "x": 105,
+          "y": 1919.25,
+          "width": 286,
+          "height": 56
+        },
+        {
+          "text": "מסגרת הניתוח שלנו",
+          "x": 538.671875,
+          "y": 2618.84375,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "הסטנדרט של Dragon Point.",
+          "x": 538.671875,
+          "y": 2661.265625,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "שש נקודות מבט. החלטה מושכלת אחת.",
+          "x": 80.015625,
+          "y": 2694.40625,
+          "width": 410.65625,
+          "height": 25.59375
+        },
+        {
+          "text": "שוק",
+          "x": 1162.671875,
+          "y": 2831.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "מיקום · תשתיות · ביקוש",
+          "x": 1162.671875,
+          "y": 2871.390625,
+          "width": 180.328125,
+          "height": 22.390625
+        },
+        {
+          "text": "מחיר",
+          "x": 949.34375,
+          "y": 2831.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "מודעה · שוק · עסקה",
+          "x": 949.34375,
+          "y": 2871.390625,
+          "width": 180.328125,
+          "height": 22.390625
+        },
+        {
+          "text": "נכס",
+          "x": 736.015625,
+          "y": 2831.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "בניין · תכנון · מצב הנכס",
+          "x": 736.015625,
+          "y": 2871.390625,
+          "width": 180.328125,
+          "height": 22.390625
+        },
+        {
+          "text": "סיכון",
+          "x": 522.671875,
+          "y": 2831.46875,
+          "width": 180.34375,
+          "height": 23.921875
+        },
+        {
+          "text": "משפטי · טכני · שוק",
+          "x": 522.671875,
+          "y": 2871.390625,
+          "width": 180.34375,
+          "height": 22.390625
+        },
+        {
+          "text": "תשואה",
+          "x": 309.34375,
+          "y": 2831.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "הכנסה · תקופות ללא שוכר · נזילות",
+          "x": 309.34375,
+          "y": 2871.390625,
+          "width": 180.328125,
+          "height": 44.78125
+        },
+        {
+          "text": "עסקה",
+          "x": 96.015625,
+          "y": 2831.46875,
+          "width": 180.328125,
+          "height": 23.921875
+        },
+        {
+          "text": "הצעה · משא ומתן · בדיקת נאותות · השלמה",
+          "x": 96.015625,
+          "y": 2871.390625,
+          "width": 180.328125,
+          "height": 44.78125
+        },
+        {
+          "text": "תחומי הפעילות שלנו",
+          "x": 538.671875,
+          "y": 3679.640625,
+          "width": 821.328125,
+          "height": 18.421875
+        },
+        {
+          "text": "שירותי נדל״ן בגאורגיה.",
+          "x": 538.671875,
+          "y": 3722.0625,
+          "width": 821.328125,
+          "height": 58.734375
+        },
+        {
+          "text": "מבית למגורים ועד להשקעה מחושבת.",
+          "x": 80.015625,
+          "y": 3755.203125,
+          "width": 410.65625,
+          "height": 25.59375
+        },
+        {
+          "text": "נדל״ן למגורים",
+          "x": 1064,
+          "y": 3893.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "השקעות",
+          "x": 736,
+          "y": 3893.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "פרויקטים חדשים",
+          "x": 408,
+          "y": 3893.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "מסחרי וקרקעות",
+          "x": 80,
+          "y": 3893.265625,
+          "width": 296,
+          "height": 28.0625
+        },
+        {
+          "text": "בהירות + שליטה",
+          "x": 768,
+          "y": 4905.5,
+          "width": 592,
+          "height": 18.421875
+        },
+        {
+          "text": "תובנותמאחורי העסקה.",
+          "x": 768,
+          "y": 4947.921875,
+          "width": 592,
+          "height": 117.46875
+        },
+        {
+          "text": "מידע מרחיב את נקודת המבט. שיקול דעת מקצועי מחבר את הפרטים לתמונה שלמה.",
+          "x": 832,
+          "y": 5089.390625,
+          "width": 528,
+          "height": 51.1875
+        },
+        {
+          "text": "בתמיכת KleekTo",
+          "x": 768,
+          "y": 5172.578125,
+          "width": 592,
+          "height": 75.59375
+        },
+        {
+          "text": "הטכנולוגיה תומכת בתהליך. אנשי מקצוע מלווים את ההחלטה.",
+          "x": 880,
+          "y": 5272.171875,
+          "width": 480,
+          "height": 22.390625
+        },
+        {
+          "text": "נכס · נתונים · החלטה",
+          "x": 80,
+          "y": 5033.234375,
+          "width": 592,
+          "height": 16.640625
+        },
+        {
+          "text": "הצעד הבא שלכם",
+          "x": 886.40625,
+          "y": 6003.828125,
+          "width": 473.59375,
+          "height": 18.421875
+        },
+        {
+          "text": "מה אתם מחפשים?",
+          "x": 886.40625,
+          "y": 6046.25,
+          "width": 473.59375,
+          "height": 58.734375
+        },
+        {
+          "text": "ספרו לנו על המטרה שלכם. צעד נכון מתחיל במידע הנכון.",
+          "x": 886.40625,
+          "y": 6128.984375,
+          "width": 473.59375,
+          "height": 25.59375
+        },
+        {
+          "text": "שדות המסומנים ב־* הם שדות חובה.",
+          "x": 886.40625,
+          "y": 6186.578125,
+          "width": 473.59375,
+          "height": 22.390625
+        },
+        {
+          "text": "קנייה",
+          "x": 558.9375,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "השקעה",
+          "x": 319.46875,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "מכירה",
+          "x": 80,
+          "y": 6041.421875,
+          "width": 231.46875,
+          "height": 51.59375
+        },
+        {
+          "text": "שם *",
+          "x": 447.203125,
+          "y": 6125.015625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "טלפון / WhatsApp *",
+          "x": 80,
+          "y": 6125.015625,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "אפשר להזין מספר בינלאומי. יש לציין את קידומת המדינה.",
+          "x": 80,
+          "y": 6218.609375,
+          "width": 343.203125,
+          "height": 22.390625
+        },
+        {
+          "text": "דוא״ל (לא חובה)",
+          "x": 447.203125,
+          "y": 6265,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "תקציב (לא חובה)",
+          "x": 80,
+          "y": 6265,
+          "width": 343.203125,
+          "height": 25.59375
+        },
+        {
+          "text": "הודעה (לא חובה)",
+          "x": 80,
+          "y": 6374.59375,
+          "width": 710.40625,
+          "height": 25.59375
+        },
+        {
+          "text": "שפה מועדפת",
+          "x": 80,
+          "y": 6560.5625,
+          "width": 710.40625,
+          "height": 25.59375
+        },
+        {
+          "text": "אתר",
+          "x": 760.953125,
+          "y": 6647.15625,
+          "width": 29.453125,
+          "height": 22
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 623.078125,
+          "y": 6678.15625,
+          "width": 167.328125,
+          "height": 54
+        },
+        {
+          "text": "דברו עם יועץ של Dragon Point.",
+          "x": 720,
+          "y": 6881.953125,
+          "width": 640,
+          "height": 51.84375
+        },
+        {
+          "text": "פרטי הקשר יפורסמו כאן לאחר אישורם.",
+          "x": 156.8125,
+          "y": 6908.203125,
+          "width": 416,
+          "height": 25.59375
+        },
+        {
+          "text": "טביליסי · בטומי · גאורגיה",
+          "x": 732.203125,
+          "y": 7084,
+          "width": 627.796875,
+          "height": 20.46875
+        },
+        {
+          "text": "בתמיכת KleekTo",
+          "x": 732.203125,
+          "y": 7120.46875,
+          "width": 627.796875,
+          "height": 25.59375
+        },
+        {
+          "text": "מדיניות הפרטיות ממתינה לבדיקה משפטית. ערוצי הפנייה ותנאי איסוף הנתונים יפורסמו לפני פתיחת האפשרות לפנות אלינו.",
+          "x": 284.203125,
+          "y": 7150.796875,
+          "width": 416,
+          "height": 44.78125
+        },
+        {
+          "text": "הגדרות פרטיות",
+          "x": 619.5,
+          "y": 7134.796875,
+          "width": 80.703125,
+          "height": 44
+        },
+        {
+          "text": "רואים את העסקה בבירור.",
+          "x": 80,
+          "y": 7226.796875,
+          "width": 1280,
+          "height": 40.34375
+        },
+        {
+          "text": "דברו עם יועץ",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "text": "הבחירה שלכם בפרטיות",
+          "x": 604.8125,
+          "y": 816.484375,
+          "width": 787.1875,
+          "height": 29.125
+        },
+        {
+          "text": "הפעולות ההכרחיות מאפשרות לאתר ולטופס הפנייה לפעול. ניתוח שימוש ומדידה שיווקית מופעלים רק בהסכמתכם.",
+          "x": 604.8125,
+          "y": 853.609375,
+          "width": 787.1875,
+          "height": 22.390625
+        },
+        {
+          "text": "הכרחי בלבד",
+          "x": 403.21875,
+          "y": 822.046875,
+          "width": 169.59375,
+          "height": 48.390625
+        },
+        {
+          "text": "אישור הכול",
+          "x": 225.609375,
+          "y": 822.046875,
+          "width": 169.609375,
+          "height": 48.390625
+        },
+        {
+          "text": "בחירת העדפות",
+          "x": 48.015625,
+          "y": 822.046875,
+          "width": 169.59375,
+          "height": 48.390625
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "file": "0-8gupcdan708.css",
+      "bytes": 54619
+    },
+    {
+      "file": "043zbln6qrk5g.js",
+      "bytes": 2684
+    },
+    {
+      "file": "06fd08vvt8qn2.js",
+      "bytes": 47453
+    },
+    {
+      "file": "0cz1d0mv5g_q7.js",
+      "bytes": 112594
+    },
+    {
+      "file": "12m6ej1ccy3m1.js",
+      "bytes": 4574
+    },
+    {
+      "file": "19mx3mg6lkumu.js",
+      "bytes": 28907
+    },
+    {
+      "file": "2z-e6jheq0ftu.js",
+      "bytes": 165979
+    },
+    {
+      "file": "31a9_ugznsb5n.js",
+      "bytes": 30682
+    },
+    {
+      "file": "32bi6sac9z5_s.js",
+      "bytes": 3396
+    },
+    {
+      "file": "3fntmmi971322.js",
+      "bytes": 14377
+    },
+    {
+      "file": "3g4px251sg85e.js",
+      "bytes": 228922
+    },
+    {
+      "file": "3s6nzrbk-8mnv.js",
+      "bytes": 5598
+    },
+    {
+      "file": "3__t4esefgj7s.js",
+      "bytes": 394356
+    },
+    {
+      "file": "turbopack-03rfayxv7ep_b.js",
+      "bytes": 9721
+    }
+  ]
+}

@@ -7,7 +7,17 @@ export function MobileLeadCTA({ label }: { label: string }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const update = () => {
+      // Avoid forcing below-fold section layout while the sticky CTA cannot
+      // appear. This is especially important with native offscreen rendering.
+      if (window.innerWidth >= 768) {
+        setVisible(false);
+        return;
+      }
       const hero = document.getElementById('hero')?.getBoundingClientRect();
+      if (!hero || hero.bottom > 0) {
+        setVisible(false);
+        return;
+      }
       const lead = document.getElementById('advisor')?.getBoundingClientRect();
       const editing = document.activeElement?.matches(
         'input, textarea, select',
@@ -33,13 +43,23 @@ export function MobileLeadCTA({ label }: { label: string }) {
         !menu;
       setVisible(show);
     };
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    window.visualViewport?.addEventListener('resize', update);
-    document.addEventListener('focusin', update);
-    document.addEventListener('focusout', update);
-    const observer = new MutationObserver(update);
+    // Multiple hydration/consent mutations can otherwise force the same
+    // geometry repeatedly within one frame. Keep one pending read/update.
+    let frame = 0;
+    const schedule = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        update();
+      });
+    };
+    schedule();
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    window.visualViewport?.addEventListener('resize', schedule);
+    document.addEventListener('focusin', schedule);
+    document.addEventListener('focusout', schedule);
+    const observer = new MutationObserver(schedule);
     observer.observe(document.documentElement, {
       subtree: true,
       childList: true,
@@ -54,11 +74,12 @@ export function MobileLeadCTA({ label }: { label: string }) {
       ],
     });
     return () => {
-      window.removeEventListener('scroll', update);
-      window.removeEventListener('resize', update);
-      window.visualViewport?.removeEventListener('resize', update);
-      document.removeEventListener('focusin', update);
-      document.removeEventListener('focusout', update);
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      window.visualViewport?.removeEventListener('resize', schedule);
+      document.removeEventListener('focusin', schedule);
+      document.removeEventListener('focusout', schedule);
       observer.disconnect();
     };
   }, []);

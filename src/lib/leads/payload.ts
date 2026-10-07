@@ -3,7 +3,7 @@ import type {
   LeadFormValues,
   LeadRequest,
 } from '../validation/lead';
-import { attributionShape } from '../validation/attribution';
+import { attributionKeys } from '../validation/attribution-rules';
 
 export type LeadPayload = Omit<
   LeadRequest,
@@ -20,7 +20,7 @@ export function buildLeadPayload(
   attribution: Attribution,
 ): LeadPayload {
   const tracking: Attribution = {};
-  for (const key of Object.keys(attributionShape) as (keyof Attribution)[])
+  for (const key of attributionKeys)
     if (attribution[key] !== undefined) tracking[key] = attribution[key];
   const digits = values.phone.replace(/\D/g, '');
   const phone = values.phone.startsWith('00')

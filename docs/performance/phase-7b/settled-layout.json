@@ -1,0 +1,29 @@
+{
+  "note": "Inspection override reveals all sections for full-page geometry only. It is never used by Lighthouse, initial asset probes or application code.",
+  "rows": [
+    {
+      "locale": "en",
+      "device": "mobile",
+      "textNodes": 84,
+      "differences": []
+    },
+    {
+      "locale": "en",
+      "device": "desktop",
+      "textNodes": 84,
+      "differences": []
+    },
+    {
+      "locale": "he",
+      "device": "mobile",
+      "textNodes": 84,
+      "differences": []
+    },
+    {
+      "locale": "he",
+      "device": "desktop",
+      "textNodes": 84,
+      "differences": []
+    }
+  ]
+}

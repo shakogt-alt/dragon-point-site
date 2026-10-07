@@ -1,0 +1,1348 @@
+{
+  "note": "Module function spans are measured from actual minified production chunks using Acorn AST; source entry IDs come from the production client-reference manifest; recognizable dependency exports identify RHF/React/Zod. Isolated module gzip sizes are not additive; network body lengths are measured separately. Unknown Next/shared IDs are retained explicitly.",
+  "initialScripts": [
+    {
+      "locale": "en",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/1b4cj_2_r-2ct.js",
+          "type": "script",
+          "transferredBytes": 15905,
+          "encodedBytes": 15605,
+          "decodedBytes": 47521
+        }
+      ]
+    },
+    {
+      "locale": "he",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "transferredBytes": 2329,
+          "encodedBytes": 2029,
+          "decodedBytes": 5598
+        },
+        {
+          "url": "/_next/static/chunks/19mx3mg6lkumu.js",
+          "type": "script",
+          "transferredBytes": 7914,
+          "encodedBytes": 7614,
+          "decodedBytes": 28907
+        },
+        {
+          "url": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "transferredBytes": 71876,
+          "encodedBytes": 71576,
+          "decodedBytes": 228922
+        },
+        {
+          "url": "/_next/static/chunks/2z-e6jheq0ftu.js",
+          "type": "script",
+          "transferredBytes": 45485,
+          "encodedBytes": 45185,
+          "decodedBytes": 165979
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+          "type": "script",
+          "transferredBytes": 4151,
+          "encodedBytes": 3851,
+          "decodedBytes": 9721
+        },
+        {
+          "url": "/_next/static/chunks/3fntmmi971322.js",
+          "type": "script",
+          "transferredBytes": 3961,
+          "encodedBytes": 3661,
+          "decodedBytes": 14377
+        },
+        {
+          "url": "/_next/static/chunks/043zbln6qrk5g.js",
+          "type": "script",
+          "transferredBytes": 1502,
+          "encodedBytes": 1202,
+          "decodedBytes": 2684
+        },
+        {
+          "url": "/_next/static/chunks/31a9_ugznsb5n.js",
+          "type": "script",
+          "transferredBytes": 11178,
+          "encodedBytes": 10878,
+          "decodedBytes": 30682
+        },
+        {
+          "url": "/_next/static/chunks/1b4cj_2_r-2ct.js",
+          "type": "script",
+          "transferredBytes": 15905,
+          "encodedBytes": 15605,
+          "decodedBytes": 47521
+        }
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "file": "043zbln6qrk5g.js",
+      "rawBytes": 2684,
+      "gzipBytes": 1202,
+      "modules": [
+        {
+          "ids": [77447],
+          "source": "Next/shared module 77447",
+          "rawBytes": 94,
+          "isolatedGzipBytes": 112
+        },
+        {
+          "ids": [12235],
+          "source": "Next/shared module 12235",
+          "rawBytes": 94,
+          "isolatedGzipBytes": 111
+        },
+        {
+          "ids": [82996],
+          "source": "Next/shared module 82996",
+          "rawBytes": 197,
+          "isolatedGzipBytes": 163
+        },
+        {
+          "ids": [16233],
+          "source": "Next/shared module 16233",
+          "rawBytes": 1615,
+          "isolatedGzipBytes": 768
+        },
+        {
+          "ids": [62509],
+          "source": "Next/shared module 62509",
+          "rawBytes": 103,
+          "isolatedGzipBytes": 114
+        },
+        {
+          "ids": [58022],
+          "source": "Next/shared module 58022",
+          "rawBytes": 324,
+          "isolatedGzipBytes": 223
+        },
+        {
+          "ids": [48307],
+          "source": "Next/shared module 48307",
+          "rawBytes": 94,
+          "isolatedGzipBytes": 108
+        }
+      ]
+    },
+    {
+      "file": "0cz1d0mv5g_q7.js",
+      "rawBytes": 112594,
+      "gzipBytes": 39627,
+      "modules": []
+    },
+    {
+      "file": "12m6ej1ccy3m1.js",
+      "rawBytes": 4574,
+      "gzipBytes": 1941,
+      "modules": [
+        {
+          "ids": [76409],
+          "source": "Next/shared module 76409",
+          "rawBytes": 4453,
+          "isolatedGzipBytes": 1872
+        }
+      ]
+    },
+    {
+      "file": "19mx3mg6lkumu.js",
+      "rawBytes": 28907,
+      "gzipBytes": 7614,
+      "modules": [
+        {
+          "ids": [55682],
+          "source": "Next/shared module 55682",
+          "rawBytes": 77,
+          "isolatedGzipBytes": 95
+        },
+        {
+          "ids": [72383],
+          "source": "Next/shared module 72383",
+          "rawBytes": 1750,
+          "isolatedGzipBytes": 815
+        },
+        {
+          "ids": [12354],
+          "source": "Next/shared module 12354",
+          "rawBytes": 521,
+          "isolatedGzipBytes": 304
+        },
+        {
+          "ids": [54394],
+          "source": "Next/shared module 54394",
+          "rawBytes": 1054,
+          "isolatedGzipBytes": 540
+        },
+        {
+          "ids": [65713],
+          "source": "Next/shared module 65713",
+          "rawBytes": 484,
+          "isolatedGzipBytes": 287
+        },
+        {
+          "ids": [78377],
+          "source": "Next/shared module 78377",
+          "rawBytes": 819,
+          "isolatedGzipBytes": 438
+        },
+        {
+          "ids": [14502],
+          "source": "Next/shared module 14502",
+          "rawBytes": 457,
+          "isolatedGzipBytes": 257
+        },
+        {
+          "ids": [13957],
+          "source": "Next/shared module 13957",
+          "rawBytes": 349,
+          "isolatedGzipBytes": 247
+        },
+        {
+          "ids": [90373],
+          "source": "Next/shared module 90373",
+          "rawBytes": 726,
+          "isolatedGzipBytes": 404
+        },
+        {
+          "ids": [22783],
+          "source": "Next/shared module 22783",
+          "rawBytes": 561,
+          "isolatedGzipBytes": 324
+        },
+        {
+          "ids": [79854],
+          "source": "Next/shared module 79854",
+          "rawBytes": 642,
+          "isolatedGzipBytes": 365
+        },
+        {
+          "ids": [22683],
+          "source": "Next/shared module 22683",
+          "rawBytes": 645,
+          "isolatedGzipBytes": 369
+        },
+        {
+          "ids": [3680],
+          "source": "Next/shared module 3680",
+          "rawBytes": 783,
+          "isolatedGzipBytes": 415
+        },
+        {
+          "ids": [58442],
+          "source": "Next/shared module 58442",
+          "rawBytes": 1327,
+          "isolatedGzipBytes": 640
+        },
+        {
+          "ids": [70725],
+          "source": "Next/shared module 70725",
+          "rawBytes": 519,
+          "isolatedGzipBytes": 308
+        },
+        {
+          "ids": [1425],
+          "source": "Next/shared module 1425",
+          "rawBytes": 492,
+          "isolatedGzipBytes": 261
+        },
+        {
+          "ids": [1244],
+          "source": "Next/shared module 1244",
+          "rawBytes": 394,
+          "isolatedGzipBytes": 228
+        },
+        {
+          "ids": [15507],
+          "source": "Next/shared module 15507",
+          "rawBytes": 527,
+          "isolatedGzipBytes": 311
+        },
+        {
+          "ids": [92805],
+          "source": "Next/shared module 92805",
+          "rawBytes": 1103,
+          "isolatedGzipBytes": 517
+        },
+        {
+          "ids": [76562],
+          "source": "Next/shared module 76562",
+          "rawBytes": 2747,
+          "isolatedGzipBytes": 1010
+        },
+        {
+          "ids": [35451],
+          "source": "Next/shared module 35451",
+          "rawBytes": 1889,
+          "isolatedGzipBytes": 823
+        },
+        {
+          "ids": [47167],
+          "source": "Next/shared module 47167",
+          "rawBytes": 155,
+          "isolatedGzipBytes": 133
+        },
+        {
+          "ids": [45689],
+          "source": "Next/shared module 45689",
+          "rawBytes": 341,
+          "isolatedGzipBytes": 246
+        },
+        {
+          "ids": [43476],
+          "source": "Next/shared module 43476",
+          "rawBytes": 55,
+          "isolatedGzipBytes": 75
+        },
+        {
+          "ids": [50740],
+          "source": "Next/shared module 50740",
+          "rawBytes": 7786,
+          "isolatedGzipBytes": 2963
+        },
+        {
+          "ids": [71645],
+          "source": "Next/shared module 71645",
+          "rawBytes": 55,
+          "isolatedGzipBytes": 75
+        },
+        {
+          "ids": [54839],
+          "source": "Next/shared module 54839",
+          "rawBytes": 453,
+          "isolatedGzipBytes": 259
+        },
+        {
+          "ids": [97367],
+          "source": "node_modules/next/dist/esm/lib/framework/boundary-components.js",
+          "rawBytes": 718,
+          "isolatedGzipBytes": 314
+        },
+        {
+          "ids": [61994],
+          "source": "Next/shared module 61994",
+          "rawBytes": 696,
+          "isolatedGzipBytes": 365
+        },
+        {
+          "ids": [32061],
+          "source": "Next/shared module 32061",
+          "rawBytes": 461,
+          "isolatedGzipBytes": 319
+        }
+      ]
+    },
+    {
+      "file": "1b4cj_2_r-2ct.js",
+      "rawBytes": 47521,
+      "gzipBytes": 15605,
+      "modules": [
+        {
+          "ids": [22016],
+          "source": "node_modules/next/dist/client/app-dir/link.js",
+          "rawBytes": 3392,
+          "isolatedGzipBytes": 1688
+        },
+        {
+          "ids": [5500],
+          "source": "node_modules/next/dist/client/image-component.js",
+          "rawBytes": 3548,
+          "isolatedGzipBytes": 1674
+        },
+        {
+          "ids": [18581],
+          "source": "Next/shared module 18581",
+          "rawBytes": 759,
+          "isolatedGzipBytes": 371
+        },
+        {
+          "ids": [25633],
+          "source": "Next/shared module 25633",
+          "rawBytes": 1749,
+          "isolatedGzipBytes": 885
+        },
+        {
+          "ids": [88143],
+          "source": "Next/shared module 88143",
+          "rawBytes": 926,
+          "isolatedGzipBytes": 545
+        },
+        {
+          "ids": [87690],
+          "source": "Next/shared module 87690",
+          "rawBytes": 819,
+          "isolatedGzipBytes": 548
+        },
+        {
+          "ids": [8927],
+          "source": "Next/shared module 8927",
+          "rawBytes": 4861,
+          "isolatedGzipBytes": 2316
+        },
+        {
+          "ids": [18556],
+          "source": "Next/shared module 18556",
+          "rawBytes": 262,
+          "isolatedGzipBytes": 209
+        },
+        {
+          "ids": [65856],
+          "source": "Next/shared module 65856",
+          "rawBytes": 224,
+          "isolatedGzipBytes": 183
+        },
+        {
+          "ids": [70965],
+          "source": "Next/shared module 70965",
+          "rawBytes": 291,
+          "isolatedGzipBytes": 217
+        },
+        {
+          "ids": [1948],
+          "source": "Next/shared module 1948",
+          "rawBytes": 1131,
+          "isolatedGzipBytes": 688
+        },
+        {
+          "ids": [73668],
+          "source": "Next/shared module 73668",
+          "rawBytes": 353,
+          "isolatedGzipBytes": 265
+        },
+        {
+          "ids": [98183],
+          "source": "Next/shared module 98183",
+          "rawBytes": 769,
+          "isolatedGzipBytes": 418
+        },
+        {
+          "ids": [95057],
+          "source": "Next/shared module 95057",
+          "rawBytes": 1053,
+          "isolatedGzipBytes": 661
+        },
+        {
+          "ids": [98879],
+          "source": "Next/shared module 98879",
+          "rawBytes": 787,
+          "isolatedGzipBytes": 385
+        },
+        {
+          "ids": [18967],
+          "source": "Next/shared module 18967",
+          "rawBytes": 2386,
+          "isolatedGzipBytes": 1153
+        },
+        {
+          "ids": [80935],
+          "source": "src/components/analytics/ConsentManager.tsx",
+          "rawBytes": 3994,
+          "isolatedGzipBytes": 1295
+        },
+        {
+          "ids": [16171],
+          "source": "src/components/analytics/ConsentSettings.tsx",
+          "rawBytes": 529,
+          "isolatedGzipBytes": 330
+        },
+        {
+          "ids": [3374],
+          "source": "src/components/layout/Header.tsx",
+          "rawBytes": 3795,
+          "isolatedGzipBytes": 1365
+        },
+        {
+          "ids": [47064],
+          "source": "src/components/leads/LeadForm.tsx",
+          "rawBytes": 7623,
+          "isolatedGzipBytes": 2917
+        },
+        {
+          "ids": [42651],
+          "source": "src/components/leads/MobileLeadCTA.tsx",
+          "rawBytes": 1826,
+          "isolatedGzipBytes": 819
+        },
+        {
+          "ids": [69831],
+          "source": "Next/shared module 69831",
+          "rawBytes": 302,
+          "isolatedGzipBytes": 244
+        },
+        {
+          "ids": [60936, 93054],
+          "source": "Next/shared module 60936,93054",
+          "rawBytes": 5865,
+          "isolatedGzipBytes": 2464
+        }
+      ]
+    },
+    {
+      "file": "2z-e6jheq0ftu.js",
+      "rawBytes": 165979,
+      "gzipBytes": 45185,
+      "modules": [
+        {
+          "ids": [90809],
+          "source": "Next/shared module 90809",
+          "rawBytes": 613,
+          "isolatedGzipBytes": 340
+        },
+        {
+          "ids": [32120],
+          "source": "Next/shared module 32120",
+          "rawBytes": 593,
+          "isolatedGzipBytes": 353
+        },
+        {
+          "ids": [92245],
+          "source": "Next/shared module 92245",
+          "rawBytes": 389,
+          "isolatedGzipBytes": 231
+        },
+        {
+          "ids": [27801],
+          "source": "Next/shared module 27801",
+          "rawBytes": 538,
+          "isolatedGzipBytes": 311
+        },
+        {
+          "ids": [21768],
+          "source": "Next/shared module 21768",
+          "rawBytes": 1727,
+          "isolatedGzipBytes": 699
+        },
+        {
+          "ids": [99781],
+          "source": "Next/shared module 99781",
+          "rawBytes": 4610,
+          "isolatedGzipBytes": 1693
+        },
+        {
+          "ids": [57630],
+          "source": "Next/shared module 57630",
+          "rawBytes": 858,
+          "isolatedGzipBytes": 487
+        },
+        {
+          "ids": [91949],
+          "source": "Next/shared module 91949",
+          "rawBytes": 3191,
+          "isolatedGzipBytes": 1246
+        },
+        {
+          "ids": [56019],
+          "source": "Next/shared module 56019",
+          "rawBytes": 471,
+          "isolatedGzipBytes": 256
+        },
+        {
+          "ids": [68391],
+          "source": "Next/shared module 68391",
+          "rawBytes": 753,
+          "isolatedGzipBytes": 438
+        },
+        {
+          "ids": [76963],
+          "source": "Next/shared module 76963",
+          "rawBytes": 514,
+          "isolatedGzipBytes": 284
+        },
+        {
+          "ids": [24063],
+          "source": "Next/shared module 24063",
+          "rawBytes": 1603,
+          "isolatedGzipBytes": 614
+        },
+        {
+          "ids": [34727],
+          "source": "Next/shared module 34727",
+          "rawBytes": 2600,
+          "isolatedGzipBytes": 1102
+        },
+        {
+          "ids": [51191],
+          "source": "Next/shared module 51191",
+          "rawBytes": 433,
+          "isolatedGzipBytes": 249
+        },
+        {
+          "ids": [87288],
+          "source": "React Server Components client",
+          "rawBytes": 4306,
+          "isolatedGzipBytes": 1966
+        },
+        {
+          "ids": [48919],
+          "source": "Next/shared module 48919",
+          "rawBytes": 790,
+          "isolatedGzipBytes": 421
+        },
+        {
+          "ids": [95871],
+          "source": "Next/shared module 95871",
+          "rawBytes": 10402,
+          "isolatedGzipBytes": 4245
+        },
+        {
+          "ids": [94272],
+          "source": "Next/shared module 94272",
+          "rawBytes": 497,
+          "isolatedGzipBytes": 267
+        },
+        {
+          "ids": [84356],
+          "source": "Next/shared module 84356",
+          "rawBytes": 705,
+          "isolatedGzipBytes": 354
+        },
+        {
+          "ids": [54069],
+          "source": "Next/shared module 54069",
+          "rawBytes": 915,
+          "isolatedGzipBytes": 544
+        },
+        {
+          "ids": [69845],
+          "source": "Next/shared module 69845",
+          "rawBytes": 1162,
+          "isolatedGzipBytes": 680
+        },
+        {
+          "ids": [73790],
+          "source": "Next/shared module 73790",
+          "rawBytes": 1239,
+          "isolatedGzipBytes": 677
+        },
+        {
+          "ids": [45794],
+          "source": "Next/shared module 45794",
+          "rawBytes": 4696,
+          "isolatedGzipBytes": 2278
+        },
+        {
+          "ids": [91668],
+          "source": "Next/shared module 91668",
+          "rawBytes": 990,
+          "isolatedGzipBytes": 577
+        },
+        {
+          "ids": [88540],
+          "source": "Next/shared module 88540",
+          "rawBytes": 866,
+          "isolatedGzipBytes": 445
+        },
+        {
+          "ids": [4924],
+          "source": "Next/shared module 4924",
+          "rawBytes": 1155,
+          "isolatedGzipBytes": 541
+        },
+        {
+          "ids": [76138],
+          "source": "Next/shared module 76138",
+          "rawBytes": 711,
+          "isolatedGzipBytes": 398
+        },
+        {
+          "ids": [79027],
+          "source": "Next/shared module 79027",
+          "rawBytes": 1428,
+          "isolatedGzipBytes": 655
+        },
+        {
+          "ids": [77048],
+          "source": "Next/shared module 77048",
+          "rawBytes": 679,
+          "isolatedGzipBytes": 385
+        },
+        {
+          "ids": [511],
+          "source": "Next/shared module 511",
+          "rawBytes": 2434,
+          "isolatedGzipBytes": 997
+        },
+        {
+          "ids": [20896],
+          "source": "Next/shared module 20896",
+          "rawBytes": 23068,
+          "isolatedGzipBytes": 7170
+        },
+        {
+          "ids": [35779],
+          "source": "Next/shared module 35779",
+          "rawBytes": 417,
+          "isolatedGzipBytes": 237
+        },
+        {
+          "ids": [73861],
+          "source": "Next/shared module 73861",
+          "rawBytes": 1123,
+          "isolatedGzipBytes": 553
+        },
+        {
+          "ids": [90555],
+          "source": "Next/shared module 90555",
+          "rawBytes": 1124,
+          "isolatedGzipBytes": 447
+        },
+        {
+          "ids": [60355],
+          "source": "Next/shared module 60355",
+          "rawBytes": 6496,
+          "isolatedGzipBytes": 2846
+        },
+        {
+          "ids": [96167],
+          "source": "Next/shared module 96167",
+          "rawBytes": 5373,
+          "isolatedGzipBytes": 1904
+        },
+        {
+          "ids": [1411],
+          "source": "Next/shared module 1411",
+          "rawBytes": 598,
+          "isolatedGzipBytes": 347
+        },
+        {
+          "ids": [77709],
+          "source": "Next/shared module 77709",
+          "rawBytes": 13524,
+          "isolatedGzipBytes": 3979
+        },
+        {
+          "ids": [9396],
+          "source": "Next/shared module 9396",
+          "rawBytes": 856,
+          "isolatedGzipBytes": 455
+        },
+        {
+          "ids": [56655],
+          "source": "Next/shared module 56655",
+          "rawBytes": 2567,
+          "isolatedGzipBytes": 756
+        },
+        {
+          "ids": [92838],
+          "source": "Next/shared module 92838",
+          "rawBytes": 614,
+          "isolatedGzipBytes": 323
+        },
+        {
+          "ids": [41538],
+          "source": "Next/shared module 41538",
+          "rawBytes": 1272,
+          "isolatedGzipBytes": 592
+        },
+        {
+          "ids": [50590],
+          "source": "Next/shared module 50590",
+          "rawBytes": 1938,
+          "isolatedGzipBytes": 1012
+        },
+        {
+          "ids": [48277],
+          "source": "Next/shared module 48277",
+          "rawBytes": 540,
+          "isolatedGzipBytes": 288
+        },
+        {
+          "ids": [32992],
+          "source": "Next/shared module 32992",
+          "rawBytes": 495,
+          "isolatedGzipBytes": 266
+        },
+        {
+          "ids": [87250],
+          "source": "Next/shared module 87250",
+          "rawBytes": 415,
+          "isolatedGzipBytes": 241
+        },
+        {
+          "ids": [33906],
+          "source": "Next/shared module 33906",
+          "rawBytes": 2263,
+          "isolatedGzipBytes": 1040
+        },
+        {
+          "ids": [18800],
+          "source": "Next/shared module 18800",
+          "rawBytes": 3652,
+          "isolatedGzipBytes": 1298
+        },
+        {
+          "ids": [74080],
+          "source": "Next/shared module 74080",
+          "rawBytes": 251,
+          "isolatedGzipBytes": 179
+        },
+        {
+          "ids": [64893],
+          "source": "React Server Components client",
+          "rawBytes": 23162,
+          "isolatedGzipBytes": 7482
+        },
+        {
+          "ids": [21413],
+          "source": "Next/shared module 21413",
+          "rawBytes": 55,
+          "isolatedGzipBytes": 75
+        },
+        {
+          "ids": [35326],
+          "source": "Next/shared module 35326",
+          "rawBytes": 44,
+          "isolatedGzipBytes": 64
+        },
+        {
+          "ids": [63416],
+          "source": "Next/shared module 63416",
+          "rawBytes": 6554,
+          "isolatedGzipBytes": 2334
+        },
+        {
+          "ids": [39146],
+          "source": "Next/shared module 39146",
+          "rawBytes": 316,
+          "isolatedGzipBytes": 210
+        },
+        {
+          "ids": [8372],
+          "source": "Next/shared module 8372",
+          "rawBytes": 555,
+          "isolatedGzipBytes": 271
+        },
+        {
+          "ids": [22744],
+          "source": "Next/shared module 22744",
+          "rawBytes": 1139,
+          "isolatedGzipBytes": 497
+        },
+        {
+          "ids": [43369],
+          "source": "Next/shared module 43369",
+          "rawBytes": 564,
+          "isolatedGzipBytes": 315
+        },
+        {
+          "ids": [19921],
+          "source": "Next/shared module 19921",
+          "rawBytes": 351,
+          "isolatedGzipBytes": 255
+        },
+        {
+          "ids": [86051],
+          "source": "Next/shared module 86051",
+          "rawBytes": 877,
+          "isolatedGzipBytes": 493
+        },
+        {
+          "ids": [88093],
+          "source": "Next/shared module 88093",
+          "rawBytes": 1196,
+          "isolatedGzipBytes": 553
+        },
+        {
+          "ids": [44305],
+          "source": "Next/shared module 44305",
+          "rawBytes": 1647,
+          "isolatedGzipBytes": 781
+        },
+        {
+          "ids": [12718],
+          "source": "Next/shared module 12718",
+          "rawBytes": 392,
+          "isolatedGzipBytes": 271
+        },
+        {
+          "ids": [64245],
+          "source": "Next/shared module 64245",
+          "rawBytes": 240,
+          "isolatedGzipBytes": 174
+        },
+        {
+          "ids": [3372],
+          "source": "Next/shared module 3372",
+          "rawBytes": 208,
+          "isolatedGzipBytes": 170
+        },
+        {
+          "ids": [39470],
+          "source": "Next/shared module 39470",
+          "rawBytes": 257,
+          "isolatedGzipBytes": 193
+        },
+        {
+          "ids": [41858],
+          "source": "Next/shared module 41858",
+          "rawBytes": 298,
+          "isolatedGzipBytes": 232
+        },
+        {
+          "ids": [38281],
+          "source": "Next/shared module 38281",
+          "rawBytes": 239,
+          "isolatedGzipBytes": 194
+        },
+        {
+          "ids": [82823],
+          "source": "Next/shared module 82823",
+          "rawBytes": 561,
+          "isolatedGzipBytes": 339
+        },
+        {
+          "ids": [5550],
+          "source": "Next/shared module 5550",
+          "rawBytes": 490,
+          "isolatedGzipBytes": 291
+        },
+        {
+          "ids": [74180],
+          "source": "Next/shared module 74180",
+          "rawBytes": 855,
+          "isolatedGzipBytes": 533
+        },
+        {
+          "ids": [26935],
+          "source": "Next/shared module 26935",
+          "rawBytes": 479,
+          "isolatedGzipBytes": 355
+        },
+        {
+          "ids": [82604],
+          "source": "Next/shared module 82604",
+          "rawBytes": 554,
+          "isolatedGzipBytes": 302
+        },
+        {
+          "ids": [91463],
+          "source": "Next/shared module 91463",
+          "rawBytes": 1626,
+          "isolatedGzipBytes": 697
+        },
+        {
+          "ids": [72463],
+          "source": "Next/shared module 72463",
+          "rawBytes": 362,
+          "isolatedGzipBytes": 251
+        },
+        {
+          "ids": [59084],
+          "source": "Next/shared module 59084",
+          "rawBytes": 288,
+          "isolatedGzipBytes": 225
+        },
+        {
+          "ids": [52817],
+          "source": "Next/shared module 52817",
+          "rawBytes": 441,
+          "isolatedGzipBytes": 260
+        },
+        {
+          "ids": [67764],
+          "source": "Next/shared module 67764",
+          "rawBytes": 841,
+          "isolatedGzipBytes": 496
+        },
+        {
+          "ids": [6372],
+          "source": "Next/shared module 6372",
+          "rawBytes": 434,
+          "isolatedGzipBytes": 286
+        },
+        {
+          "ids": [13258],
+          "source": "Next/shared module 13258",
+          "rawBytes": 1111,
+          "isolatedGzipBytes": 583
+        },
+        {
+          "ids": [39747],
+          "source": "Next/shared module 39747",
+          "rawBytes": 724,
+          "isolatedGzipBytes": 448
+        }
+      ]
+    },
+    {
+      "file": "31a9_ugznsb5n.js",
+      "rawBytes": 30682,
+      "gzipBytes": 10878,
+      "modules": [
+        {
+          "ids": [53145],
+          "source": "Next/shared module 53145",
+          "rawBytes": 30561,
+          "isolatedGzipBytes": 10818
+        }
+      ]
+    },
+    {
+      "file": "32bi6sac9z5_s.js",
+      "rawBytes": 3396,
+      "gzipBytes": 1327,
+      "modules": [
+        {
+          "ids": [94814],
+          "source": "Zod Mini/core",
+          "rawBytes": 3275,
+          "isolatedGzipBytes": 1265
+        }
+      ]
+    },
+    {
+      "file": "3fntmmi971322.js",
+      "rawBytes": 14377,
+      "gzipBytes": 3661,
+      "modules": [
+        {
+          "ids": [28298],
+          "source": "Next/shared module 28298",
+          "rawBytes": 747,
+          "isolatedGzipBytes": 396
+        },
+        {
+          "ids": [47257],
+          "source": "node_modules/next/dist/esm/client/components/client-page.js",
+          "rawBytes": 810,
+          "isolatedGzipBytes": 445
+        },
+        {
+          "ids": [92825],
+          "source": "node_modules/next/dist/esm/client/components/client-segment.js",
+          "rawBytes": 656,
+          "isolatedGzipBytes": 386
+        },
+        {
+          "ids": [68017],
+          "source": "node_modules/next/dist/esm/client/components/http-access-fallback/error-boundary.js",
+          "rawBytes": 1748,
+          "isolatedGzipBytes": 778
+        },
+        {
+          "ids": [22976],
+          "source": "Next/shared module 22976",
+          "rawBytes": 596,
+          "isolatedGzipBytes": 310
+        },
+        {
+          "ids": [77694],
+          "source": "Next/shared module 77694",
+          "rawBytes": 699,
+          "isolatedGzipBytes": 321
+        },
+        {
+          "ids": [39756],
+          "source": "node_modules/next/dist/esm/client/components/layout-router.js",
+          "rawBytes": 5269,
+          "isolatedGzipBytes": 2208
+        },
+        {
+          "ids": [37457],
+          "source": "node_modules/next/dist/esm/client/components/render-from-template-context.js",
+          "rawBytes": 519,
+          "isolatedGzipBytes": 308
+        },
+        {
+          "ids": [6831],
+          "source": "Next/shared module 6831",
+          "rawBytes": 490,
+          "isolatedGzipBytes": 281
+        },
+        {
+          "ids": [97689],
+          "source": "Next/shared module 97689",
+          "rawBytes": 440,
+          "isolatedGzipBytes": 250
+        },
+        {
+          "ids": [93504],
+          "source": "Next/shared module 93504",
+          "rawBytes": 496,
+          "isolatedGzipBytes": 286
+        },
+        {
+          "ids": [66996],
+          "source": "Next/shared module 66996",
+          "rawBytes": 453,
+          "isolatedGzipBytes": 255
+        },
+        {
+          "ids": [15783],
+          "source": "Next/shared module 15783",
+          "rawBytes": 542,
+          "isolatedGzipBytes": 293
+        },
+        {
+          "ids": [27201],
+          "source": "node_modules/next/dist/esm/lib/metadata/generate/icon-mark.js",
+          "rawBytes": 235,
+          "isolatedGzipBytes": 205
+        },
+        {
+          "ids": [91915],
+          "source": "Next/shared module 91915",
+          "rawBytes": 459,
+          "isolatedGzipBytes": 295
+        }
+      ]
+    },
+    {
+      "file": "3g4px251sg85e.js",
+      "rawBytes": 228922,
+      "gzipBytes": 71576,
+      "modules": [
+        {
+          "ids": [66849],
+          "source": "Next/shared module 66849",
+          "rawBytes": 1387,
+          "isolatedGzipBytes": 597
+        },
+        {
+          "ids": [23911],
+          "source": "Next/shared module 23911",
+          "rawBytes": 309,
+          "isolatedGzipBytes": 193
+        },
+        {
+          "ids": [62262],
+          "source": "React scheduler",
+          "rawBytes": 3454,
+          "isolatedGzipBytes": 1476
+        },
+        {
+          "ids": [53389],
+          "source": "Next/shared module 53389",
+          "rawBytes": 55,
+          "isolatedGzipBytes": 75
+        },
+        {
+          "ids": [98569],
+          "source": "React DOM client",
+          "rawBytes": 3723,
+          "isolatedGzipBytes": 1635
+        },
+        {
+          "ids": [94553],
+          "source": "Next/shared module 94553",
+          "rawBytes": 461,
+          "isolatedGzipBytes": 299
+        },
+        {
+          "ids": [74575],
+          "source": "Next/shared module 74575",
+          "rawBytes": 952,
+          "isolatedGzipBytes": 463
+        },
+        {
+          "ids": [22737],
+          "source": "Next/shared module 22737",
+          "rawBytes": 952,
+          "isolatedGzipBytes": 525
+        },
+        {
+          "ids": [96517],
+          "source": "Next/shared module 96517",
+          "rawBytes": 852,
+          "isolatedGzipBytes": 514
+        },
+        {
+          "ids": [62634],
+          "source": "Next/shared module 62634",
+          "rawBytes": 1428,
+          "isolatedGzipBytes": 731
+        },
+        {
+          "ids": [75530],
+          "source": "Next/shared module 75530",
+          "rawBytes": 5552,
+          "isolatedGzipBytes": 2136
+        },
+        {
+          "ids": [41624],
+          "source": "Next/shared module 41624",
+          "rawBytes": 1245,
+          "isolatedGzipBytes": 650
+        },
+        {
+          "ids": [94109],
+          "source": "Next/shared module 94109",
+          "rawBytes": 713,
+          "isolatedGzipBytes": 388
+        },
+        {
+          "ids": [65716],
+          "source": "Next/shared module 65716",
+          "rawBytes": 2262,
+          "isolatedGzipBytes": 1169
+        },
+        {
+          "ids": [25018],
+          "source": "Next/shared module 25018",
+          "rawBytes": 818,
+          "isolatedGzipBytes": 451
+        },
+        {
+          "ids": [51323],
+          "source": "Next/shared module 51323",
+          "rawBytes": 961,
+          "isolatedGzipBytes": 506
+        },
+        {
+          "ids": [23755],
+          "source": "Next/shared module 23755",
+          "rawBytes": 358,
+          "isolatedGzipBytes": 240
+        },
+        {
+          "ids": [46480],
+          "source": "React DOM client",
+          "rawBytes": 200694,
+          "isolatedGzipBytes": 63182
+        },
+        {
+          "ids": [88014],
+          "source": "Next/shared module 88014",
+          "rawBytes": 251,
+          "isolatedGzipBytes": 179
+        },
+        {
+          "ids": [16565],
+          "source": "Next/shared module 16565",
+          "rawBytes": 412,
+          "isolatedGzipBytes": 262
+        },
+        {
+          "ids": [2023],
+          "source": "Next/shared module 2023",
+          "rawBytes": 599,
+          "isolatedGzipBytes": 378
+        },
+        {
+          "ids": [28279],
+          "source": "Next/shared module 28279",
+          "rawBytes": 455,
+          "isolatedGzipBytes": 251
+        },
+        {
+          "ids": [97238],
+          "source": "Next/shared module 97238",
+          "rawBytes": 671,
+          "isolatedGzipBytes": 394
+        },
+        {
+          "ids": [5526],
+          "source": "Next/shared module 5526",
+          "rawBytes": 78,
+          "isolatedGzipBytes": 94
+        }
+      ]
+    },
+    {
+      "file": "3s6nzrbk-8mnv.js",
+      "rawBytes": 5598,
+      "gzipBytes": 2029,
+      "modules": [
+        {
+          "ids": [18576],
+          "source": "Next/shared module 18576",
+          "rawBytes": 3725,
+          "isolatedGzipBytes": 1457
+        },
+        {
+          "ids": [68027],
+          "source": "node_modules/next/dist/client/components/builtin/global-error.js",
+          "rawBytes": 1511,
+          "isolatedGzipBytes": 687
+        },
+        {
+          "ids": [42732],
+          "source": "Next/shared module 42732",
+          "rawBytes": 227,
+          "isolatedGzipBytes": 189
+        }
+      ]
+    },
+    {
+      "file": "3__t4esefgj7s.js",
+      "rawBytes": 394356,
+      "gzipBytes": 91938,
+      "modules": [
+        {
+          "ids": [16526],
+          "source": "Zod Mini/core",
+          "rawBytes": 394235,
+          "isolatedGzipBytes": 91878
+        }
+      ]
+    },
+    {
+      "file": "turbopack-03rfayxv7ep_b.js",
+      "rawBytes": 9721,
+      "gzipBytes": 3851,
+      "modules": []
+    }
+  ]
+}
