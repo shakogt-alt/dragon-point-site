@@ -1,35 +1,37 @@
-// Decorative architecture, not a property advertisement or live data chart.
-export function ArchitectureVisual() {
+import Image from 'next/image';
+
+// Supplied illustrative architecture, never a listing or live market data.
+export function ArchitectureVisual({ alt }: { alt: string }) {
   return (
-    <svg
-      className="dp-architecture"
-      viewBox="0 0 620 540"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <g className="dp-visual-grid" stroke="currentColor" strokeWidth=".5">
-        {Array.from({ length: 13 }, (_, i) => (
-          <path key={`v${i}`} d={`M${i * 50} 0v540`} />
-        ))}
-        {Array.from({ length: 12 }, (_, i) => (
-          <path key={`h${i}`} d={`M0 ${i * 50}h620`} />
-        ))}
-      </g>
-      <g stroke="currentColor" strokeWidth="1.1">
-        <path d="m86 350 210 120 238-138-210-120Z M86 350V188l210-122 238 138v128 M86 188l210 122 238-106 M296 310v160 M296 66v244" />
-        <path d="m136 218 160-94 187 109v100l-187 108-160-92Z M136 218l160 93 187-78 M296 124v187 M296 311v130" />
-        <path d="m186 247 110-65 138 80v71l-138 80-110-63Z M186 247l110 64 138-49" />
-        <path d="M86 270l210 122 238-138 M86 309l210 122 238-138" />
-      </g>
-      <g className="dp-visual-accent" stroke="currentColor" strokeWidth="2">
-        <path d="m296 124 187 109v100l-187 108 M296 311l138-49 M296 182v129" />
-        <circle cx="296" cy="311" r="5" fill="currentColor" />
-        <path d="M296 311H40 M483 233h100" strokeDasharray="3 7" />
-      </g>
-      <g stroke="currentColor">
-        <path d="M18 18h20m-10-10v20 M582 512h20m-10-10v20" />
-      </g>
-    </svg>
+    <div className="dp-architecture">
+      <Image
+        className="dp-architecture-image"
+        src="/images/architecture/illustrative-building.webp"
+        width={1600}
+        height={900}
+        // A portrait cover crop needs landscape pixels for its full height.
+        sizes="(min-width: 1440px) 1200px, (min-width: 1024px) 95vw, calc(100vw - 80px)"
+        alt={alt}
+        preload
+      />
+      <svg
+        className="dp-architecture-overlay"
+        viewBox="0 0 1600 900"
+        preserveAspectRatio="none"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <g className="dp-visual-grid" stroke="currentColor" strokeWidth="1">
+          <path d="M400 0v900M800 0v900M1200 0v900M0 300h1600M0 600h1600" />
+        </g>
+        <g stroke="currentColor" strokeWidth="2">
+          <path d="M56 112V56h100M1444 56h100v56M56 788v56h100M1444 844h100v-56" />
+        </g>
+        <g className="dp-visual-accent" stroke="currentColor" strokeWidth="3">
+          <path d="M1000 230h360v300h-360zM1180 530v220M880 380h120" />
+        </g>
+      </svg>
+    </div>
   );
 }

@@ -93,9 +93,38 @@ for (const locale of locales) {
     test(`${locale}: responsive Core UI ${width}px`, async ({
       page,
     }, testInfo) => {
+      const errors: string[] = [];
+      page.on('pageerror', (error) => errors.push(error.message));
+      page.on('console', (message) => {
+        if (message.type() === 'error') errors.push(message.text());
+      });
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(`/${locale}`);
       await page.evaluate(() => document.fonts.ready);
+      const image = page.locator('.dp-architecture-image');
+      await expect(image).toHaveAttribute('width', '1600');
+      await expect(image).toHaveAttribute('height', '900');
+      expect(await image.getAttribute('alt')).toBeTruthy();
+      await image.evaluate((el: HTMLImageElement) => el.decode());
+      expect(
+        await image.evaluate((el: HTMLImageElement) => el.naturalWidth),
+      ).toBeGreaterThan(0);
+      // A portrait crop must not upscale a small landscape derivative.
+      expect(
+        await image.evaluate(
+          (el: HTMLImageElement) => el.naturalHeight >= el.height * 0.9,
+        ),
+      ).toBe(true);
+      expect(await image.evaluate((el) => getComputedStyle(el).transform)).toBe(
+        'none',
+      );
+      expect(
+        await image.evaluate((el) => getComputedStyle(el).objectPosition),
+      ).toBe('70% 50%');
+      await expect(page.locator('.dp-architecture-overlay')).toHaveAttribute(
+        'aria-hidden',
+        'true',
+      );
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth,
@@ -177,13 +206,56 @@ for (const locale of locales) {
       if (wanted) {
         await page.goto(`/${locale}`);
         await page.evaluate(() => document.fonts.ready);
+        await page
+          .locator('.dp-architecture-image')
+          .evaluate((el: HTMLImageElement) => el.decode());
         await page.screenshot({
           path: testInfo.outputPath(`${locale}-${width}.png`),
           fullPage: true,
         });
+        await page.screenshot({
+          path: `docs/screenshots/visual-assets-pass/${locale}-${width}.png`,
+          fullPage: true,
+        });
+        if (locale === 'en') {
+          await page.locator('#hero').screenshot({
+            path: `docs/screenshots/visual-assets-pass/en-${width}-hero-after.png`,
+            style:
+              '.dp-header,.dp-skip-link,.dp-mobile-lead-cta {visibility:hidden !important}',
+          });
+        }
       }
+      expect(errors).toEqual([]);
     });
   }
+
+  test(`${locale}: architecture reserves layout before image response`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 1000 });
+    let release!: () => void;
+    const gate = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    await page.route('**/_next/image**', async (route) => {
+      await gate;
+      await route.continue();
+    });
+    await page.goto(`/${locale}`, { waitUntil: 'domcontentloaded' });
+    await page.evaluate(() => document.fonts.ready);
+    const frame = page.locator('.dp-architecture');
+    const before = (await frame.boundingBox())!;
+    expect(before.height).toBeGreaterThan(100);
+    release();
+    await page
+      .locator('.dp-architecture-image')
+      .evaluate((el: HTMLImageElement) => el.decode());
+    const after = (await frame.boundingBox())!;
+    expect(after.x).toBeCloseTo(before.x, 1);
+    expect(after.y).toBeCloseTo(before.y, 1);
+    expect(after.width).toBeCloseTo(before.width, 1);
+    expect(after.height).toBeCloseTo(before.height, 1);
+  });
 
   test(`${locale}: mobile disclosures, escape, outside click, RTL and keyboard`, async ({
     page,

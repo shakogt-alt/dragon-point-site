@@ -308,11 +308,29 @@ summary::-webkit-details-marker {
   color: var(--dp-titanium);
 }
 .dp-architecture {
+  position: relative;
   display: block;
   inline-size: 100%;
-  block-size: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-block: var(--dp-space-4);
   color: var(--dp-titanium);
-  max-block-size: 32rem;
+}
+.dp-architecture-image,
+.dp-architecture-overlay {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.dp-architecture-image {
+  object-fit: cover;
+  /* Physical crop stays identical in RTL; photography is never mirrored. */
+  object-position: 70% center;
+  filter: grayscale(1) brightness(0.85);
+}
+.dp-architecture-overlay {
+  pointer-events: none;
 }
 .dp-visual-grid {
   opacity: 0.18;
@@ -652,6 +670,11 @@ summary::-webkit-details-marker {
   }
   .dp-hero-visual {
     padding: var(--dp-space-6);
+  }
+  .dp-architecture {
+    aspect-ratio: 4 / 5;
+    flex: 1;
+    min-block-size: 20rem;
   }
   .dp-hero-title {
     overflow-wrap: anywhere;

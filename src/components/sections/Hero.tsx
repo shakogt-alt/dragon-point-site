@@ -37,7 +37,7 @@ export function Hero({ messages }: { messages: Messages }) {
         </div>
         <div className="dp-hero-visual">
           <p className="dp-visual-label">{copy.visual}</p>
-          <ArchitectureVisual />
+          <ArchitectureVisual alt={copy.imageAlt} />
           <div className="dp-visual-caption">
             <span>{copy.formula}</span>
             <span>{copy.visualNote}</span>
