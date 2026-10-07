@@ -1,0 +1,100 @@
+{
+  "stage": "baseline",
+  "node": "v24.17.0",
+  "lighthouse": "13.5.0",
+  "setup": "Local production server; reserved .test SEO fixture; blank IDs; first-visit consent; cold browser profiles; warm origin derivatives; default simulated mobile/desktop throttling; sequential runs",
+  "summaries": [
+    {
+      "locale": "en",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "samples": 3,
+      "scores": {
+        "performance": 66,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 6101.0251,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0,
+        "first-contentful-paint": 4856.868,
+        "speed-index": 4856.868,
+        "server-response-time": 51,
+        "total-byte-weight": 1076846
+      }
+    },
+    {
+      "locale": "en",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "samples": 3,
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 1202.7719,
+        "cumulative-layout-shift": 0.000126644642796074,
+        "total-blocking-time": 0,
+        "first-contentful-paint": 974.7719,
+        "speed-index": 974.7719,
+        "server-response-time": 34,
+        "total-byte-weight": 1129737
+      }
+    },
+    {
+      "locale": "he",
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "samples": 3,
+      "scores": {
+        "performance": 76,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 2899.9964,
+        "cumulative-layout-shift": 0.0005474944408256778,
+        "total-blocking-time": 811.0036,
+        "first-contentful-paint": 1244.9946,
+        "speed-index": 1943.5569471181914,
+        "server-response-time": 32,
+        "total-byte-weight": 380926
+      }
+    },
+    {
+      "locale": "he",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "samples": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": 759.6315999999999,
+        "cumulative-layout-shift": 0.000182170514004309,
+        "total-blocking-time": 91.50000000000011,
+        "first-contentful-paint": 391.95500000000004,
+        "speed-index": 665.8704579003074,
+        "server-response-time": 35,
+        "total-byte-weight": 433830
+      }
+    }
+  ]
+}

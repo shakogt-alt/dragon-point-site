@@ -2,7 +2,7 @@ import {
   attributionSchema,
   attributionShape,
   type Attribution,
-} from '../validation/lead';
+} from '../validation/attribution';
 
 const storageKey = 'dragon-point:first-touch:v1';
 type StorageAccess = Pick<Storage, 'getItem' | 'setItem'>;

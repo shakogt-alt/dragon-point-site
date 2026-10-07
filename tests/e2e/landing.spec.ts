@@ -72,7 +72,7 @@ for (const locale of locales) {
         await page
           .locator('body')
           .evaluate((el) => getComputedStyle(el).fontFamily),
-      ).toContain(language === 'HE' ? 'notoHebrew' : 'firago');
+      ).toContain(language === 'HE' ? 'Noto Sans Hebrew' : 'FiraGO');
     }
     await page.goto(`/${locale}`);
     await page.keyboard.press('Tab');

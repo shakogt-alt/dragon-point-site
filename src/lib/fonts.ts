@@ -1,41 +1,16 @@
-import localFont from 'next/font/local';
+import manifest from '@/assets/fonts/web-manifest.json';
+import type { Locale } from '@/lib/i18n/locales';
 
-export const notoHebrew = localFont({
-  src: '../assets/fonts/hebrew/NotoSansHebrew-Variable.ttf',
-  weight: '100 900',
-  style: 'normal',
-  variable: '--font-noto-hebrew',
-  display: 'swap',
-  preload: false,
-  fallback: ['Arial', 'sans-serif'],
-});
-
-export const firago = localFont({
-  src: [
-    {
-      path: '../assets/fonts/FiraGO-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../assets/fonts/FiraGO-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../assets/fonts/FiraGO-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../assets/fonts/FiraGO-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-firago',
-  display: 'swap',
-  // Avoid preloading unused weights; optimize font usage with the final UI in Phase 7.
-  preload: false,
-  fallback: ['Arial', 'sans-serif'],
-});
+// Only above-fold weights for the active writing system are preloaded. Other
+// weights/scripts remain available through unicode-range faces on demand.
+export function getFontPreloads(locale: Locale) {
+  const names =
+    locale === 'he'
+      ? ['noto-sans-hebrew-variable']
+      : locale === 'ka' || locale === 'ru'
+        ? [`firago-dictionary-${locale}-400`, `firago-dictionary-${locale}-500`]
+        : ['firago-common-400', 'firago-common-500'];
+  return manifest.assets
+    .filter((asset) => names.includes(asset.name))
+    .map((asset) => asset.url);
+}

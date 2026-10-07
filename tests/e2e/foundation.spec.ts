@@ -47,8 +47,9 @@ for (const { locale, heading } of languageCases) {
         (locale) =>
           Array.from(document.fonts).some(
             (font) =>
-              font.family.includes(locale === 'he' ? 'notoHebrew' : 'firago') &&
-              font.status === 'loaded',
+              font.family.includes(
+                locale === 'he' ? 'Noto Sans Hebrew' : 'FiraGO',
+              ) && font.status === 'loaded',
           ),
         locale,
       ),

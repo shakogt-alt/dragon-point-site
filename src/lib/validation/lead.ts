@@ -1,10 +1,7 @@
 import { z } from 'zod';
-import { locales } from '../i18n/locales';
+import { intents, leadLocales } from '../leads/constants';
+import { attributionShape, noControls } from './attribution';
 
-export const intents = ['buy', 'invest', 'sell'] as const;
-export const leadLocales = locales;
-const noControls =
-  /^[^\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f\u202a-\u202e]*$/;
 const text = (max: number) =>
   z
     .string()
@@ -12,6 +9,14 @@ const text = (max: number) =>
     .max(max)
     .regex(noControls)
     .transform((value) => value.normalize('NFC'));
+
+export { intents, leadLocales } from '../leads/constants';
+export {
+  safeUrl,
+  attributionShape,
+  attributionSchema,
+  type Attribution,
+} from './attribution';
 
 export const leadFormSchema = z.object({
   intent: z.enum(intents),
@@ -40,34 +45,6 @@ export const leadFormSchema = z.object({
   website: z.string().max(200),
 });
 
-export const safeUrl = z
-  .string()
-  .max(2048)
-  .refine((value) => {
-    try {
-      const url = new URL(value);
-      return (
-        ['http:', 'https:'].includes(url.protocol) &&
-        !url.username &&
-        !url.password &&
-        noControls.test(value)
-      );
-    } catch {
-      return false;
-    }
-  });
-export const attributionShape = {
-  utm_source: text(160).optional(),
-  utm_medium: text(160).optional(),
-  utm_campaign: text(160).optional(),
-  utm_content: text(160).optional(),
-  utm_term: text(160).optional(),
-  gclid: text(256).optional(),
-  fbclid: text(256).optional(),
-  referrer: safeUrl.optional(),
-  landingUrl: safeUrl.optional(),
-};
-export const attributionSchema = z.object(attributionShape).strict();
 export const leadRequestSchema = leadFormSchema
   .extend({
     email: leadFormSchema.shape.email.default(''),
@@ -81,4 +58,3 @@ export const leadRequestSchema = leadFormSchema
   .strict();
 export type LeadFormValues = z.infer<typeof leadFormSchema>;
 export type LeadRequest = z.infer<typeof leadRequestSchema>;
-export type Attribution = z.infer<typeof attributionSchema>;

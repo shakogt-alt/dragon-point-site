@@ -3,7 +3,7 @@ import type {
   LeadFormValues,
   LeadRequest,
 } from '../validation/lead';
-import { attributionShape } from '../validation/lead';
+import { attributionShape } from '../validation/attribution';
 
 export type LeadPayload = Omit<
   LeadRequest,

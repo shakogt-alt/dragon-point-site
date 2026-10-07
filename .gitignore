@@ -4,6 +4,7 @@ out/
 coverage/
 playwright-report/
 test-results/
+.superpowers/
 *.tsbuildinfo
 .env*
 !.env.example

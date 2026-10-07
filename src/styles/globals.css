@@ -1,8 +1,16 @@
 @import 'tailwindcss';
 @import './tokens.css';
+@import './fonts.css';
 @import './landing.css';
 @import './leads.css';
 @import './consent.css';
+
+:root:lang(ka) {
+  --dp-font-family: var(--font-firago-ka);
+}
+:root:lang(ru) {
+  --dp-font-family: var(--font-firago-ru);
+}
 
 body {
   background: var(--dp-off-white);

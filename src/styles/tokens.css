@@ -4,6 +4,11 @@
   --dp-titanium: #b9c0c8;
   --dp-off-white: #f5f6f7;
   --dp-violet: #6847f5;
+  --font-firago: 'FiraGO', 'FiraGO Fallback', Arial, sans-serif;
+  --font-firago-ka: 'FiraGO KA', 'FiraGO', 'FiraGO Fallback', Arial, sans-serif;
+  --font-firago-ru: 'FiraGO RU', 'FiraGO', 'FiraGO Fallback', Arial, sans-serif;
+  --font-noto-hebrew:
+    'Noto Sans Hebrew', 'Noto Hebrew Fallback', Arial, sans-serif;
   --dp-font-family: var(--font-firago), Arial, sans-serif;
   --dp-text-body: 1rem;
   --dp-text-small: 0.875rem;

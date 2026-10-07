@@ -1,17 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm, type Resolver } from 'react-hook-form';
 import type { Locale } from '@/lib/i18n/locales';
 import type { Messages } from '@/lib/i18n/messages';
-import {
-  intents,
-  leadLocales,
-  leadFormSchema,
-  type LeadFormValues,
-  type Attribution,
-} from '@/lib/validation/lead';
+import type { LeadFormValues, Attribution } from '@/lib/validation/lead';
+import { intents, leadLocales } from '@/lib/leads/constants';
 import { getFirstTouchAttribution } from '@/lib/leads/browser-attribution';
 import { buildLeadPayload } from '@/lib/leads/payload';
 import { Arrow } from '@/components/ui/Arrow';
@@ -20,6 +14,31 @@ import { trackAnalytics } from '@/lib/analytics/client';
 const subscribe = () => () => {};
 const hydrated = () => true;
 const server = () => false;
+const focusOrder = [
+  'intent',
+  'name',
+  'phone',
+  'email',
+  'budget',
+  'message',
+  'preferredLanguage',
+] as const;
+
+let validation: Promise<Resolver<LeadFormValues>> | undefined;
+function loadValidation() {
+  validation ??= Promise.all([
+    import('@hookform/resolvers/zod'),
+    import('@/lib/validation/lead'),
+  ])
+    .then(([{ zodResolver }, { leadFormSchema }]) =>
+      zodResolver(leadFormSchema),
+    )
+    .catch((error) => {
+      validation = undefined;
+      throw error;
+    });
+  return validation;
+}
 
 export function LeadForm({
   locale,
@@ -34,6 +53,9 @@ export function LeadForm({
   );
   const feedback = useRef<HTMLDivElement>(null);
   const attribution = useRef<Attribution>({});
+  const pendingInvalidFocus = useRef<(typeof focusOrder)[number] | undefined>(
+    undefined,
+  );
   const {
     register,
     handleSubmit,
@@ -42,7 +64,17 @@ export function LeadForm({
     reset,
     formState: { errors, isSubmitting },
   } = useForm<LeadFormValues>({
-    resolver: zodResolver(leadFormSchema),
+    resolver: async (values, context, options) => {
+      try {
+        return await (
+          await loadValidation()
+        )(values, context, options);
+      } catch {
+        // Download failure stays fail-closed, retains the enquiry and permits retry.
+        setStatus('error');
+        return { values: {}, errors: { root: { type: 'delivery' } } };
+      }
+    },
     defaultValues: {
       intent: 'buy',
       name: '',
@@ -54,7 +86,17 @@ export function LeadForm({
       website: '',
     },
     mode: 'onSubmit',
+    // RHF's timer can run while the submitting fieldset is still disabled.
+    shouldFocusError: false,
   });
+
+  useEffect(() => {
+    if (isSubmitting || !pendingInvalidFocus.current) return;
+    // Effects run after the enabled fieldset and error descriptions commit.
+    const field = pendingInvalidFocus.current;
+    pendingInvalidFocus.current = undefined;
+    setFocus(field);
+  }, [errors, isSubmitting, setFocus]);
 
   useEffect(() => {
     attribution.current = getFirstTouchAttribution();
@@ -239,13 +281,20 @@ export function LeadForm({
     <form
       id="lead-form"
       onSubmit={(event) => {
-        void handleSubmit(submit, () => {
+        void handleSubmit(submit, (errors) => {
+          pendingInvalidFocus.current = focusOrder.find(
+            (field) => errors[field],
+          );
           trackAnalytics('lead_form_error', {
             locale,
             surface: 'lead',
-            errorKind: 'validation',
+            errorKind:
+              errors.root?.type === 'delivery' ? 'delivery' : 'validation',
           });
         })(event);
+      }}
+      onFocusCapture={() => {
+        void loadValidation().catch(() => {});
       }}
       action="/api/leads"
       method="post"
@@ -295,6 +344,8 @@ export function LeadForm({
               </label>
               <input
                 id={`lead-${key}`}
+                // Blank CSS hook defers the complete input font until focus/value.
+                placeholder=" "
                 type={
                   key === 'phone' ? 'tel' : key === 'email' ? 'email' : 'text'
                 }
@@ -325,6 +376,7 @@ export function LeadForm({
             <label htmlFor="lead-message">{copy.labels.message}</label>
             <textarea
               id="lead-message"
+              placeholder=" "
               dir="auto"
               rows={4}
               maxLength={2000}

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { isLocale, locales } from '@/lib/i18n/locales';
-import { firago, notoHebrew } from '@/lib/fonts';
+import { getFontPreloads } from '@/lib/fonts';
 import '@/styles/globals.css';
 
 export function generateStaticParams() {
@@ -18,11 +18,19 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   return (
-    <html
-      lang={locale}
-      dir={locale === 'he' ? 'rtl' : 'ltr'}
-      className={locale === 'he' ? notoHebrew.variable : firago.variable}
-    >
+    <html lang={locale} dir={locale === 'he' ? 'rtl' : 'ltr'}>
+      <head>
+        {getFontPreloads(locale).map((href) => (
+          <link
+            key={href}
+            rel="preload"
+            href={href}
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+        ))}
+      </head>
       <body>{children}</body>
     </html>
   );

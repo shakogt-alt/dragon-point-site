@@ -96,6 +96,14 @@
   text-align: start;
   scroll-margin-block: var(--dp-header-offset) 6rem;
 }
+
+/* Free-text shaping retains the complete original face; Hebrew already uses
+   the complete Noto font. Empty fields do not download this on first paint. */
+html:not([lang='he'])
+  .dp-field
+  :is(input, textarea):is(:focus, :not(:placeholder-shown)) {
+  font-family: 'FiraGO Input', 'FiraGO Fallback', Arial, sans-serif;
+}
 .dp-field textarea {
   resize: vertical;
 }
