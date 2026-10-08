@@ -1,0 +1,22 @@
+[
+  ".env.example",
+  ".vercelignore",
+  "docs/audits/phase-8/README.md",
+  "docs/audits/phase-8/audit-all.json",
+  "docs/audits/phase-8/audit-production.json",
+  "docs/audits/phase-8/changed-files.json",
+  "docs/audits/phase-8/gate-results.json",
+  "docs/audits/phase-8/local-staging-observations.json",
+  "docs/audits/phase-8/public-output-scan.json",
+  "docs/audits/phase-8/target-inventory.json",
+  "docs/phase-8-launch-readiness-report.md",
+  "docs/staging/preview-runbook.md",
+  "docs/superpowers/plans/2026-10-08-launch-readiness.md",
+  "next.config.ts",
+  "playwright.config.ts",
+  "scripts/staging-readiness-audit.mjs",
+  "src/proxy.ts",
+  "tests/e2e/staging.spec.ts",
+  "tests/unit/lead-handler.test.ts",
+  "vercel.json"
+]

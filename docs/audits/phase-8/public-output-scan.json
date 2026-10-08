@@ -1,0 +1,150 @@
+{
+  "scope": "Local final blank-ID production build; not a deployed host scan",
+  "publicFiles": 35,
+  "clientFiles": 17,
+  "configuredPrivateValuesChecked": 0,
+  "findings": [],
+  "limitations": "Bounded marker/file scan, not proof of absence of every possible secret. No real webhook credentials are configured.",
+  "publicAssetHashes": [
+    {
+      "file": "public/fonts/firago-common-400.d200e020fd35.woff2",
+      "sha256": "d200e020fd3548c17cdcd50f143a15743da3eb59e4e1e68125f4e97d685165ba"
+    },
+    {
+      "file": "public/fonts/firago-common-500.3c55cee41236.woff2",
+      "sha256": "3c55cee41236d842dadd313494c8831e0d3188a768855b270236adc1cbb8c8df"
+    },
+    {
+      "file": "public/fonts/firago-common-600.543e0d24dc9e.woff2",
+      "sha256": "543e0d24dc9e22d5e22478a81815a2170b4b7f8fb5567e8d8bd7ea2e43a868d1"
+    },
+    {
+      "file": "public/fonts/firago-common-700.598ca5b0a6cd.woff2",
+      "sha256": "598ca5b0a6cddab7e0b24fbaab0d9a9ac40172adc835ea9f76cc19d1d71ef713"
+    },
+    {
+      "file": "public/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+      "sha256": "4f464b727e05ac4ec505fda86cf1bb89fbf6509c56e6794eb712070129752114"
+    },
+    {
+      "file": "public/fonts/firago-cyrillic-500.a5ac305ccac3.woff2",
+      "sha256": "a5ac305ccac3f75cc55315058558f2442de4143b3c889a8bc4441445d1be56fb"
+    },
+    {
+      "file": "public/fonts/firago-cyrillic-600.fb74f2b8dca1.woff2",
+      "sha256": "fb74f2b8dca11634abbe8e15d9d93ec4b3fdd38f802fcace59e2092d17267f94"
+    },
+    {
+      "file": "public/fonts/firago-cyrillic-700.2ab55d44fa5f.woff2",
+      "sha256": "2ab55d44fa5f9eb783008664238c3756bcb3bf594348669720912ec50fb79575"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ka-400.abad6dc54f27.woff2",
+      "sha256": "abad6dc54f27b673ae095dcda8cff26e14122f2b26416408a0876884b47f237e"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ka-500.688376c9a514.woff2",
+      "sha256": "688376c9a51445ccfa0c3f68021ebd2b24eff4edf0496ac7a8f2a314d7d57850"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ka-600.72bf1c8ae7e3.woff2",
+      "sha256": "72bf1c8ae7e31170e878b9728801a54c1809d9a72af21ed2985383ac8ea1a294"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ka-700.0dde6c617602.woff2",
+      "sha256": "0dde6c61760235e876d33e174dda1953d3d3a831aaf8fd702e9bbd8a4f5be252"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ru-400.e2732468da9a.woff2",
+      "sha256": "e2732468da9ad79a79bebefdda6c19676ff0c35233eec374db138ddee46fdd9c"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ru-500.3b5ec51d7d26.woff2",
+      "sha256": "3b5ec51d7d262aaf5b09c3d43db98a5019ac374f62d5af75706b0423a0c0f477"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ru-600.4ba07f869939.woff2",
+      "sha256": "4ba07f8699395837b2b2448d791b60ee5377c1e73d8beb3aadd4fbf4b4158ee3"
+    },
+    {
+      "file": "public/fonts/firago-dictionary-ru-700.48f50b9206fc.woff2",
+      "sha256": "48f50b9206fc04e445925f8bff590ac269005d456d34f87d74685c64f173d3f6"
+    },
+    {
+      "file": "public/fonts/firago-extended-400.322f2e894c84.woff2",
+      "sha256": "322f2e894c846fb7c50d1aec018d5c7c1538b90d1e168b672c6cec332d84eb2c"
+    },
+    {
+      "file": "public/fonts/firago-extended-500.0dc700621707.woff2",
+      "sha256": "0dc700621707b35dba26a8e361f084532aef43c636bfd481bcc6d06ffe0d66f1"
+    },
+    {
+      "file": "public/fonts/firago-extended-600.557de21f84ae.woff2",
+      "sha256": "557de21f84aea0d8c4fac2a9352855a58791d3fac0898de2f0951199f9009e57"
+    },
+    {
+      "file": "public/fonts/firago-extended-700.4320b6ef6d42.woff2",
+      "sha256": "4320b6ef6d42ed983f7e0ef0a71ce9b81344d078ac89d791e3b4d84bfc63f61c"
+    },
+    {
+      "file": "public/fonts/firago-georgian-400.8c7722e1a031.woff2",
+      "sha256": "8c7722e1a031e7b51cf7398f770e2b493dfd3fc959bf62034b5bc8d1f596d4a2"
+    },
+    {
+      "file": "public/fonts/firago-georgian-500.0dffab4730f9.woff2",
+      "sha256": "0dffab4730f9ed39e20ea6f8fa7eafaecfd79a3dcc8d808f89caa4f453361c69"
+    },
+    {
+      "file": "public/fonts/firago-georgian-600.26516021ae15.woff2",
+      "sha256": "26516021ae15462c90274aec44f46a1bac73ac79c4d4b5779d81056eec84430a"
+    },
+    {
+      "file": "public/fonts/firago-georgian-700.033694ff283a.woff2",
+      "sha256": "033694ff283aa69d88aefc3bb72d93a9d9c3efd29a0a0ac483b1bece300a30d9"
+    },
+    {
+      "file": "public/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+      "sha256": "7bad14f945e1e22d98afca539cfde9565b5d19b6376b96ee8658cdc094ee6c47"
+    },
+    {
+      "file": "public/fonts/firago-hebrew-500.bdf44cc4d2ec.woff2",
+      "sha256": "bdf44cc4d2ec56e90691e40831c8dc0b0db8e7c6dd55bebc1efea089649e7f01"
+    },
+    {
+      "file": "public/fonts/firago-hebrew-600.e1e9ffe247d5.woff2",
+      "sha256": "e1e9ffe247d5fe1e49904da1c2f3a5e5e21e070be6b3723fcc2f5ebc5b4ad773"
+    },
+    {
+      "file": "public/fonts/firago-hebrew-700.7bb63033e7f1.woff2",
+      "sha256": "7bb63033e7f1d612abe36ca49bc3dd7c12336bf95650238f4223e88da3372d7e"
+    },
+    {
+      "file": "public/fonts/firago-input-complete-400.0badb625b6ed.woff2",
+      "sha256": "0badb625b6ed398c105f512e723dc7341bc64b1228262ae822060a26a676dc9d"
+    },
+    {
+      "file": "public/fonts/firago-latin-extended-400.75ef598a4b82.woff2",
+      "sha256": "75ef598a4b82fec0daa0d4638c59bdbb99b0bc4aa29c067792ba8269c19e27b3"
+    },
+    {
+      "file": "public/fonts/firago-latin-extended-500.05f605f03fc9.woff2",
+      "sha256": "05f605f03fc9e1598dd01a4b180a8db6729570d9291d9bc31eecac1c1ab94c59"
+    },
+    {
+      "file": "public/fonts/firago-latin-extended-600.40f200d0a488.woff2",
+      "sha256": "40f200d0a488e16d08e6572ff58d3e9412564c652c0e4ef0cd75fd78051ff718"
+    },
+    {
+      "file": "public/fonts/firago-latin-extended-700.1267c33e0544.woff2",
+      "sha256": "1267c33e054459c796bc5d2e211f47988493783421ed5cf2f2af8a097a76ecb1"
+    },
+    {
+      "file": "public/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+      "sha256": "70ea1664b95298b764c6c8b9c5b7f024f98f84eae3a048ba6a1464d7eca0e1ae"
+    },
+    {
+      "file": "public/images/architecture/illustrative-building.webp",
+      "sha256": "f0ee98368937c9c52e398bb6015094dd024fd0419ac59389a61ce404924fdd9d"
+    }
+  ]
+}

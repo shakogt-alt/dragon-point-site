@@ -1,0 +1,1612 @@
+{
+  "scope": "Local production build in staging/preview mode; HTTP localhost; no real hosting/CDN/device claims",
+  "configuration": {
+    "SITE_ENV": "staging",
+    "VERCEL_ENV": "preview",
+    "SITE_URL": "empty",
+    "providers": "blank",
+    "receiver": "unconfigured"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "status": 307,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": "/en"
+      },
+      "bodyBytes": 6470
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 57665
+    },
+    {
+      "path": "/ka",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 77535
+    },
+    {
+      "path": "/ru",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 66744
+    },
+    {
+      "path": "/he",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 61502
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "headers": {
+        "content-type": "text/plain",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 27
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "content-type": "application/xml",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 110
+    },
+    {
+      "path": "/fr",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 4644
+    },
+    {
+      "path": "/en/unknown",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 6830
+    },
+    {
+      "path": "/%ZZ",
+      "status": 400,
+      "headers": {
+        "content-type": null,
+        "cache-control": "no-store",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 0
+    },
+    {
+      "path": "/.env",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 4648
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 6830
+    },
+    {
+      "path": "/AGENTS.md",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 4658
+    },
+    {
+      "path": "/CODEX_TASK.md",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 4666
+    },
+    {
+      "path": "/docs/phase-7b-report.md",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 6830
+    },
+    {
+      "path": "/reference/Dragon_Point_Project_State_and_Changelog.md",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 6830
+    },
+    {
+      "path": "/dragon-point-visuals/",
+      "status": 308,
+      "headers": {
+        "content-type": null,
+        "cache-control": null,
+        "x-robots-tag": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "x-frame-options": null,
+        "content-security-policy": null,
+        "permissions-policy": null,
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": "/dragon-point-visuals"
+      },
+      "bodyBytes": 21
+    },
+    {
+      "path": "/dragon-point-visuals",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 4680
+    },
+    {
+      "path": "/api/leads",
+      "status": 405,
+      "headers": {
+        "content-type": null,
+        "cache-control": "no-store",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 0
+    }
+  ],
+  "locales": [
+    {
+      "locale": "en",
+      "directAndRefresh": "passed",
+      "lang": "en",
+      "dir": "ltr",
+      "h1": 1,
+      "overflow": false,
+      "hero": "http://127.0.0.1:3308/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "fonts": [
+        {
+          "family": "FiraGO",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "500"
+        },
+        {
+          "family": "FiraGO",
+          "weight": "600"
+        }
+      ],
+      "resources": [
+        "http://127.0.0.1:3308/fonts/firago-common-400.d200e020fd35.woff2",
+        "http://127.0.0.1:3308/fonts/firago-common-500.3c55cee41236.woff2",
+        "http://127.0.0.1:3308/_next/static/chunks/3s6nzrbk-8mnv.js",
+        "http://127.0.0.1:3308/_next/static/chunks/19mx3mg6lkumu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3g4px251sg85e.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2z-e6jheq0ftu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3fntmmi971322.js",
+        "http://127.0.0.1:3308/_next/static/chunks/043zbln6qrk5g.js",
+        "http://127.0.0.1:3308/_next/static/chunks/31a9_ugznsb5n.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2jb8yhuhm5lxg.js",
+        "http://127.0.0.1:3308/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+        "http://127.0.0.1:3308/fonts/firago-georgian-400.8c7722e1a031.woff2",
+        "http://127.0.0.1:3308/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+        "http://127.0.0.1:3308/fonts/firago-common-600.543e0d24dc9e.woff2"
+      ],
+      "errors": [],
+      "external": []
+    },
+    {
+      "locale": "ka",
+      "directAndRefresh": "passed",
+      "lang": "ka",
+      "dir": "ltr",
+      "h1": 1,
+      "overflow": false,
+      "hero": "http://127.0.0.1:3308/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "fonts": [
+        {
+          "family": "FiraGO KA",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "500"
+        },
+        {
+          "family": "FiraGO KA",
+          "weight": "600"
+        }
+      ],
+      "resources": [
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ka-400.abad6dc54f27.woff2",
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ka-500.688376c9a514.woff2",
+        "http://127.0.0.1:3308/_next/static/chunks/3s6nzrbk-8mnv.js",
+        "http://127.0.0.1:3308/_next/static/chunks/19mx3mg6lkumu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3g4px251sg85e.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2z-e6jheq0ftu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3fntmmi971322.js",
+        "http://127.0.0.1:3308/_next/static/chunks/043zbln6qrk5g.js",
+        "http://127.0.0.1:3308/_next/static/chunks/31a9_ugznsb5n.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2jb8yhuhm5lxg.js",
+        "http://127.0.0.1:3308/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+        "http://127.0.0.1:3308/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ka-600.72bf1c8ae7e3.woff2"
+      ],
+      "errors": [],
+      "external": []
+    },
+    {
+      "locale": "ru",
+      "directAndRefresh": "passed",
+      "lang": "ru",
+      "dir": "ltr",
+      "h1": 1,
+      "overflow": false,
+      "hero": "http://127.0.0.1:3308/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "fonts": [
+        {
+          "family": "FiraGO RU",
+          "weight": "400"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "500"
+        },
+        {
+          "family": "FiraGO RU",
+          "weight": "600"
+        }
+      ],
+      "resources": [
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ru-400.e2732468da9a.woff2",
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ru-500.3b5ec51d7d26.woff2",
+        "http://127.0.0.1:3308/_next/static/chunks/3s6nzrbk-8mnv.js",
+        "http://127.0.0.1:3308/_next/static/chunks/19mx3mg6lkumu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3g4px251sg85e.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2z-e6jheq0ftu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3fntmmi971322.js",
+        "http://127.0.0.1:3308/_next/static/chunks/043zbln6qrk5g.js",
+        "http://127.0.0.1:3308/_next/static/chunks/31a9_ugznsb5n.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2jb8yhuhm5lxg.js",
+        "http://127.0.0.1:3308/fonts/firago-georgian-400.8c7722e1a031.woff2",
+        "http://127.0.0.1:3308/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+        "http://127.0.0.1:3308/fonts/firago-dictionary-ru-600.4ba07f869939.woff2"
+      ],
+      "errors": [],
+      "external": []
+    },
+    {
+      "locale": "he",
+      "directAndRefresh": "passed",
+      "lang": "he",
+      "dir": "rtl",
+      "h1": 1,
+      "overflow": false,
+      "hero": "http://127.0.0.1:3308/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "fonts": [
+        {
+          "family": "Noto Sans Hebrew",
+          "weight": "100 900"
+        }
+      ],
+      "resources": [
+        "http://127.0.0.1:3308/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+        "http://127.0.0.1:3308/_next/static/chunks/3s6nzrbk-8mnv.js",
+        "http://127.0.0.1:3308/_next/static/chunks/19mx3mg6lkumu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3g4px251sg85e.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2z-e6jheq0ftu.js",
+        "http://127.0.0.1:3308/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+        "http://127.0.0.1:3308/_next/static/chunks/3fntmmi971322.js",
+        "http://127.0.0.1:3308/_next/static/chunks/043zbln6qrk5g.js",
+        "http://127.0.0.1:3308/_next/static/chunks/31a9_ugznsb5n.js",
+        "http://127.0.0.1:3308/_next/static/chunks/2jb8yhuhm5lxg.js"
+      ],
+      "errors": [],
+      "external": []
+    }
+  ],
+  "assetRequests": [
+    {
+      "path": "/fonts/firago-common-400.d200e020fd35.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 44412
+    },
+    {
+      "path": "/fonts/firago-common-400.d200e020fd35.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 44412
+    },
+    {
+      "path": "/fonts/firago-common-500.3c55cee41236.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 45472
+    },
+    {
+      "path": "/fonts/firago-common-500.3c55cee41236.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 45472
+    },
+    {
+      "path": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 5598
+    },
+    {
+      "path": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 5598
+    },
+    {
+      "path": "/_next/static/chunks/19mx3mg6lkumu.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 28907
+    },
+    {
+      "path": "/_next/static/chunks/19mx3mg6lkumu.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 28907
+    },
+    {
+      "path": "/_next/static/chunks/3g4px251sg85e.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 228922
+    },
+    {
+      "path": "/_next/static/chunks/3g4px251sg85e.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 228922
+    },
+    {
+      "path": "/_next/static/chunks/2z-e6jheq0ftu.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 165979
+    },
+    {
+      "path": "/_next/static/chunks/2z-e6jheq0ftu.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 165979
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 9721
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-03rfayxv7ep_b.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 9721
+    },
+    {
+      "path": "/_next/static/chunks/3fntmmi971322.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 14377
+    },
+    {
+      "path": "/_next/static/chunks/3fntmmi971322.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 14377
+    },
+    {
+      "path": "/_next/static/chunks/043zbln6qrk5g.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 2684
+    },
+    {
+      "path": "/_next/static/chunks/043zbln6qrk5g.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 2684
+    },
+    {
+      "path": "/_next/static/chunks/31a9_ugznsb5n.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 30682
+    },
+    {
+      "path": "/_next/static/chunks/31a9_ugznsb5n.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 30682
+    },
+    {
+      "path": "/_next/static/chunks/2jb8yhuhm5lxg.js",
+      "repetition": 1,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 47412
+    },
+    {
+      "path": "/_next/static/chunks/2jb8yhuhm5lxg.js",
+      "repetition": 2,
+      "headers": {
+        "content-type": "application/javascript; charset=UTF-8",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 47412
+    },
+    {
+      "path": "/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 32464
+    },
+    {
+      "path": "/fonts/firago-cyrillic-400.4f464b727e05.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 32464
+    },
+    {
+      "path": "/fonts/firago-georgian-400.8c7722e1a031.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 12616
+    },
+    {
+      "path": "/fonts/firago-georgian-400.8c7722e1a031.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 12616
+    },
+    {
+      "path": "/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 8596
+    },
+    {
+      "path": "/fonts/firago-hebrew-400.7bad14f945e1.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 8596
+    },
+    {
+      "path": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 45504
+    },
+    {
+      "path": "/fonts/firago-common-600.543e0d24dc9e.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 45504
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "repetition": 1,
+      "headers": {
+        "content-type": "image/webp",
+        "cache-control": "public, max-age=14400, must-revalidate",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "script-src 'none'; frame-src 'none'; sandbox;",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 28638
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Farchitecture%2Fillustrative-building.webp&w=640&q=75",
+      "repetition": 2,
+      "headers": {
+        "content-type": "image/webp",
+        "cache-control": "public, max-age=14400, must-revalidate",
+        "x-robots-tag": null,
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "script-src 'none'; frame-src 'none'; sandbox;",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": "HIT",
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 28638
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-400.abad6dc54f27.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 93716
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-400.abad6dc54f27.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 93716
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-500.688376c9a514.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 96020
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-500.688376c9a514.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 96020
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-600.72bf1c8ae7e3.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 96256
+    },
+    {
+      "path": "/fonts/firago-dictionary-ka-600.72bf1c8ae7e3.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 96256
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-400.e2732468da9a.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 112700
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-400.e2732468da9a.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 112700
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-500.3b5ec51d7d26.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 116296
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-500.3b5ec51d7d26.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 116296
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-600.4ba07f869939.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 116276
+    },
+    {
+      "path": "/fonts/firago-dictionary-ru-600.4ba07f869939.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 116276
+    },
+    {
+      "path": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+      "repetition": 1,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 58632
+    },
+    {
+      "path": "/fonts/noto-sans-hebrew-variable.70ea1664b952.woff2",
+      "repetition": 2,
+      "headers": {
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000, immutable",
+        "x-robots-tag": "noindex, nofollow",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "strict-transport-security": null,
+        "server": null,
+        "x-powered-by": null,
+        "x-vercel-cache": null,
+        "x-nextjs-cache": null,
+        "age": null,
+        "location": null
+      },
+      "bodyBytes": 58632
+    }
+  ],
+  "limitations": "Repeated requests show local response/origin-cache policy only. No HTTPS, CDN cold/warm, HSTS host or physical-device validation."
+}

@@ -1,0 +1,20 @@
+# Source uploads are not the public root, but private material is unnecessary.
+.git/
+.next/
+.superpowers/
+node_modules/
+.env*
+docs/
+reference/
+dragon-point-visuals/
+tests/
+test-results/
+playwright-report/
+coverage/
+tmp/
+scripts/
+AGENTS.md
+CODEX_TASK.md
+README.md
+*.log
+*.tsbuildinfo

@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-08",
+  "repository": "shakogt-alt/dragon-point-site",
+  "branch": "codex/landing-mvp",
+  "startingHead": "e6e8f6bfca75fb7b1fd38517a7a35c09274baa41",
+  "scope": "Phase 8 local final-source regression/preparation only; no hosting exists",
+  "runtime": { "node": "24.17.0", "npm": "11.13.0" },
+  "gates": [
+    { "command": "npm run lint", "exitCode": 0, "status": "passed" },
+    { "command": "npm run format:check", "exitCode": 0, "status": "passed" },
+    { "command": "npm run typecheck", "exitCode": 0, "status": "passed" },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "status": "passed",
+      "files": 9,
+      "passed": 123,
+      "seconds": 9.37
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "status": "passed",
+      "configuration": "staging/preview; blank SITE_URL, OG, webhook and provider IDs"
+    },
+    {
+      "command": "npm run test:e2e",
+      "exitCode": 0,
+      "status": "passed on final isolated full run",
+      "passed": 238,
+      "failed": 0,
+      "retries": 0,
+      "minutes": 8.8
+    },
+    {
+      "command": "npx playwright test --config=tests/e2e/campaign.config.ts",
+      "variant": "ga-meta",
+      "exitCode": 0,
+      "passed": 5,
+      "seconds": 16.9,
+      "providers": "synthetic intercepted mocks only"
+    },
+    {
+      "command": "npx playwright test --config=tests/e2e/campaign.config.ts",
+      "variant": "gtm",
+      "exitCode": 0,
+      "passed": 5,
+      "seconds": 15.8,
+      "providers": "synthetic intercepted mocks only"
+    },
+    {
+      "command": "node scripts/staging-readiness-audit.mjs",
+      "exitCode": 0,
+      "routes": 19,
+      "locales": 4,
+      "assetRequests": 46,
+      "publicFiles": 35,
+      "clientFiles": 17,
+      "scanFindings": 0
+    },
+    { "command": "npm audit --omit=dev", "exitCode": 0, "total": 0 },
+    {
+      "command": "npm audit",
+      "exitCode": 1,
+      "high": 5,
+      "total": 5,
+      "status": "inherited development findings; lockfile unchanged"
+    }
+  ],
+  "fullE2ECoverage": {
+    "criticalBrowsers": ["chromium", "firefox", "webkit"],
+    "locales": ["en", "ka", "ru", "he"],
+    "widths": [360, 390, 430, 768, 1024, 1280, 1440, 1920],
+    "axeTags": ["wcag2a", "wcag2aa", "wcag21aa"],
+    "contracts": [
+      "SEO environment veto and production fixtures",
+      "lead validation/retry/sticky/focus",
+      "consent persistence/reopening/RTL",
+      "attribution and private-value exclusion",
+      "layout/font/Hero/console/overflow",
+      "HTTP headers/malformed encoding/API methods"
+    ]
+  },
+  "initialRun": {
+    "exitCode": 1,
+    "passed": 237,
+    "failed": 1,
+    "minutes": 9.3,
+    "failure": "Firefox EN first-visit focused-field check: locator evaluation did not complete before 5-second poll deadline; no failed geometry value",
+    "unchangedSerialReproductions": { "passed": 3, "seconds": 53.7 },
+    "resolution": "Final full suite rerun without concurrent heavy checks passed. No UI/assertion/timeout/retry changes. Exact transient protocol/browser cause not conclusively established; retained P2 history."
+  },
+  "redGreen": {
+    "missingHeadersAndApiCache": "5 failed before config, 5 passed after",
+    "malformedEncoding": "one failed before guard; all six HTTP boundary tests passed after guard"
+  },
+  "finalBuild": "Blank provider IDs restored after both final-source mock variants; scanned before final full E2E",
+  "blockedNotPassed": [
+    "real HTTPS preview deployment",
+    "staging Lighthouse five samples per mobile locale and desktop sanity",
+    "real CDN cold/warm and TTFB",
+    "real durable lead receiver",
+    "hosted visual/screenshots",
+    "physical iPhone Safari and Android Chrome"
+  ],
+  "recommendation": "NO-GO for production launch"
+}

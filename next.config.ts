@@ -9,6 +9,32 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          // Embedding protection only: do not block Next hydration or approved
+          // post-consent providers with an untested script/connect policy.
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'none'",
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        // Also covers framework-generated 405/OPTIONS responses.
+        source: '/api/leads',
+        headers: [{ key: 'Cache-Control', value: 'no-store' }],
+      },
+      {
         // Generated names contain a content hash. Never apply this to HTML/API/SEO.
         source: '/fonts/:path*',
         headers: [

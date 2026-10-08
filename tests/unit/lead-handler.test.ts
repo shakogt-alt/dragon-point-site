@@ -185,6 +185,39 @@ describe('bounded rate limiting', () => {
 });
 
 describe('webhook delivery', () => {
+  it('aborts a stalled receiver at the real deadline and fails without logging', async () => {
+    const deadline = vi.spyOn(AbortSignal, 'timeout');
+    const log = vi.spyOn(console, 'error');
+    let deliverySignal: AbortSignal | undefined;
+    try {
+      const service = createLeadService(
+        { LEAD_WEBHOOK_URL: 'https://receiver.test/lead' },
+        (async (_url, init) => {
+          deliverySignal = init?.signal ?? undefined;
+          return new Promise<Response>((_resolve, reject) => {
+            if (!deliverySignal) {
+              reject(new Error('Missing deadline'));
+              return;
+            }
+            const signal = deliverySignal;
+            if (signal.aborted) reject(signal.reason);
+            else
+              signal.addEventListener('abort', () => reject(signal.reason), {
+                once: true,
+              });
+          });
+        }) as typeof fetch,
+      );
+      expect(await service.submit(valid)).toEqual({ delivered: false });
+      expect(deadline).toHaveBeenCalledWith(8000);
+      expect(deliverySignal?.aborted).toBe(true);
+      expect(deliverySignal?.reason.name).toBe('TimeoutError');
+      expect(log).not.toHaveBeenCalled();
+    } finally {
+      deadline.mockRestore();
+      log.mockRestore();
+    }
+  }, 15000);
   it('fails closed for missing, insecure or credential-bearing URLs', async () => {
     for (const url of [
       '',

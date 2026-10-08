@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-08",
+  "repository": "shakogt-alt/dragon-point-site",
+  "branch": "codex/landing-mvp",
+  "startingHead": "e6e8f6bfca75fb7b1fd38517a7a35c09274baa41",
+  "localProjectLink": "absent",
+  "localVercelCli": "not installed",
+  "realEnvFiles": [],
+  "connectorRepositoryMatches": 0,
+  "connectorNameMatches": 0,
+  "connectorTeams": 0,
+  "ownerConfirmation": "No existing Vercel project or preview URL",
+  "deploymentStatus": "not attempted: no safe authenticated target",
+  "deploymentUrl": null,
+  "environmentPresence": {
+    "SITE_URL": false,
+    "SITE_ENV": false,
+    "OG_IMAGE_URL": false,
+    "LEAD_WEBHOOK_URL": false,
+    "LEAD_WEBHOOK_TOKEN": false,
+    "NEXT_PUBLIC_GA_ID": false,
+    "NEXT_PUBLIC_GTM_ID": false,
+    "NEXT_PUBLIC_META_PIXEL_ID": false,
+    "VERCEL_TOKEN": false,
+    "VERCEL_PROJECT_ID": false,
+    "VERCEL_ORG_ID": false,
+    "VERCEL_ENV": false
+  },
+  "missingHostingInput": "Owner-authenticated Dragon Point Vercel project linked to this repository, verified preview environment/branch and accessible HTTPS preview URL. No secret values should be supplied in chat."
+}
