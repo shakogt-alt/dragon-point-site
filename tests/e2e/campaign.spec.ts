@@ -23,7 +23,21 @@ async function mockVendors(page: Page) {
       // Next initializes its own history state before effects without changing URL.
       // Record actual query removal, not that independent framework initialization.
       const next = new URL(String(url ?? location.href), location.href);
-      if (location.search && !next.search)
+      if (
+        [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_content',
+          'utm_term',
+          'gclid',
+          'fbclid',
+        ].some(
+          (key) =>
+            new URL(location.href).searchParams.has(key) &&
+            !next.searchParams.has(key),
+        )
+      )
         w.__cleanup.push({
           before: location.href,
           first: (() => {
@@ -111,16 +125,16 @@ for (const locale of ['en', 'he'] as const) {
       locale === 'en'
         ? 'utm_source=google&utm_campaign=test'
         : 'utm_source=meta&fbclid=test';
-    const query = `${campaign}&utm_medium=paid-fixture&utm_content=building-fixture&utm_term=intent-fixture&gclid=private-click&email=private%40example.test`;
+    const query = `${campaign}&utm_medium=paid-fixture&utm_content=building-fixture&utm_term=intent-fixture&gclid=private-click`;
     const original = `http://127.0.0.1:3304/${locale}?${query}#hero`;
     await page.goto(original);
     await expect(page.locator('[data-consent-settings]')).toBeEnabled();
     const initial = await snapshot(page);
     expect(initial.loads).toEqual([]);
     expect(initial.dataLayer).toEqual([]);
-    expect(initial.cleanup).toEqual([]);
+    expect(initial.cleanup).toHaveLength(1);
     expect(events).toEqual([]);
-    await expect(page).toHaveURL(original);
+    await expect(page).toHaveURL('/' + locale + '#hero');
 
     await preferences(page, locale === 'en', locale === 'he');
     if (mode === 'gtm') {
@@ -328,3 +342,28 @@ test(`${mode}: blocked session storage keeps original lead attribution after cle
     utm_campaign: 'test',
   });
 });
+
+test(
+  mode + ': unrelated query remains and blocks vendors after both consents',
+  async ({ page }) => {
+    await mockVendors(page);
+    const original =
+      'http://127.0.0.1:3304/he?utm_source=meta&fbclid=test&email=private%40example.test#hero';
+    await page.goto(original);
+    await expect(page).toHaveURL('/he?email=private%40example.test#hero');
+    await preferences(page, true, true);
+    await page.locator('#invest .dp-action').click();
+    await page.locator('#lead-name').fill('Still Usable');
+    const measured = await snapshot(page);
+    expect(measured.loads).toEqual([]);
+    expect(measured.dataLayer).toEqual([]);
+    expect(measured.meta).toEqual([]);
+    expect(measured.cleanup).toHaveLength(1);
+    expect(measured.cleanup[0].first).toMatchObject({
+      landingUrl: original,
+      utm_source: 'meta',
+      fbclid: 'test',
+    });
+    await expect(page).toHaveURL('/he?email=private%40example.test#advisor');
+  },
+);

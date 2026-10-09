@@ -181,7 +181,6 @@ export function browserProviderHost(): ProviderHost {
         capture: getFirstTouchAttribution,
         href: () => location.href,
         referrer: () => document.referrer,
-        replaceUrl: (url) => history.replaceState(history.state, '', url),
       }),
     google,
     tag(event) {

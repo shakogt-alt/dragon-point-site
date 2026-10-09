@@ -1,6 +1,6 @@
 // Vendor scripts can collect their own URL/referrer beyond our event payload.
 // This final guard stays strict. Campaign boot captures attribution and removes
-// unsafe query/fragment context before a provider can reach it.
+// supported campaign keys independently; other unsafe context blocks providers.
 export function safeTrackingContext(href: string, referrer: string): boolean {
   try {
     const url = new URL(href);
@@ -47,27 +47,14 @@ type ContextPort = {
   capture: () => unknown;
   href: () => string;
   referrer: () => string;
-  replaceUrl: (url: string) => void;
 };
 
-// Called only inside consent-gated provider start/dispatch, never by mount order.
+// Attribution owns cleanup. Providers only verify the resulting URL/referrer.
 export function prepareProviderContext(port: ContextPort): boolean {
   try {
     port.capture();
-    const url = new URL(port.href());
-    if (
-      !/^https?:$/.test(url.protocol) ||
-      url.username ||
-      url.password ||
-      !/^\/(en|ka|ru|he)$/.test(url.pathname)
-    )
-      return false;
-    url.search = '';
-    // Reuse the final guard's approved anchor contract with an empty referrer.
-    if (!safeTrackingContext(url.href, '')) url.hash = '';
-    if (url.href !== port.href()) port.replaceUrl(url.href);
     return safeTrackingContext(port.href(), port.referrer());
   } catch {
-    return false; // Failed capture/cleanup is never permission to load a vendor.
+    return false;
   }
 }

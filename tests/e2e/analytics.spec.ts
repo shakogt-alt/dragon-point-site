@@ -21,7 +21,7 @@ for (const [locale, campaign] of [
     const original = response!.url();
     await expect(page.locator('[data-consent-settings]')).toBeEnabled();
     await page.locator('[data-consent-action="all"]').click();
-    await expect(page).toHaveURL(original);
+    await expect(page).toHaveURL('/' + locale);
     await expect(page.locator('html')).toHaveAttribute(
       'dir',
       locale === 'he' ? 'rtl' : 'ltr',
@@ -44,12 +44,13 @@ for (const [locale, campaign] of [
 test('root campaign redirect preserves query for localized first-touch capture', async ({
   page,
 }) => {
-  await page.goto(
+  const response = await page.goto(
     '/?utm_source=google&utm_campaign=test&fbclid=one&fbclid=two',
   );
-  await expect(page).toHaveURL(
+  expect(response!.url()).toContain(
     '/en?utm_source=google&utm_campaign=test&fbclid=one&fbclid=two',
   );
+  await expect(page).toHaveURL('/en');
   await expect(page.locator('[data-consent-settings]')).toBeEnabled();
   expect(
     await page.evaluate(() =>
