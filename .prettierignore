@@ -12,3 +12,5 @@ dragon-point-visuals/
 reference/
 tmp/
 .superpowers/
+# Private generated CLI state, already excluded from Git in this checkout.
+.vercel/
