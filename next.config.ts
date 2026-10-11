@@ -32,7 +32,10 @@ const nextConfig: NextConfig = {
       {
         // Also covers framework-generated 405/OPTIONS responses.
         source: '/api/leads',
-        headers: [{ key: 'Cache-Control', value: 'no-store' }],
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' },
+          { key: 'Allow', value: 'OPTIONS, POST' },
+        ],
       },
       {
         // Generated names contain a content hash. Never apply this to HTML/API/SEO.

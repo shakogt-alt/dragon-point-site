@@ -35,11 +35,30 @@ for (const locale of ['en', 'ka', 'ru', 'he']) {
 test('unsupported lead methods are not cached or exposed as HTML errors', async ({
   request,
 }) => {
-  for (const method of ['GET', 'PUT', 'DELETE']) {
+  for (const method of ['GET', 'HEAD', 'PUT', 'PATCH', 'DELETE']) {
     const response = await request.fetch('/api/leads', { method });
     expect(response.status()).toBe(405);
+    expect(response.headers().allow).toBe('OPTIONS, POST');
+    expect(response.headers()['x-robots-tag']).toBe('noindex, nofollow');
     expect(response.headers()['cache-control']).toBe('no-store');
     expect(response.headers()['x-content-type-options']).toBe('nosniff');
     expect(await response.text()).toBe('');
   }
+});
+
+test('lead OPTIONS advertises the supported methods', async ({ request }) => {
+  const response = await request.fetch('/api/leads', { method: 'OPTIONS' });
+  expect(response.status()).toBe(204);
+  expect(response.headers().allow).toBe('OPTIONS, POST');
+  expect(response.headers()['cache-control']).toBe('no-store');
+  expect(await response.text()).toBe('');
+});
+
+test('favicon requests have an empty response while the approved icon is pending', async ({
+  request,
+}) => {
+  const response = await request.get('/favicon.ico');
+  expect(response.status()).toBe(204);
+  expect(await response.body()).toHaveLength(0);
+  expect(response.headers()['cache-control']).toBe('no-store');
 });
