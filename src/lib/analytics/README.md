@@ -58,30 +58,47 @@ delivery. Activating vendors requires the following checks:
    vendor account settings in a separate activation review before deployment.
    Consent-copy/legal approval is an owner input, not established by these tests.
 
-Vendor scripts may read URL/referrer independently of application events. Phase
-5B therefore uses an explicit sequence, independent of React effect order:
+Vendor scripts may read URL/referrer independently of application events.
+At baseline 3812ae1 (Phase 8B), the explicit sequence is:
 
-1. `getFirstTouchAttribution()` captures the original document into the existing
-   session-storage attribution system and a document-local memory cache.
-2. After required consent, a configured adapter calls `prepareProviderContext()`
-   before vendor commands or download. It captures first, removes every query
-   parameter and any unapproved hash via `history.replaceState`, then validates
-   the actual browser URL/referrer. Locale, approved anchors and history state
-   are preserved. There is no reload or synthetic navigation event.
-3. Only the validated context permits provider loading and manual events.
+1. `getFirstTouchAttribution()` captures the original document or valid stored
+   first touch into session storage and a document-local memory cache. Analytics
+   boot invokes it before consent restoration; LeadForm uses the same record.
+2. That capture call then removes only the seven supported campaign keys:
+   utm_source, utm_medium, utm_campaign, utm_content, utm_term, gclid and fbclid.
+   This happens with denied consent and blank provider IDs, before any provider
+   activation. `history.replaceState` preserves history state, locale route,
+   unrelated query values/duplicates and every fragment without reloading.
+   URLSearchParams serialization can normalize unrelated query encoding; raw
+   byte-identical preservation is not promised.
+3. After required consent, a configured adapter calls `prepareProviderContext()`.
+   It ensures capture and validates actual URL/referrer; it no longer removes
+   unrelated query parameters or fragments. Only safe context permits loading
+   and manual events.
 
-Normal UTM/gclid/fbclid campaign pages can now activate vendors after consent.
-Raw campaign values stay exclusively in lead attribution; the event allowlist
-does not expose them. LeadForm reads the same cached original record even if it
-mounts after cleanup or session storage is blocked. Root `/` preserves the query
-in its server redirect to `/en` so it can be captured there.
+Root / preserves campaign queries in its server redirect to /en. Original
+validated campaign fields, landing URL and referrer remain in lead attribution,
+including when session storage is blocked within that document. Blocked storage
+cannot guarantee persistence into another document.
 
-`safeTrackingContext()` remains strict about raw queries, unapproved fragments
-and arbitrary routes. Failed capture/cleanup or unsafe immutable referrer stays
-blocked. An empty referrer, an HTTP(S) origin-only external referrer, or a clean
-same-origin locale referrer is allowed; arbitrary cross-origin paths/queries are
-not rewritten or passed to vendors. With no valid provider IDs, there is no vendor
-loading or URL cleanup. No changes to consent wording/categories or lead payload.
+`safeTrackingContext()` rejects any remaining query, unapproved fragments,
+credentials, arbitrary routes and unsafe immutable referrers. Thus campaign-only
+entry with a safe referrer can activate after consent, while even foo=bar blocks
+vendors when it remains. Unrelated PII queries are not scrubbed to force activation.
+The raw original lead URL/referrer can contain externally supplied personal
+values; these are separate from the enum-only analytics event contract.
+
+No explicit campaign or click-ID handoff to GA4/GTM/Meta exists. Lead attribution
+retains those values; provider commands/event payloads do not map them.
+[Owner decisions A and B](../../../docs/OWNER_DECISIONS.md) must resolve campaign
+handoff and safe unrelated-query coexistence before affected vendor activation.
+No implementation of either decision is included.
+
+With invalid/blank IDs no vendor loads, but campaign cleanup still occurs.
+Failed cleanup leaves context blocked; unsafe immutable referrers are not
+rewritten. Empty referrer, HTTP(S) origin-only external referrer, and clean
+same-origin locale referrer retain the conservative allowance.
+Consent categories/wording and lead payload semantics remain unchanged.
 
 Mocked browser activation tests use separate synthetic-ID builds:
 

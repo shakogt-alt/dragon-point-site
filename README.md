@@ -1,4 +1,9 @@
-# Dragon Point — Landing, Leads, SEO and Analytics Readiness
+# Dragon Point — Current Implementation and Launch Readiness
+
+Current implementation reference: [docs/CURRENT_STATE.md](docs/CURRENT_STATE.md).
+Launch gates and hosted audit plan: [docs/LAUNCH_READINESS.md](docs/LAUNCH_READINESS.md).
+Pending owner decisions: [docs/OWNER_DECISIONS.md](docs/OWNER_DECISIONS.md).
+Baseline commit: `3812ae1b89a8615005b76706b9bb82084745c620`.
 
 Repository: `shakogt-alt/dragon-point-site`. Working branch: `codex/landing-mvp`.
 Read `AGENTS.md` and `CODEX_TASK.md` before changing the application.
@@ -75,8 +80,8 @@ CTA add client enhancements. Native mobile
 disclosures and all anchor/language links also work without JavaScript.
 Goal card/CTA actions preselect intent and focus the form at `#advisor`; Hero and
 advisor links target it too. Real contact information remains pending at
-`#contact` in the footer. Privacy copy is an inline pending-input disclosure, not
-a future page. The form requires JavaScript; it renders disabled before hydration
+`#contact` in the footer. Privacy currently uses an inline pending-input disclosure. CODEX_TASK requires a
+Privacy Policy route; owner decision C must resolve that requirement conflict. The form requires JavaScript; it renders disabled before hydration
 and has a localized noscript explanation, avoiding accidental URL-based PII submission.
 Comparison cards contain explicitly labeled qualitative examples, not market data.
 
@@ -109,8 +114,11 @@ distributed protection can be added when deployment infrastructure is known.
 First-touch `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`,
 `gclid`, `fbclid`, referrer and landingUrl persist in session storage across
 locale navigation. No form fields or personal contact details are stored there.
-Blocked/corrupt storage falls back to current-page attribution without preventing
-submission. The server fixes source to `dragon-point-landing` and validates all
+Blocked/corrupt storage uses a document-local original snapshot without preventing
+submission; persistence across full document navigation still requires session storage.
+Capture precedes removal of the seven supported campaign keys, even with denied
+consent and blank provider IDs. Unrelated query values and fragments remain;
+query serialization may normalize encoding. The server fixes source to `dragon-point-landing` and validates all
 attribution fields; attribution is contextual, not trusted for authorization.
 
 The mobile CTA appears after Hero below 768 px, respects safe-area padding and
@@ -135,10 +143,13 @@ No personal lead values, attribution, URLs or raw error details enter events.
 GA4, GTM and Meta adapters are prepared with empty environment IDs. GTM replaces
 direct GA4 and requires both optional categories plus an audited consent-aware
 container. Automatic vendor collection and account settings require an activation
-review. Phase 5B captures first-touch explicitly, then removes queries and
-unapproved fragments without reload before consented vendor activation. Campaign
-URLs therefore work; unsafe immutable referrers still block vendors. Lead
-attribution retains the original URL and parameters. See the full
+review. Phase 8B captures first touch before consent restoration, then removes
+only utm_source/medium/campaign/content/term, gclid and fbclid without reload,
+independently of provider IDs or consent. Unrelated queries and fragments remain.
+The strict provider guard still blocks any surviving query, unapproved fragment
+or unsafe immutable referrer. Lead attribution retains the original snapshot.
+Campaign handoff to vendors and safe unrelated-query coexistence require owner
+decisions; neither is changed by normalization. See the full
 [event and activation contract](src/lib/analytics/README.md).
 
 ## SEO configuration
@@ -201,7 +212,11 @@ credentials or invent the production domain, contact information, logo,
 photography, social links or lead destination. Analytics is not activated.
 No KleekTo code, credentials or integration is touched.
 
-## Phase gate
+## Current release boundary
 
-Phase 5 stops after verification, a separate commit, push and report.
-Phase 6 requires explicit user confirmation.
+Phases 1–8 and the Phase 8B attribution change are implemented; their reports
+remain historical. The protected Vercel Preview is READY at the baseline commit,
+and the project reports live=false. Hosted application QA and production inputs
+remain open. This normalization prepares uncommitted local documentation/HTTP
+fixes only. No commit, push, deployment, domain or access change is part of it.
+Follow the reviewed staging-first sequence in docs/LAUNCH_READINESS.md.

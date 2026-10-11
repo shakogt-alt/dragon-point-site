@@ -2,13 +2,24 @@
 
 ## Current boundary
 
-No staging target exists as of 2026-10-08; the owner confirmed this. No account,
-project, DNS, domain, receiver or vendor ID was created. This runbook is preparation,
-not evidence of a deployed site. Use the repository root and `codex/landing-mvp`.
+As verified on 2026-10-10, the existing protected Preview is READY:
+`dpl_6cpq1pzq1n1UBr4SNQDvHjBFrL8S`, commit
+`3812ae1b89a8615005b76706b9bb82084745c620`, branch `staging/phase-8a`.
+Project `prj_x9FOZhZkLivcqqomlYEMUey59E5k` reports `live=false`.
+[Exact Preview](https://dragon-point-site-9l6f12y5r-shako-s-projects2.vercel.app).
+Authentication remains enabled; unauthenticated HTTP redirects to Vercel SSO.
+The 2026-10-08 Phase 8 report remains historical preparation-only evidence.
+
+Use [CURRENT_STATE](../CURRENT_STATE.md) as the current implementation reference,
+[LAUNCH_READINESS](../LAUNCH_READINESS.md) for the exact protected hosted audit
+commands/checklist, and [OWNER_DECISIONS](../OWNER_DECISIONS.md) for access and
+launch inputs. Do not create another project, deploy, create bypass/share access,
+or alter protection based on the older setup instructions below.
+Scoped hosted environment presence/values are not certified by this audit.
 
 ## Owner/project verification before a preview
 
-Provide an owner-authenticated Dragon Point project connected to
+Verify the existing owner-authenticated Dragon Point project is connected to
 `shakogt-alt/dragon-point-site`. Verify team/owner, Git link, root directory `.`,
 the exact reviewed commit and **Preview** environment. Keep production domain and
 branch settings protected. Do not infer the project from a matching display name.
@@ -38,19 +49,19 @@ font licenses and source are retained.
 
 ## Environment matrix (presence only, never values)
 
-| Variable                              | Staging classification                                     | Current status             | Production requirement / action                                                  |
-| ------------------------------------- | ---------------------------------------------------------- | -------------------------- | -------------------------------------------------------------------------------- |
-| `SITE_ENV`                            | Required explicit `staging`                                | Real configuration missing | `production` only after separate approval                                        |
-| `VERCEL_ENV`                          | Platform-managed `preview`; vetoes production              | No host                    | Verify platform target, do not manually spoof it on Vercel                       |
-| `SITE_URL`                            | Leave empty unless confirmed production origin is supplied | Missing                    | Required final HTTPS origin for production SEO; never preview hostname           |
-| `OG_IMAGE_URL`                        | Optional approved artwork; leave empty                     | Missing                    | Approved absolute HTTPS 1200×630 artwork before social launch                    |
-| `LEAD_WEBHOOK_URL`                    | Optional confirmed isolated staging receiver               | Missing                    | P0: real durable receiver required before public lead collection                 |
-| `LEAD_WEBHOOK_TOKEN`                  | Optional server-only credential, receiver-dependent        | Missing                    | Required if receiver requires auth; configure privately in scoped secrets        |
-| `NEXT_PUBLIC_GA_ID`                   | Optional approved staging/test account; otherwise blank    | Blank                      | Optional production measurement requires reviewed IDs/account settings           |
-| `NEXT_PUBLIC_GTM_ID`                  | Optional reviewed test container; otherwise blank          | Blank                      | Optional; replaces direct GA and requires both optional consents                 |
-| `NEXT_PUBLIC_META_PIXEL_ID`           | Optional approved test pixel; otherwise blank              | Blank                      | Optional; requires Marketing and reviewed matching/automatic collection settings |
-| `VERCEL_TOKEN`                        | CLI/CI authentication only, not application runtime        | Missing                    | Owner auth/access prerequisite; never Git/public env                             |
-| `VERCEL_PROJECT_ID` / `VERCEL_ORG_ID` | Confirmed CLI/project context, not invented                | Missing                    | Verified owner/project identity                                                  |
+| Variable                              | Staging classification                                     | Current status                 | Production requirement / action                                                  |
+| ------------------------------------- | ---------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
+| `SITE_ENV`                            | Required explicit `staging`                                | Not inspected in hosted scope  | `production` only after separate approval                                        |
+| `VERCEL_ENV`                          | Platform-managed `preview`; vetoes production              | Preview target verified by API | Verify platform target, do not manually spoof it on Vercel                       |
+| `SITE_URL`                            | Leave empty unless confirmed production origin is supplied | Not inspected in hosted scope  | Required final HTTPS origin for production SEO; never preview hostname           |
+| `OG_IMAGE_URL`                        | Optional approved artwork; leave empty                     | Not inspected in hosted scope  | Approved absolute HTTPS 1200×630 artwork before social launch                    |
+| `LEAD_WEBHOOK_URL`                    | Optional confirmed isolated staging receiver               | Not inspected in hosted scope  | P0: real durable receiver required before public lead collection                 |
+| `LEAD_WEBHOOK_TOKEN`                  | Optional server-only credential, receiver-dependent        | Not inspected in hosted scope  | Required if receiver requires auth; configure privately in scoped secrets        |
+| `NEXT_PUBLIC_GA_ID`                   | Optional approved staging/test account; otherwise blank    | Not inspected in hosted scope  | Optional production measurement requires reviewed IDs/account settings           |
+| `NEXT_PUBLIC_GTM_ID`                  | Optional reviewed test container; otherwise blank          | Not inspected in hosted scope  | Optional; replaces direct GA and requires both optional consents                 |
+| `NEXT_PUBLIC_META_PIXEL_ID`           | Optional approved test pixel; otherwise blank              | Not inspected in hosted scope  | Optional; requires Marketing and reviewed matching/automatic collection settings |
+| `VERCEL_TOKEN`                        | CLI/CI authentication only, not application runtime        | Not inspected in hosted scope  | Owner auth/access prerequisite; never Git/public env                             |
+| `VERCEL_PROJECT_ID` / `VERCEL_ORG_ID` | Confirmed CLI/project context, not invented                | Project/team identity verified | Verified owner/project identity                                                  |
 
 Use Preview-scoped configuration; do not pull/print production secrets. Leave
 webhook and all vendor IDs blank in the initial preview. No lead submission can
@@ -96,10 +107,9 @@ and confirm browser→API→durable receiver→2xx. Do not log names/phones/payl
 
 Use `/en?utm_source=google&utm_medium=cpc&utm_campaign=staging-test` and
 `/he?utm_source=meta&fbclid=staging-test`. Verify first-touch storage/payload across
-locale changes, and no raw values in event/dataLayer/Meta parameters. With blank IDs,
-no providers load and URL cleanup is not required; attribution still captures first.
-Only approved test providers may require capture→non-navigation cleanup→consented
-activation. External referrers remain fail-closed. Local synthetic provider builds
+locale changes, and no raw values in event/dataLayer/Meta parameters. With blank IDs no providers load, but capture now precedes cleanup of the seven
+campaign keys regardless of consent. Unrelated queries/fragments remain and can
+block approved test providers after consent. Unsafe immutable referrers remain blocked; HTTP(S) origin-only external referrers are permitted. Local synthetic provider builds
 must intercept every vendor request and be replaced by a blank-ID build afterwards.
 
 Check Necessary only, Analytics only, Marketing only, Accept all, revocation,
@@ -124,7 +134,9 @@ source maps, documents, `.env`/Git/source folders/test data/diagnostics and synt
 IDs. Report filenames/counts only, not credential contents. Repeat against hosted
 responses; local source/marker scans have bounded coverage.
 
-Save nine real staging screenshots under `docs/screenshots/phase-8/`: EN desktop
+Save reviewed sanitized staging screenshots in a new deployment/run directory,
+not in historical Phase 8 evidence. Required EN/HE widths are 390, 768 and 1440.
+Additional state comparisons from the earlier protocol include EN desktop
 1440, EN mobile 390, KA mobile 390, RU desktop 1440, HE desktop 1440, HE mobile 390,
 EN mobile consent, HE mobile consent, EN mobile lead. Compare Hero/crop/fonts/RTL
 and consent geometry with approved Phase 6/7 evidence. Do not call local/emulated
@@ -133,7 +145,8 @@ and Android Chrome on actual hardware with keyboard/menu/lead/consent/RTL checks
 
 ## Release boundary
 
-Complete the input matrix and production checklist in the Phase 8 report. Staging
+Complete the current input matrix and production checklist in LAUNCH_READINESS.
+Use CURRENT_STATE for implementation and OWNER_DECISIONS for approvals. Staging
 success would authorize neither production indexing nor a launch. Obtain explicit
 owner approval of the remaining P0/P1 findings and the exact tested release commit
 before a separate production deployment/SEO activation.
