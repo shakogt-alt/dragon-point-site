@@ -17,12 +17,23 @@ export function Footer({
     <footer id="contact" tabIndex={-1} className="dp-footer dp-dark">
       <div className="dp-container">
         <div className="dp-footer-intro">
-          <h2>{copy.title}</h2>
+          <h2>
+            {copy.title.split(/(Dragon Point\.?)/).map((part, index) =>
+              part.startsWith('Dragon Point') ? (
+                <bdi key={index} dir="ltr">
+                  {part}
+                </bdi>
+              ) : (
+                part
+              ),
+            )}
+          </h2>
           <p>{copy.contact}</p>
         </div>
         <div className="dp-footer-grid">
           <div>
-            <Logo brand={messages.brand} />
+            <Logo brand={messages.brand} variant="footer" />
+            <p className="dp-brand-formula">{messages.landing.hero.formula}</p>
             <p>{copy.geo}</p>
             <p className="dp-powered">
               {messages.brand.powered}{' '}

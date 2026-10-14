@@ -23,6 +23,23 @@
     var(--dp-off-white)
   );
   --dp-header-offset: 6.5rem;
+  --dp-surface-light: color-mix(
+    in srgb,
+    var(--dp-off-white) 96%,
+    var(--dp-titanium)
+  );
+  --dp-surface-muted: color-mix(
+    in srgb,
+    var(--dp-titanium) 15%,
+    var(--dp-off-white)
+  );
+  --dp-surface-dark: color-mix(
+    in srgb,
+    var(--dp-graphite) 70%,
+    var(--dp-obsidian)
+  );
+  --dp-focus-ring: var(--dp-violet);
+  --dp-section-rule: var(--dp-border-light);
 
   --dp-space-1: 0.25rem;
   --dp-space-2: 0.5rem;

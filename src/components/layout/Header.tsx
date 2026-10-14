@@ -107,7 +107,7 @@ export function Header({
         <a
           className="dp-home"
           href="#hero"
-          aria-label={messages.landing.header.home}
+          aria-label={`${messages.brand.name} ${messages.brand.descriptor} — ${messages.landing.header.home}`}
         >
           <Logo brand={messages.brand} />
         </a>
@@ -133,7 +133,9 @@ export function Header({
         </a>
         <div className="dp-mobile-controls">
           <details className="dp-language-picker">
-            <summary aria-label={messages.languageNavigation}>
+            <summary
+              aria-label={`${messages.languageLabels[locale]} — ${messages.languageNavigation}`}
+            >
               <bdi dir="ltr">{messages.languageLabels[locale]}</bdi>
               <svg
                 className="dp-utility-icon"

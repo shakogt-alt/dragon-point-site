@@ -8,6 +8,13 @@
 .dp-lead-grid > * {
   min-inline-size: 0;
 }
+.dp-lead-grid > div:last-child {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--dp-border-light);
+  border-block-start: 2px solid var(--dp-violet);
+  border-radius: var(--dp-radius-sm);
+  background: var(--dp-surface-light);
+}
 .dp-lead-intro a {
   text-decoration: underline;
   text-underline-offset: var(--dp-space-1);
@@ -87,7 +94,7 @@
   min-inline-size: 0;
   min-block-size: 3.25rem;
   border: 1px solid var(--dp-border-control);
-  border-radius: 0;
+  border-radius: var(--dp-radius-sm);
   padding-block: var(--dp-space-3);
   padding-inline: var(--dp-space-4);
   background: var(--dp-off-white);
@@ -161,8 +168,11 @@ html:not([lang='he'])
   inline-size: 100%;
 }
 @media (max-width: 767px) {
-  body {
-    padding-block-end: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  /* Preserve the CTA's existing scroll clearance inside the dark Footer. */
+  .dp-footer {
+    padding-block-end: calc(
+      var(--dp-space-8) + 5.5rem + env(safe-area-inset-bottom, 0px)
+    );
   }
 }
 @media (min-width: 768px) {

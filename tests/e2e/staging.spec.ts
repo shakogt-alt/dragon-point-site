@@ -54,11 +54,16 @@ test('lead OPTIONS advertises the supported methods', async ({ request }) => {
   expect(await response.text()).toBe('');
 });
 
-test('favicon requests have an empty response while the approved icon is pending', async ({
+test('favicon returns the approved symbol as a cacheable ICO', async ({
   request,
 }) => {
   const response = await request.get('/favicon.ico');
-  expect(response.status()).toBe(204);
-  expect(await response.body()).toHaveLength(0);
-  expect(response.headers()['cache-control']).toBe('no-store');
+  expect(response.status()).toBe(200);
+  expect(response.headers()['content-type']).toMatch(
+    /image\/(x-icon|vnd.microsoft.icon)/,
+  );
+  expect(response.headers()['cache-control']).toContain('max-age=');
+  const body = await response.body();
+  expect(Array.from(body.subarray(0, 4))).toEqual([0, 0, 1, 0]);
+  expect(body.readUInt16LE(4)).toBeGreaterThan(0);
 });

@@ -1,12 +1,16 @@
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+
 export const dynamic = 'force-dynamic';
 
-// No approved icon master exists yet. Avoid a browser 404 without inventing art.
-// Replace this route with the approved favicon asset when the owner supplies it.
-export function GET() {
-  return new Response(null, {
-    status: 204,
+export async function GET() {
+  const icon = await readFile(
+    path.join(process.cwd(), 'public/brand/favicon.ico'),
+  );
+  return new Response(new Uint8Array(icon), {
     headers: {
-      'Cache-Control': 'no-store',
+      'Content-Type': 'image/x-icon',
+      'Cache-Control': 'public, max-age=86400',
       'X-Robots-Tag': 'noindex, nofollow',
     },
   });

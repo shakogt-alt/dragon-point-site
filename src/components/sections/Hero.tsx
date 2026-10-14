@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Messages } from '@/lib/i18n/messages';
 import { ArchitectureVisual } from '@/components/ui/ArchitectureVisual';
 import { ActionLink } from '@/components/ui/ActionLink';
@@ -13,9 +14,22 @@ export function Hero({ messages }: { messages: Messages }) {
     >
       <div className="dp-container dp-hero-grid">
         <div className="dp-hero-copy">
-          <p className="dp-eyebrow" dir="ltr">
-            {messages.brand.name} <span>{messages.brand.descriptor}</span>
-          </p>
+          <div className="dp-hero-brand" dir="ltr">
+            <Image
+              className="dp-hero-symbol"
+              src="/brand/logo-symbol.webp"
+              width={88}
+              height={128}
+              alt=""
+              aria-hidden="true"
+              unoptimized
+              loading="eager"
+              fetchPriority="low"
+            />
+            <p className="dp-eyebrow">
+              {messages.brand.name} <span>{messages.brand.descriptor}</span>
+            </p>
+          </div>
           <h1 id="hero-heading" className="dp-hero-context">
             {messages.foundation.heading}
           </h1>

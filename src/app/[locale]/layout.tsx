@@ -20,6 +20,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === 'he' ? 'rtl' : 'ltr'}>
       <head>
+        <link rel="icon" href="/brand/favicon.ico" type="image/x-icon" />
         {getFontPreloads(locale).map((href) => (
           <link
             key={href}
