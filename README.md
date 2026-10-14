@@ -2,8 +2,8 @@
 
 Current implementation reference: [docs/CURRENT_STATE.md](docs/CURRENT_STATE.md).
 Launch gates and hosted audit plan: [docs/LAUNCH_READINESS.md](docs/LAUNCH_READINESS.md).
-Pending owner decisions: [docs/OWNER_DECISIONS.md](docs/OWNER_DECISIONS.md).
-Baseline commit: `3812ae1b89a8615005b76706b9bb82084745c620`.
+Pending and accepted owner decisions: [docs/OWNER_DECISIONS.md](docs/OWNER_DECISIONS.md).
+2026-10-10 audit baseline commit: `3812ae1b89a8615005b76706b9bb82084745c620`.
 
 Repository: `shakogt-alt/dragon-point-site`. Working branch: `codex/landing-mvp`.
 Read `AGENTS.md` and `CODEX_TASK.md` before changing the application.
@@ -211,6 +211,22 @@ Phase 5 consent and refreshed landing screenshots live in `docs/screenshots/phas
 credentials or invent the production domain, contact information, logo,
 photography, social links or lead destination. Analytics is not activated.
 No KleekTo code, credentials or integration is touched.
+
+## MVP performance launch policy
+
+Owner decision accepted on 2026-10-13: **PERFORMANCE EXCEPTION ACCEPTED FOR MVP**.
+Mobile Lighthouse Performance >=90 remains monitored and is no longer a hard
+pre-launch blocker. Hosted EN/HE median Performance is 77/76 and median simulated
+TBT is 1113/1118 ms; LCP is within target in the measured environment and CLS is
+effectively zero. See [decision D](docs/OWNER_DECISIONS.md#d--mobile-performance-gate--accepted-for-mvp)
+for measurement conditions and the change-control record.
+
+LCP, CLS, accessibility and functional regressions remain launch-critical.
+Measure before introducing a large client dependency, animation framework or
+heavy branding effect. Re-test after major Next.js / React upgrades or material
+architecture changes. Re-open optimization only for a specific reproducible,
+attributable bottleneck with A/B validation. Other launch gates and exact-release
+owner GO remain required.
 
 ## Current release boundary
 

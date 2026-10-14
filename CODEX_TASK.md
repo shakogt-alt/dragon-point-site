@@ -507,10 +507,22 @@ Prepare the codebase so these can be added later, but do not publish empty pages
 ## Performance
 
 Target Lighthouse mobile:
-- Performance >= 90
+- Performance >= 90 remains a monitored quality target; it is not a hard pre-launch blocker for this MVP under the owner decision accepted on 2026-10-13.
 - SEO >= 95
 - Accessibility >= 95
 - Best Practices >= 95
+
+Owner decision: **PERFORMANCE EXCEPTION ACCEPTED FOR MVP**.
+See [Owner Decisions — Mobile performance gate](docs/OWNER_DECISIONS.md#d--mobile-performance-gate--accepted-for-mvp)
+for the accepted change-control record and measured baseline.
+
+LCP, CLS, accessibility and functional regressions remain launch-critical.
+Performance and TBT remain monitored; this exception accepts the measured startup
+limitation and does not establish a Performance >=90 pass or production launch approval.
+Do not introduce a large client-side dependency, animation framework or heavy
+branding effect without measurement. Re-test after major Next.js / React upgrades
+or material architecture changes. Re-open performance optimization only when a
+specific reproducible bottleneck can be attributed and A/B validated.
 
 Guidelines:
 - hero image under ~300 KB where practical
@@ -774,7 +786,7 @@ MVP is complete when:
 - JSON-LD works
 - preview/staging is noindex
 - production can be indexable
-- Lighthouse targets are met or deviations documented
+- Lighthouse targets are met or deviations documented, including the accepted MVP mobile Performance exception; LCP, CLS, accessibility and functional regressions remain launch-critical
 - accessibility audit completed
 - no console errors
 - no broken links

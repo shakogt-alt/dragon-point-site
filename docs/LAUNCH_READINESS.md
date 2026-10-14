@@ -5,14 +5,25 @@
 This report records the uncommitted normalization patch and release gates.
 [CURRENT_STATE](CURRENT_STATE.md) is the current implementation reference;
 `CODEX_TASK.md` remains the requirements authority.
-[OWNER_DECISIONS](OWNER_DECISIONS.md) records unresolved approvals.
+[OWNER_DECISIONS](OWNER_DECISIONS.md) records pending approvals and accepted
+performance decision D.
+
+2026-10-13 policy update at diagnostic source revision
+`bcaad5cf77e9ade72896b43b16a2789e026e4851`:
+**PERFORMANCE EXCEPTION ACCEPTED FOR MVP**. Mobile Lighthouse Performance >=90
+is monitored and is no longer a hard pre-launch blocker. The Git/Vercel inventory,
+normalization patch and test table below retain their dated 2026-10-10 evidence;
+this policy update is not a fresh audit of all remaining release gates.
 
 ## 1. Executive status
 
-NOT READY for launch. The existing Preview is READY, but protected hosted
-application QA, durable lead delivery, production origin, legal/consent approval
-and P1 editorial/asset/performance inputs remain open. A deployed Preview is not
-production clearance. No commit, push, deployment, DNS or access changes occurred.
+NOT READY for launch until the remaining release gates are closed. This owner
+decision closes the mobile Performance >=90 blocker only. Durable lead delivery,
+production origin, legal/consent approval, editorial/assets/device decisions and
+complete release verification still require their own evidence and approval.
+Hosted EN/HE performance collection and trace diagnostics have completed; they
+are not full production clearance. This update makes no commit, push, deployment,
+DNS or access change.
 
 ## 2. Git truth
 
@@ -60,9 +71,17 @@ implementation is inline disclosure only. Decision C remains pending, with ISSUE
 REASON / PROPOSED CHANGE / IMPACT documented. No route or legal content change made.
 
 Campaign handoff and safe unrelated queries are owner decisions A/B; current code
-remains unchanged. Mobile Performance >=90 remains an unmet historical local
-requirement, not a silently relaxed target. Any amendment needs explicit change
-control and owner approval.
+remains unchanged. Mobile Performance >=90 is an unmet monitored target covered
+by [accepted owner decision D](OWNER_DECISIONS.md#d--mobile-performance-gate--accepted-for-mvp).
+It is no longer a hard MVP pre-launch blocker. LCP, CLS, accessibility and
+functional regressions remain launch-critical.
+
+No large client-side dependency, animation framework or heavy branding effect
+may be introduced without measurement. Re-test after major Next.js / React
+upgrades or material architecture changes. Re-open performance optimization only
+when a specific reproducible bottleneck can be attributed and A/B validated.
+The exception accepts the measured startup/TBT limitation and does not turn the
+score into a pass. Historical failed-gate reports remain dated evidence.
 
 ## 6. Documentation debt
 
@@ -125,7 +144,7 @@ rather than relying on the review verdict. Final review and gate results follow.
 
 ## 9. P1 blockers
 
-- Hosted repeated mobile performance audit and budget resolution.
+- LCP, CLS, accessibility and functional regression clearance for the release; mobile Performance >=90 is covered by accepted decision D and is not a hard pre-launch blocker.
 - Native KA and HE visible/SEO/form/privacy/consent signoff.
 - Final logo or approved current wordmark; approved OG asset/configuration.
 - Physical mobile QA or explicit owner QA decision before launch.
@@ -147,8 +166,10 @@ flakiness as a new failure or proof it can never recur.
 
 A: vendor campaign handoff. B: safe unrelated-query coexistence.
 C: Privacy Policy route/content model. None implemented without approval.
-Also required: protected audit access, production inputs, applicable performance/
-device decisions and GO for the exact fully tested release.
+Decision D: mobile performance exception ACCEPTED on 2026-10-13; not pending.
+Authenticated access was subsequently authorized for the completed hosted EN/HE
+performance diagnostics. Still required: production inputs, complete release
+verification, applicable device decisions and GO for the exact fully tested release.
 Blank optional tracking may remain off; it does not itself block launch.
 See OWNER_DECISIONS for exact input/impact records.
 
@@ -590,7 +611,38 @@ Next step: review the local patch, obtain owner access/inputs, and follow the st
 release sequence. Track compatible dev-tool maintenance separately as P2; it is
 not a launch prerequisite.
 
-CURRENT STATUS: **NOT READY**.
-Exact reason: protected hosted verification, durable receiver, confirmed production
-origin and privacy/consent decisions are unresolved, with P1 performance/editorial/
-asset/device inputs still open. No commit, push or deployment performed.
+## 17. Owner performance policy update — 2026-10-13
+
+Completed: recorded the explicitly accepted mobile Performance exception, amended
+the requirements authority and aligned current gate/decision/runbook references.
+No performance application fix was selected.
+
+Changed files: CODEX_TASK.md, README.md, docs/OWNER_DECISIONS.md,
+docs/CURRENT_STATE.md, docs/LAUNCH_READINESS.md and docs/staging/preview-runbook.md.
+
+Fresh validation for this documentation update:
+
+- Lint: exit 0.
+- Typecheck: exit 0.
+- Unit tests: 140 passed / 10 files, exit 0.
+- Prettier: five current documentation files pass; CODEX_TASK remains excluded
+  by the repository's existing formatting policy.
+- Decision/policy cross-references, original hosted median values, allowed changed
+  files, unchanged HEAD and existing untracked audit checksum: pass.
+- Git diff whitespace check: exit 0.
+
+The preceding diagnostic run's 202 Chromium E2E passes at the unchanged runtime
+source remain separate evidence; E2E, build and Lighthouse were not repeated for
+this documentation-only update. Historical reports/raw evidence remain unchanged.
+
+Known issues/pending inputs: remaining production inputs, approvals and complete
+release verification above; decision D is accepted and is not pending.
+Next step: close the remaining release gates and obtain owner GO for the exact
+tested release. No commit, push or deployment is made by this update.
+
+CURRENT STATUS: **NOT READY** pending closure of the remaining release gates.
+The 2026-10-13 decision removes mobile Performance >=90 as a hard MVP blocker;
+it does not close durable receiver, confirmed production origin, privacy/consent,
+editorial/asset/device decisions or complete release verification. LCP, CLS,
+accessibility and functional regressions remain launch-critical. No commit,
+push or deployment is performed by this documentation update.

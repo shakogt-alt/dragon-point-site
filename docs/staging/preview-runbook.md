@@ -17,6 +17,28 @@ launch inputs. Do not create another project, deploy, create bypass/share access
 or alter protection based on the older setup instructions below.
 Scoped hosted environment presence/values are not certified by this audit.
 
+## Accepted MVP performance gate
+
+On 2026-10-13 the owner accepted **PERFORMANCE EXCEPTION ACCEPTED FOR MVP**.
+Mobile Lighthouse Performance >=90 is a monitored quality target, not a hard
+pre-launch blocker. Hosted EN/HE collection and raw diagnostics are complete;
+[decision D](../OWNER_DECISIONS.md#d--mobile-performance-gate--accepted-for-mvp)
+records the baseline and authenticated cached-repeat conditions. The initial
+2026-10-10 deployment inventory above remains historical.
+
+LCP, CLS, accessibility and functional regressions remain launch-critical.
+Record scores/TBT as observed; do not label the exception as a >=90 pass or remove
+Preview noindex to improve SEO. Measure before adding a large client dependency,
+an animation framework or heavy branding effect. Re-test after major Next.js /
+React upgrades or material architecture changes. Re-open optimization only when
+a specific reproducible bottleneck can be attributed and A/B validated.
+
+Future comparisons must state Chrome/Lighthouse versions, throttling, cache and
+consent conditions; first-visit and cached repeat results are separate series.
+The diagnostic run used Chrome 154 and retained authentication/consent/cache,
+whereas the original fresh-profile protocol below is a different control.
+This policy update does not require repeating the completed diagnostic series.
+
 ## Owner/project verification before a preview
 
 Verify the existing owner-authenticated Dragon Point project is connected to
