@@ -53,6 +53,7 @@ export function LeadForm({
   );
   const feedback = useRef<HTMLDivElement>(null);
   const attribution = useRef<Attribution>({});
+  const submissionId = useRef<string | undefined>(undefined);
   const pendingInvalidFocus = useRef<(typeof focusOrder)[number] | undefined>(
     undefined,
   );
@@ -203,11 +204,17 @@ export function LeadForm({
     trackAnalytics('lead_form_submit', measurement);
     setStatus('idle');
     try {
+      submissionId.current ??= crypto.randomUUID();
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
-          ...buildLeadPayload(values, locale, attribution.current),
+          ...buildLeadPayload(
+            values,
+            locale,
+            attribution.current,
+            submissionId.current,
+          ),
           website: values.website,
         }),
         signal: AbortSignal.timeout(12000),
@@ -220,6 +227,7 @@ export function LeadForm({
         'ok' in result &&
         result.ok === true
       ) {
+        submissionId.current = undefined;
         reset();
         setStatus('success');
         trackAnalytics('lead_form_success', measurement);

@@ -93,7 +93,12 @@ export function createLeadHandler({
     if (!parsed.success || parsed.data.website) return reply(400, 'invalid');
     try {
       const result = await service.submit(
-        buildLeadPayload(parsed.data, parsed.data.locale, parsed.data),
+        buildLeadPayload(
+          parsed.data,
+          parsed.data.locale,
+          parsed.data,
+          parsed.data.submissionId,
+        ),
       );
       return result.delivered ? reply(200) : reply(503, 'unavailable');
     } catch {

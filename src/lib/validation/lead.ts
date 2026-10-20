@@ -20,9 +20,15 @@ export {
 
 export const leadFormSchema = z.object({
   intent: z.enum(intents),
-  name: text(120).refine(
-    (value) => value.length >= 2 && !/[\r\n\t]/.test(value),
-  ),
+  name: z
+    .string()
+    .trim()
+    .regex(noControls)
+    .transform((value) => value.normalize('NFC'))
+    .refine((value) => {
+      const length = Array.from(value).length;
+      return length >= 2 && length <= 120 && !/[\r\n\t]/.test(value);
+    }),
   phone: z
     .string()
     .trim()
@@ -53,6 +59,7 @@ export const leadRequestSchema = leadFormSchema
     website: leadFormSchema.shape.website.default(''),
     locale: z.enum(leadLocales),
     source: z.literal('dragon-point-landing'),
+    submissionId: z.uuid(),
     ...attributionShape,
   })
   .strict();

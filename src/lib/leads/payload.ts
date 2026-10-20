@@ -18,6 +18,7 @@ export function buildLeadPayload(
   values: LeadFormValues,
   locale: LeadRequest['locale'],
   attribution: Attribution,
+  submissionId: LeadRequest['submissionId'],
 ): LeadPayload {
   const tracking: Attribution = {};
   for (const key of attributionKeys)
@@ -37,5 +38,6 @@ export function buildLeadPayload(
     preferredLanguage: values.preferredLanguage,
     locale,
     source: 'dragon-point-landing',
+    submissionId,
   };
 }

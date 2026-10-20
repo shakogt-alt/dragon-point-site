@@ -6,6 +6,7 @@ import {
 import { captureFirstTouch } from '../../src/lib/leads/attribution';
 import { buildLeadPayload } from '../../src/lib/leads/payload';
 
+const submissionId = '71da1176-f50a-4c21-9281-47d3bc9bdbe4';
 const values = {
   intent: 'invest',
   name: 'Test Person',
@@ -49,9 +50,12 @@ describe('lead validation', () => {
     expect(result.email).toBe('');
   });
   it('rejects overposting, invalid attribution URLs and oversized campaign values', () => {
-    const valid = buildLeadPayload(leadFormSchema.parse(values), 'ru', {
-      landingUrl: 'https://example.test/en',
-    });
+    const valid = buildLeadPayload(
+      leadFormSchema.parse(values),
+      'ru',
+      { landingUrl: 'https://example.test/en' },
+      submissionId,
+    );
     expect(leadRequestSchema.safeParse({ ...valid, website: '' }).success).toBe(
       true,
     );
@@ -155,10 +159,12 @@ describe('first-touch attribution', () => {
 
 it('constructs a sanitized payload with separate page/preferred locales and no honeypot', () => {
   expect(
-    buildLeadPayload(leadFormSchema.parse(values), 'ru', {
-      utm_source: 'search',
-      landingUrl: 'https://example.test/en',
-    }),
+    buildLeadPayload(
+      leadFormSchema.parse(values),
+      'ru',
+      { utm_source: 'search', landingUrl: 'https://example.test/en' },
+      submissionId,
+    ),
   ).toEqual({
     intent: 'invest',
     name: 'Test Person',
@@ -166,6 +172,7 @@ it('constructs a sanitized payload with separate page/preferred locales and no h
     preferredLanguage: 'he',
     locale: 'ru',
     source: 'dragon-point-landing',
+    submissionId,
     utm_source: 'search',
     landingUrl: 'https://example.test/en',
   });

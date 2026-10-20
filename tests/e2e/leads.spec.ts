@@ -22,6 +22,7 @@ test('API rejects invalid payload, honeypot and cross-origin requests; no receiv
     preferredLanguage: 'en',
     locale: 'en',
     source: 'dragon-point-landing',
+    submissionId: '71da1176-f50a-4c21-9281-47d3bc9bdbe4',
     website: '',
     landingUrl: 'http://127.0.0.1:3300/en',
   };
@@ -294,3 +295,83 @@ test('first-touch campaign survives locale changes and is submitted unchanged', 
   });
   expect(payload.landingUrl).toContain('/en?utm_source=search');
 });
+
+for (const locale of locales) {
+  test(`${locale}: submission UUID survives delivery failures and resets only after confirmed success`, async ({
+    page,
+  }) => {
+    test.setTimeout(60000);
+    await page.goto(`/${locale}`);
+    await expect(page.locator('#lead-name')).toBeEnabled();
+    const fill = async () => {
+      await page.locator('#lead-name').fill('Test Person');
+      await page.locator('#lead-phone').fill('+995555000000');
+    };
+    await fill();
+    let outcome: 'unavailable' | 'rate' | 'network' | 'timeout' | 'success' =
+      'unavailable';
+    const payloads: Record<string, unknown>[] = [];
+    await page.route('**/api/leads', async (route) => {
+      payloads.push(route.request().postDataJSON());
+      if (outcome === 'network') return route.abort('connectionfailed');
+      if (outcome === 'timeout') return;
+      await route.fulfill({
+        status: outcome === 'success' ? 200 : outcome === 'rate' ? 429 : 503,
+        contentType: 'application/json',
+        body: JSON.stringify(
+          outcome === 'success'
+            ? { ok: true }
+            : {
+                ok: false,
+                code: outcome === 'rate' ? 'rate_limited' : 'unavailable',
+              },
+        ),
+      });
+    });
+    const submit = page.locator('#lead-form button[type="submit"]');
+    const uuid =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
+    let lifecycleId: unknown;
+    for (const failure of [
+      'unavailable',
+      'rate',
+      'network',
+      'timeout',
+    ] as const) {
+      outcome = failure;
+      const previous = payloads.length;
+      await submit.click();
+      await expect.poll(() => payloads.length).toBe(previous + 1);
+      expect(payloads.at(-1)?.submissionId).toMatch(uuid);
+      lifecycleId ??= payloads.at(-1)?.submissionId;
+      expect(payloads.at(-1)?.submissionId).toBe(lifecycleId);
+      await expect(page.locator('.dp-lead-feedback')).toBeVisible({
+        timeout: 15000,
+      });
+      await expect(submit).toBeEnabled();
+      await expect(page.locator('#lead-name')).toHaveValue('Test Person');
+      await expect(page.locator('#lead-phone')).toHaveValue('+995555000000');
+    }
+    outcome = 'success';
+    await submit.click();
+    await expect(page.locator('.dp-lead-success')).toBeVisible();
+    expect(payloads.at(-1)?.submissionId).toBe(lifecycleId);
+    expect(payloads).toHaveLength(5);
+    await page.locator('.dp-lead-success button').click();
+    await fill();
+    await submit.click();
+    await expect(page.locator('.dp-lead-success')).toBeVisible();
+    expect(payloads).toHaveLength(6);
+    expect(payloads.at(-1)?.submissionId).toMatch(uuid);
+    expect(payloads.at(-1)?.submissionId).not.toBe(lifecycleId);
+    expect(
+      await page.evaluate(() =>
+        Object.keys(
+          JSON.parse(
+            sessionStorage.getItem('dragon-point:first-touch:v1') ?? '{}',
+          ),
+        ),
+      ),
+    ).not.toContain('submissionId');
+  });
+}

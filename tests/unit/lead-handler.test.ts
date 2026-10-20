@@ -14,6 +14,7 @@ const valid = {
   website: '',
   locale: 'en',
   source: 'dragon-point-landing',
+  submissionId: '71da1176-f50a-4c21-9281-47d3bc9bdbe4',
   landingUrl: 'https://example.test/en',
 } as const;
 const request = (
@@ -54,6 +55,7 @@ describe('server lead boundary', () => {
         preferredLanguage: 'he',
         locale: 'en',
         source: 'dragon-point-landing',
+        submissionId: '71da1176-f50a-4c21-9281-47d3bc9bdbe4',
         landingUrl: 'https://example.test/en',
       },
     ]);
