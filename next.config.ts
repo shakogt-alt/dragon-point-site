@@ -38,6 +38,14 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: '/api/internal/leads/receiver',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' },
+          { key: 'Allow', value: 'POST' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ],
+      },
+      {
         // Generated names contain a content hash. Never apply this to HTML/API/SEO.
         source: '/fonts/:path*',
         headers: [

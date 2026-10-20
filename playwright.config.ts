@@ -68,7 +68,7 @@ export default defineConfig({
     {
       name: 'foundation',
       testMatch:
-        '**/{foundation,landing,leads,analytics,attribution,performance,staging,branding}.spec.ts',
+        '**/{foundation,landing,leads,analytics,attribution,performance,staging,branding,receiver}.spec.ts',
       use: { ...devices['Desktop Chrome'] },
     },
     ...servers.map(({ name, port }) => ({
@@ -89,6 +89,7 @@ export default defineConfig({
       ...env,
       LEAD_WEBHOOK_URL: '',
       LEAD_WEBHOOK_TOKEN: '',
+      LEAD_INBOX_DATABASE_URL: '',
       VERCEL: '',
       NEXT_PUBLIC_GA_ID: '',
       NEXT_PUBLIC_GTM_ID: '',
